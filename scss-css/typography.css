@@ -1,0 +1,44 @@
+.typography {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.typography h1 {
+  font-size: 64px;
+  line-height: 70.4px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.typography h2 {
+  font-size: 40px;
+  line-height: 44px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.typography .demo-text {
+  font-size: 20px;
+  line-height: 22px;
+  font-family: "kanit", "sans";
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.typography .copy {
+  font-size: 16px;
+  line-height: 22px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.typography .button-txt {
+  font-size: 16px;
+  line-height: 22px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.typography .value-name {
+  font-size: 12px;
+  line-height: 8px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+/*# sourceMappingURL=typography.css.map */

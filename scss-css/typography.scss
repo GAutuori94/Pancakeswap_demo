@@ -1,0 +1,67 @@
+$font-family: 'kanit', 'sans';
+$font-size-header: 64px;
+$font-size-subheader: 40px;
+$font-size-paragraph: 20px;
+$font-size-copy: 16px;
+$font-size-button: 16px;
+$font-size-general: 12px;
+$line-height-h: 70.4px;
+$line-height-h2: 44px;
+$line-height-par: 22px;
+$line-height-copy: 22px;
+$line-height-button: 22px;
+$line-height-general: 8px;
+
+/*
+    The custom properties up above, are referenced to the design system elements.
+    You can copy and paste to your CSS as you need.
+    Here below, the SCSS code permitt a demonstration to how works the code in a real page, in this case Design System.
+*/
+.typography {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    h1 {
+        font-size: $font-size-header;
+        line-height: $line-height-h;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    h2 {
+        font-size: $font-size-subheader;
+        line-height: $line-height-h2;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .demo-text {
+        font-size: $font-size-paragraph;
+        line-height: $line-height-par;
+        font-family: $font-family;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .copy {
+        font-size: $font-size-copy;
+        line-height: $line-height-copy;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .button-txt {
+        font-size: $font-size-button;
+        line-height: $line-height-button;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .value-name {
+        font-size: $font-size-general;
+        line-height: $line-height-general;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+}
