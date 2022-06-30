@@ -1,0 +1,1 @@
+# ATTENZIONE : File principale per gli script non modificare
