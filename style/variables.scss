@@ -57,9 +57,22 @@ $dark_gradientBubblegum: linear-gradient(139.73deg, #313D5C 0%, #3D2A54 100%);
 
 @import url("https://fonts.googleapis.com/css2?family=Kanit:wght@100;200;300&display=swap");
 
-$fontFamily: "Kanit";
+// EMA: updated this section with other useful fonts variables, added a default family in $fontFamily too
+$fontFamily: "Kanit", "sans";
 $fontLightWeight : 400;
 $fontHeavyWeight : 600;
+$font-size-header: 64px;
+$font-size-subheader: 40px;
+$font-size-paragraph: 20px;
+$font-size-copy: 16px;
+$font-size-button: 16px;
+$font-size-general: 12px;
+$line-height-h: 70.4px;
+$line-height-h2: 44px;
+$line-height-par: 22px;
+$line-height-copy: 22px;
+$line-height-button: 22px;
+$line-height-general: 8px;
 
 
 /*------------------------------------------------------------------------------------------------------------------------------------------------*/
