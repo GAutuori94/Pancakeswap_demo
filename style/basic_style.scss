@@ -1,0 +1,13 @@
+/*Reset*/
+* {
+    margin: 0;
+	padding: 0;
+	border: 0;
+	box-sizing: border-box;
+}
+
+/*Px to rem conversion function*/
+
+@function remConverter($pxinput) {
+    @return calc($pxinput / 16px)+rem;
+}
