@@ -1,0 +1,42 @@
+@use 'pancakeFonts' as k;
+@use 'pancakeColors' as c;
+@use 'pancakeFunctions' as f;
+/*
+la mixin colorDiv gestisce le dimensioni 
+dei div in cui andrò a porre le info sui colori principali ()
+ per far si che il codice non venga ripetuto 
+*/
+@mixin colorDiv($color) {
+    height: f.remConverter(40px);
+    width: f.remConverter(40px);
+    border: k.$divBorder;
+    border-radius: 15%;
+    background-color: $color;
+}
+
+
+/*
+La mixin per button da lo stile di base ai button, il cui extend verrà sovrascritto per quelli che vediamo a destra
+*/
+@mixin button {
+    align-items: center; // alla scritta piazzandola al centro
+    border: 0px; // di base non c'è bordo, verrà aggiunto 
+    border-radius: f.remConverter(16px); // resta così per tutti, verrà visualizzato diversamente nella navbar per via dell'altezza del div padre
+    box-shadow: rgba(14, 14, 44, 0.4) 0px -1px 0px 0px inset; // leggero box-shadow a sud dell'asse y
+    cursor: pointer; // simula il link
+    display: inline-flex; // serve per gestire l'allineamento con le arrowsvg
+    font-family: inherit; //ereditano kanit
+    font-size: f.remConverter(16px);
+    font-weight: k.$fontHeavyWeight;
+    justify-content: center; //portano al centro il testo rispetto all'asse x
+    letter-spacing: 0.03em;
+    line-height: 1;
+    opacity: 1;
+    outline: 0px;
+    transition: background-color 0.2s ease 0s, opacity 0.2s ease 0s; // con i valori impostati in precedenza ne gestiamo l'effetto di transizione di
+    height: f.remConverter(48px);
+    padding: 0px f.remConverter(24px);
+    background-color: c.$buttonBlue;
+    color: white;
+    margin-right: f.remConverter(8px);
+}

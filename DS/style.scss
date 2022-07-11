@@ -1,0 +1,207 @@
+@use 'colors' as c;
+@use 'functions' as f;
+@use 'mixin' as m;
+@use 'fonts' as k;
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+
+}
+
+body {
+    background-image: URL("assets/images/bitcoin.webp");
+    background-size: cover;
+    margin: 0 auto;
+    padding: 0 auto;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    gap: f.remConverter(20px);
+
+
+    section {
+
+        background-color: rgba(255, 255, 255, 0.842);
+        width: f.remConverter(420px);
+        height: f.remConverter(250px);
+        border: k.$divBorder;
+        border-radius: f.remConverter(10px);
+        margin: 30px;
+
+
+        div.color {
+            height: 100%;
+            display: flex;
+            flex-flow: column wrap;
+            justify-content: space-between;
+
+
+            p {
+                font-family: k.$fontFamily;
+                align-self: center;
+                font-weight: bold;
+            }
+
+            >div {
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+
+                p {
+                    margin: 0%;
+                    font-size: remConverter(14px);
+                    font-family: k.$fontFamily;
+                    font-weight: k.$fontHeavyWeight;
+
+                    span {
+                        font-size: f.remConverter(13px);
+                        color: gray;
+                        font-size: k.$fontLightWeight;
+                    }
+                }
+
+                div.purple {
+                    margin: 0 f.remConverter(5px) f.remConverter(3px) f.remConverter(3px);
+                    @include m.colorDiv(c.$mainPurple);
+                }
+
+                div.blue {
+                    margin: 0 f.remConverter(5px) f.remConverter(3px) f.remConverter(3px);
+                    @include m.colorDiv(c.$buttonBlue);
+                }
+
+                div.orange {
+                    margin: 0 f.remConverter(5px) f.remConverter(3px) f.remConverter(3px);
+                    @include m.colorDiv(c.$orangeVarious);
+                }
+
+                div.black {
+                    margin: 0 f.remConverter(5px) f.remConverter(3px) f.remConverter(3px);
+                    @include m.colorDiv(c.$mainBlack);
+
+                }
+            }
+
+        }
+    }
+}
+
+
+section.second {
+    .tipography {
+        font-family: k.$fontFamily;
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: space-between;
+
+        .description {
+            display: flex;
+            align-items: center;
+            margin: 0px 5px 0px 5px;
+
+            p {
+                margin: 10px;
+            }
+        }
+    }
+}
+
+
+
+section {
+    &.third {
+        div.icon {
+            margin: 0 1rem;
+
+            p {
+                font-family: k.$fontFamily;
+                text-align: center;
+                font-weight: bold;
+
+            }
+        }
+
+        div.iconContainer {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+    }
+}
+
+section.third {
+
+    .icon {
+        height: 100%;
+    }
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: remConverter(10px);
+
+}
+
+section.fourth {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: remConverter(10px);
+
+    div.buttons {
+
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-items: center;
+
+        p {
+            font-family: k.$fontFamily;
+            width: 100%;
+            text-align: center;
+            font-weight: bold;
+            margin: 10px auto;
+        }
+
+        div {
+            font-family: k.$fontFamily;
+            font-weight: k.$fontLightWeight;
+
+            button {
+                @include m.button;
+                width: f.remConverter(150px);
+
+                &.arrowMainButton img {
+                    filter: brightness(0) invert(1);
+                }
+
+                &.arrowBlackButton {
+                    color: black;
+
+                    img {
+                        filter: brightness(0%); //applica la proprietà anche alla freccia
+                    }
+                }
+
+                &.secondaryButton {
+                    background-color: transparent;
+                    color: c.$buttonBlue;
+                    border: 3px solid c.$buttonBlue;
+                    box-shadow: none;
+                }
+
+                &:hover {
+                    opacity: 50%;
+                }
+
+
+            }
+        }
+    }
+}

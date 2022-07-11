@@ -1,0 +1,19 @@
+$mainPurple : rgb(122, 110, 170);
+$buttonBlue : rgb(31, 199, 212);
+$orangeVarious: rgb(255, 178, 55);
+$mainBlack : #27262c;
+
+
+:root {
+    --cyan-color: rgb(31, 199, 212);
+    --cyan-gradient: rgba(0, 0, 0, 0) linear-gradient(rgb(167, 232, 241) 0%, rgb(148, 225, 242) 100%) repeat scroll 0% 0%;
+    --lavender-color:
+        --lavender-gradient: rgba(0, 0, 0, 0) linear-gradient(rgb(226, 201, 251) 0%, rgb(205, 184, 250) 100%) repeat scroll 0% 0%;
+    --dark-purple-color: rgb(40, 13, 95);
+    --purple-gradient-color: rgba(0, 0, 0, 0) linear-gradient(rgb(118, 69, 217) 0%, rgb(69, 42, 122) 100%) repeat scroll 0% 0%;
+    --phishing-banner-gradient: rgba(0, 0, 0, 0) linear-gradient(rgb(128, 81, 214) 0%, rgb(73, 34, 134) 100%) repeat scroll 0% 0%;
+    --green-color: rgb(49, 208, 170);
+    --pink-color: rgb(237, 75, 158);
+    --yellow-color: rgb(255, 178, 55);
+    --yellow-gradient: rgba(0, 0, 0, 0) linear-gradient(rgb(255, 216, 0) 0%, rgb(253, 171, 50) 100%) repeat scroll 0% 0% padding-box text;
+}

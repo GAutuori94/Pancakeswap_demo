@@ -1,0 +1,8 @@
+@function remConverter($pxinput) {
+    @return calc($pxinput / 16px)+rem;
+}
+
+/*
+la funzione convertirà i px passati come parametro in rem attraverso il calcolo impostato:
+passato un parametro, esso verrà diviso per il rapporto px/rem che è 1/16, dopodichè verrà sostituita l'unità di misura
+*/

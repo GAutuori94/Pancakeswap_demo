@@ -1,0 +1,201 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@100;200;300&display=swap");
+/*
+la funzione convertirà i px passati come parametro in rem attraverso il calcolo impostato:
+passato un parametro, esso verrà diviso per il rapporto px/rem che è 1/16, dopodichè verrà sostituita l'unità di misura
+*/
+/*
+la mixin colorDiv gestisce le dimensioni 
+dei div in cui andrò a porre le info sui colori principali ()
+ per far si che il codice non venga ripetuto 
+*/
+/*
+La mixin per button da lo stile di base ai button, il cui extend verrà sovrascritto per quelli che vediamo a destra
+*/
+body {
+  background-image: URL("assets/images/bitcoin.webp");
+  background-size: cover;
+  overflow: auto;
+  margin: 0 auto;
+  padding: 0 auto;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1.25rem;
+}
+body section {
+  background-color: rgba(255, 255, 255, 0.842);
+  width: 26.25rem;
+  height: 15.625rem;
+  border: 1.5px solid rgba(45, 216, 247, 0.768627451);
+  border-radius: 0.625rem;
+  margin: 10px;
+}
+body section div.color {
+  height: 100%;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-between;
+}
+body section div.color p {
+  font-family: "Kanit";
+  align-self: center;
+  font-weight: bold;
+}
+body section div.color > div {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+body section div.color > div p {
+  margin: 0%;
+  font-size: remConverter(14px);
+  font-family: "Kanit";
+  font-weight: 600;
+}
+body section div.color > div p span {
+  font-size: 0.8125rem;
+  color: gray;
+  font-size: 400;
+}
+body section div.color > div div.purple {
+  margin: 0 0.3125rem 0.1875rem 0.1875rem;
+  height: 2.5rem;
+  width: 2.5rem;
+  border: 1.5px solid rgba(45, 216, 247, 0.768627451);
+  border-radius: 15%;
+  background-color: #9a6aff;
+}
+body section div.color > div div.blue {
+  margin: 0 0.3125rem 0.1875rem 0.1875rem;
+  height: 2.5rem;
+  width: 2.5rem;
+  border: 1.5px solid rgba(45, 216, 247, 0.768627451);
+  border-radius: 15%;
+  background-color: #1fc7d4;
+}
+body section div.color > div div.orange {
+  margin: 0 0.3125rem 0.1875rem 0.1875rem;
+  height: 2.5rem;
+  width: 2.5rem;
+  border: 1.5px solid rgba(45, 216, 247, 0.768627451);
+  border-radius: 15%;
+  background-color: #ffb237;
+}
+body section div.color > div div.black {
+  margin: 0 0.3125rem 0.1875rem 0.1875rem;
+  height: 2.5rem;
+  width: 2.5rem;
+  border: 1.5px solid rgba(45, 216, 247, 0.768627451);
+  border-radius: 15%;
+  background-color: #27262c;
+}
+
+section.second .tipography {
+  font-family: "Kanit";
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-between;
+}
+section.second .tipography .description {
+  display: flex;
+  align-items: center;
+  margin: 0px 5px 0px 5px;
+}
+section.second .tipography .description p {
+  margin: 10px;
+}
+
+section.third div.icon {
+  margin: 0 1rem;
+}
+section.third div.icon p {
+  font-family: "Kanit";
+  text-align: center;
+  font-weight: bold;
+}
+section.third div.iconContainer {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+section.third {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: remConverter(10px);
+}
+section.third .icon {
+  height: 100%;
+}
+
+section.fourth {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: remConverter(10px);
+}
+section.fourth div.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+section.fourth div.buttons p {
+  font-family: "Kanit";
+  width: 100%;
+  text-align: center;
+  font-weight: bold;
+  margin: 10px auto;
+}
+section.fourth div.buttons div {
+  font-family: "Kanit";
+  font-weight: 400;
+}
+section.fourth div.buttons div button {
+  align-items: center;
+  border: 0px;
+  border-radius: 1rem;
+  box-shadow: rgba(14, 14, 44, 0.4) 0px -1px 0px 0px inset;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  justify-content: center;
+  letter-spacing: 0.03em;
+  line-height: 1;
+  opacity: 1;
+  outline: 0px;
+  transition: background-color 0.2s ease 0s, opacity 0.2s ease 0s;
+  height: 3rem;
+  padding: 0px 1.5rem;
+  background-color: #1fc7d4;
+  color: white;
+  margin-right: 0.5rem;
+  width: 9.375rem;
+}
+section.fourth div.buttons div button.arrowMainButton img {
+  filter: brightness(0) invert(1);
+}
+section.fourth div.buttons div button.arrowBlackButton {
+  color: black;
+}
+section.fourth div.buttons div button.arrowBlackButton img {
+  filter: brightness(0%);
+}
+section.fourth div.buttons div button.secondaryButton {
+  background-color: transparent;
+  color: #1fc7d4;
+  border: 3px solid #1fc7d4;
+  box-shadow: none;
+}
+section.fourth div.buttons div button:hover {
+  opacity: 50%;
+}
+
+/*# sourceMappingURL=style.css.map */

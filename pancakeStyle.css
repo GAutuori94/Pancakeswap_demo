@@ -1,0 +1,116 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@100;200;300&display=swap");
+/*
+la funzione convertirà i px passati come parametro in rem attraverso il calcolo impostato:
+passato un parametro, esso verrà diviso per il rapporto px/rem che è 1/16, dopodichè verrà sostituita l'unità di misura
+*/
+/*
+la mixin colorDiv gestisce le dimensioni 
+dei div in cui andrò a porre le info sui colori principali ()
+ per far si che il codice non venga ripetuto 
+*/
+/*
+La mixin per button da lo stile di base ai button, il cui extend verrà sovrascritto per quelli che vediamo a destra
+*/
+* {
+  font-family: "Kanit";
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+}
+
+nav {
+  font-weight: 400;
+  padding: 3px;
+  position: relative;
+  z-index: auto;
+  padding-left: 0.625rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 3rem;
+  background-color: rgb(255, 255, 255);
+  border-bottom: 1px solid rgba(128, 128, 128, 0.349);
+}
+nav .leftContainer {
+  display: flex;
+}
+nav .leftContainer div {
+  width: 100%;
+  padding: 0.625rem;
+  border-radius: 15px;
+}
+nav .leftContainer div .grey-hover:hover {
+  background-color: #EFF4F5;
+  transition: 120ms;
+}
+nav .leftContainer .pancakeLogo {
+  display: flex;
+  list-style-type: none;
+  align-items: center;
+  margin-top: 0.3125rem;
+}
+nav ul {
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+  position: relative;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  color: rgb(122, 110, 170);
+  font-size: 16px;
+  font-weight: 400;
+  padding: 0px 16px;
+  height: 48px;
+}
+nav ul li a {
+  text-shadow: #7A6EAA, 0.5px;
+  text-decoration: none;
+  margin: 10px;
+  color: #7A6EAA;
+}
+nav .rightContainer {
+  display: flex;
+  justify-content: space-between;
+}
+nav .rightContainer div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+nav button {
+  align-items: center;
+  border: 0px;
+  border-radius: 1rem;
+  box-shadow: rgba(14, 14, 44, 0.4) 0px -1px 0px 0px inset;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  justify-content: center;
+  letter-spacing: 0.03em;
+  line-height: 1;
+  opacity: 1;
+  outline: 0px;
+  transition: background-color 0.2s ease 0s, opacity 0.2s ease 0s;
+  height: 3rem;
+  padding: 0px 1.5rem;
+  background-color: #1fc7d4;
+  color: white;
+  margin-right: 0.5rem;
+  color: white;
+}
+nav button div {
+  margin: 0;
+}
+
+footer {
+  width: 100%;
+  background-color: #27262c;
+  display: flex;
+}
+
+/*# sourceMappingURL=pancakeStyle.css.map */

@@ -1,0 +1,103 @@
+@use 'pancakeColors' as c;
+@use 'pancakeFunctions' as f;
+@use 'pancakeMixin' as m;
+@use 'pancakeFonts' as k;
+
+* {
+    font-family: k.$fontFamily;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+
+}
+
+
+nav {
+    font-weight: 400;
+    padding: 3px;
+    position: relative;
+    z-index: auto;
+    padding-left: f.remConverter(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: f.remConverter(48px);
+    background-color: rgb(255, 255, 255);
+    border-bottom: 1px solid rgba(128, 128, 128, 0.349);
+
+    .leftContainer {
+        display: flex;
+
+        div {
+            width: 100%;
+            padding: f.remConverter(10px);
+            border-radius: 15px;
+
+            .grey-hover:hover {
+                background-color: #EFF4F5;
+                transition: 120ms;
+            }
+        }
+
+        .pancakeLogo {
+            display: flex;
+            list-style-type: none;
+            align-items: center;
+            margin-top: f.remConverter(5px);
+        }
+    }
+
+    ul {
+
+        display: flex;
+        justify-content: space-between;
+        list-style-type: none;
+        position: relative;
+        display: flex;
+        -webkit-box-align: center;
+        align-items: center;
+        color: rgb(122, 110, 170);
+        font-size: 16px;
+        font-weight: 400;
+        padding: 0px 16px;
+        height: 48px;
+
+        li {
+
+            a {
+
+                text-shadow: c.$mainPurple, 0.5px;
+                text-decoration: none;
+                margin: 10px;
+                color: c.$mainPurple;
+            }
+        }
+    }
+
+    .rightContainer {
+        display: flex;
+        justify-content: space-between;
+
+        div {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+    }
+
+    button {
+        div {
+            margin: 0;
+        }
+
+        @include m.button;
+        color: white;
+    }
+}
+footer {
+    width: 100%; 
+    background-color: c.$mainBlack;
+    display: flex;
+
+}
