@@ -1,1 +1,13 @@
-/*# sourceMappingURL=cards.css.map */
+.card-body {
+  border-width: 1px;
+  border-color: rgb(231, 227, 235);
+  border-style: solid;
+  border-radius: 24px 24px 0 0;
+}
+
+.card-footer {
+  border-width: 1px;
+  border-color: rgb(231, 227, 235);
+  border-style: solid;
+  border-radius: 0 0 24px 24px;
+}/*# sourceMappingURL=cards.css.map */

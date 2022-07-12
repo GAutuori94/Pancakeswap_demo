@@ -1,0 +1,17 @@
+.card-body {
+  border: {
+    width: 1px;
+    color: rgb(231, 227, 235);
+    style: solid;
+    radius: 24px 24px 0 0;
+  }
+}
+
+.card-footer {
+  border: {
+    width: 1px;
+    color: rgb(231, 227, 235);
+    style: solid;
+    radius: 0 0 24px 24px;
+  }
+}
