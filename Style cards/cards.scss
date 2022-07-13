@@ -1,5 +1,10 @@
+.card {
+  border-radius: 32px;
+}
+
 .card-body {
   padding: 24px;
+  color: rgb(69, 42, 122);
   border: {
     width: 1px;
     color: rgb(231, 227, 235);
@@ -14,3 +19,21 @@
     radius: 0 0 24px 24px;
   }
 }
+
+/* 
+    line-height: 1;
+    box-sizing: border-box;
+    font-family: Kanit, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    font-size: 100%;
+    vertical-align: baseline;
+    background-color: rgb(255, 255, 255);
+    border-radius: 32px;
+    box-shadow: rgba(25, 19, 38, 0.1) 0px 2px 12px -8px, rgba(25, 19, 38, 0.05) 0px 1px 1px;
+    color: rgb(69, 42, 122);
+    overflow: hidden;
+    position: relative;
+*/
