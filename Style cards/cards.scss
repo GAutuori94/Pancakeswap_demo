@@ -1,39 +1,88 @@
-.card {
+/* CARD STYLING */
+
+.default-card {
+  background-color: rgb(255, 255, 255);
   border-radius: 32px;
-}
-
-.card-body {
-  padding: 24px;
+  box-shadow: rgba(25, 19, 38, 0.1) 0px 2px 12px -8px,
+    rgba(25, 19, 38, 0.05) 0px 1px 1px;
   color: rgb(69, 42, 122);
-  border: {
-    width: 1px;
-    color: rgb(231, 227, 235);
-    style: solid;
-    radius: 24px 24px 0 0;
+  overflow: hidden;
+  position: relative;
+
+  .card-body {
+    padding: 24px;
+  }
+
+  .card-footer {
+    padding: 24px;
+    border-top: 1px solid rgb(233, 234, 235);
   }
 }
 
-.card-footer {
-  @extend .card-body;
-  border: {
-    radius: 0 0 24px 24px;
-  }
-}
+.home-yellow-card {
+  max-width: 100%;
+  margin-right: 24px;
+  margin-bottom: 0px;
+  display: flex;
+  flex: 1 1 0%;
 
-/* 
-    line-height: 1;
-    box-sizing: border-box;
-    font-family: Kanit, sans-serif;
-    -webkit-font-smoothing: antialiased;
-    margin: 0px;
-    padding: 0px;
-    border: 0px;
-    font-size: 100%;
-    vertical-align: baseline;
-    background-color: rgb(255, 255, 255);
-    border-radius: 32px;
-    box-shadow: rgba(25, 19, 38, 0.1) 0px 2px 12px -8px, rgba(25, 19, 38, 0.05) 0px 1px 1px;
-    color: rgb(69, 42, 122);
+  .home-yellow-card-outer {
+    background: rgb(255, 178, 55);
+
+    border-radius: 24px;
+    color: rgb(40, 13, 95);
     overflow: hidden;
     position: relative;
-*/
+    height: fit-content;
+    padding: 1px 1px 4px;
+    transform: rotate(-2.36deg);
+
+    .home-yellow-card-inner {
+      color: rgb(40, 13, 95);
+
+      overflow: initial;
+      background: linear-gradient(
+        rgb(255, 178, 55) 0%,
+        rgb(255, 205, 81) 51.17%,
+        rgb(255, 231, 106) 100%
+      );
+      border-radius: 24px;
+
+      .home-yellow-card-body {
+        color: rgb(40, 13, 95);
+        padding: 24px;
+      }
+    }
+  }
+}
+
+.home-purple-card {
+  max-width: 100%;
+  display: flex;
+  flex: 1 1 0%;
+
+  .home-purple-card-outer {
+    background: rgb(60, 23, 134);
+    border-radius: 24px;
+    color: rgb(40, 13, 95);
+    overflow: hidden;
+    position: relative;
+    height: fit-content;
+    padding: 1px 1px 4px;
+    transform: rotate(1.43deg);
+
+    .home-purple-card-inner {
+      color: rgb(40, 13, 95);
+      width: 100%;
+      height: 100%;
+      overflow: initial;
+      background: linear-gradient(rgb(118, 69, 217) 0%, rgb(81, 33, 177) 100%);
+      border-radius: 24px;
+
+      .home-purple-card-body {
+        color: rgb(40, 13, 95);
+        padding: 24px;
+      }
+    }
+  }
+}
