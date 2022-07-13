@@ -1,0 +1,46 @@
+@mixin opacityAnimation {
+    animation: opacityAnimation 5s ease-in-out 0.66s infinite normal none running;
+    @keyframes opacityAnimation {
+        0% {
+            opacity: 0.9;
+        }
+
+        ;
+
+        50% {
+            opacity: 0.1;
+        }
+
+        ;
+
+        100% {
+            opacity: 0.9;
+        }
+
+        ;
+    }
+}
+
+
+@mixin floatting {
+    animation: floatting 3s ease-in-out 0.66s infinite normal none running;
+    @keyframes floatting {
+        0% {
+            transform: translate(0px)
+        }
+
+        ;
+
+        50% {
+            transform: translate(-5px, -5px)
+        }
+
+        ;
+
+        100% {
+            transform: translate(0px)
+        }
+
+        ;
+    }
+}
