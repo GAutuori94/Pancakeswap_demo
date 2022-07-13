@@ -1,3 +1,17 @@
-@import "./variables";
-@import "./mixin";
+@use "mixin" as m;
+
+
+*{
+    box-sizing: border-box;
+}
+
+.container{
+    width: 100%;
+    position: relative;
+    .floatEl {
+    @include m.floatting;
+    position: absolute;
+    
+    }
+}
 

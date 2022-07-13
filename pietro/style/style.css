@@ -1,3 +1,35 @@
+* {
+  box-sizing: border-box;
+}
 
-
-/*# sourceMappingURL=style.css.map */
+.container {
+  width: 100%;
+  position: relative;
+}
+.container .floatEl {
+  -webkit-animation: floatting 3s ease-in-out 0.66s infinite normal none running;
+          animation: floatting 3s ease-in-out 0.66s infinite normal none running;
+  position: absolute;
+}
+@-webkit-keyframes floatting {
+  0% {
+    transform: translate(0px);
+  }
+  50% {
+    transform: translate(-5px, -5px);
+  }
+  100% {
+    transform: translate(0px);
+  }
+}
+@keyframes floatting {
+  0% {
+    transform: translate(0px);
+  }
+  50% {
+    transform: translate(-5px, -5px);
+  }
+  100% {
+    transform: translate(0px);
+  }
+}/*# sourceMappingURL=style.css.map */
