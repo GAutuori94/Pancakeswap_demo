@@ -1,5 +1,19 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Kanit:wght@100;200;300&display=swap");
+:root {
+  --cyan-color: rgb(31, 199, 212);
+  --cyan-gradient: rgba(0, 0, 0, 0) linear-gradient(rgb(167, 232, 241) 0%, rgb(148, 225, 242) 100%) repeat scroll 0% 0%;
+  --lavender-color:
+      --lavender-gradient: rgba(0, 0, 0, 0) linear-gradient(rgb(226, 201, 251) 0%, rgb(205, 184, 250) 100%) repeat scroll 0% 0%;
+  --dark-purple-color: rgb(40, 13, 95);
+  --purple-gradient-color: rgba(0, 0, 0, 0) linear-gradient(rgb(118, 69, 217) 0%, rgb(69, 42, 122) 100%) repeat scroll 0% 0%;
+  --phishing-banner-gradient: rgba(0, 0, 0, 0) linear-gradient(rgb(128, 81, 214) 0%, rgb(73, 34, 134) 100%) repeat scroll 0% 0%;
+  --green-color: rgb(49, 208, 170);
+  --pink-color: rgb(237, 75, 158);
+  --yellow-color: rgb(255, 178, 55);
+  --yellow-gradient: rgba(0, 0, 0, 0) linear-gradient(rgb(255, 216, 0) 0%, rgb(253, 171, 50) 100%) repeat scroll 0% 0% padding-box text;
+}
+
 /*
 la funzione convertirà i px passati come parametro in rem attraverso il calcolo impostato:
 passato un parametro, esso verrà diviso per il rapporto px/rem che è 1/16, dopodichè verrà sostituita l'unità di misura
@@ -12,10 +26,101 @@ dei div in cui andrò a porre le info sui colori principali ()
 /*
 La mixin per button da lo stile di base ai button, il cui extend verrà sovrascritto per quelli che vediamo a destra
 */
+.button {
+  align-items: center;
+  border: 0px none;
+  border-radius: 16px;
+  box-shadow: rgba(14, 14, 44, 0.4) 0px -1px 0px 0px inset;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: Kanit, sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  justify-content: center;
+  letter-spacing: 0.03em;
+  line-height: 1;
+  opacity: 1;
+  outline: currentcolor none 0px;
+  height: 48px;
+  padding: 0px 24px;
+  background-color: rgb(31, 199, 212);
+  color: white;
+  margin-right: 8px;
+}
+
+.transparent-button {
+  align-items: center;
+  border: 2px solid rgb(31, 199, 212);
+  border-radius: 16px;
+  box-shadow: rgba(14, 14, 44, 0.4) 0px -1px 0px 0px inset;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: Kanit, sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  justify-content: center;
+  letter-spacing: 0.03em;
+  line-height: 1;
+  opacity: 1;
+  outline: currentcolor none 0px;
+  height: 32px;
+  padding: 0px 16px;
+  background-color: rgba(31, 200, 212, 0);
+  color: rgb(31, 200, 212);
+}
+
+.input-field {
+  background-color: rgb(238, 234, 244);
+  border-radius: 16px;
+  box-shadow: rgba(74, 74, 104, 0.1) 0px 2px 2px -1px inset;
+  color: rgb(40, 13, 95);
+  display: block;
+  font-size: 16px;
+  height: 40px;
+  max-width: 150px;
+  outline: currentcolor none 0px;
+  padding: 0px 16px;
+  width: 100%;
+  border: 1px solid rgb(215, 202, 236);
+  font-family: Kanit, sans-serif;
+}
+
+.input-field:focus {
+  box-shadow: rgb(118, 69, 217) 0px 0px 0px 1px, rgba(118, 69, 217, 0.6) 0px 0px 0px 4px;
+}
+
+.dropdown-menu {
+  max-width: 150px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 16px;
+  box-shadow: rgba(74, 74, 104, 0.1) 0px 2px 2px -1px inset;
+  border: 1px solid rgb(215, 202, 236);
+  border-radius: 16px;
+  background: rgb(238, 234, 244) none repeat scroll 0% 0%;
+  transition: border-radius 0.15s ease 0s;
+}
+
+.dropdown-text {
+  color: rgb(40, 13, 95);
+  font-weight: 400;
+  font-family: Kanit, sans-serif;
+  line-height: 1.5;
+  font-size: 16px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+}
+
 body {
   background-image: URL("assets/images/bitcoin.webp");
   background-size: cover;
-  overflow: auto;
   margin: 0 auto;
   padding: 0 auto;
   height: 100%;
@@ -32,7 +137,7 @@ body section {
   height: 15.625rem;
   border: 1.5px solid rgba(45, 216, 247, 0.768627451);
   border-radius: 0.625rem;
-  margin: 10px;
+  margin: 30px;
 }
 body section div.color {
   height: 100%;
@@ -67,7 +172,7 @@ body section div.color > div div.purple {
   width: 2.5rem;
   border: 1.5px solid rgba(45, 216, 247, 0.768627451);
   border-radius: 15%;
-  background-color: #9a6aff;
+  background-color: rgb(122, 110, 170);
 }
 body section div.color > div div.blue {
   margin: 0 0.3125rem 0.1875rem 0.1875rem;
@@ -75,7 +180,7 @@ body section div.color > div div.blue {
   width: 2.5rem;
   border: 1.5px solid rgba(45, 216, 247, 0.768627451);
   border-radius: 15%;
-  background-color: #1fc7d4;
+  background-color: rgb(31, 199, 212);
 }
 body section div.color > div div.orange {
   margin: 0 0.3125rem 0.1875rem 0.1875rem;
@@ -83,7 +188,7 @@ body section div.color > div div.orange {
   width: 2.5rem;
   border: 1.5px solid rgba(45, 216, 247, 0.768627451);
   border-radius: 15%;
-  background-color: #ffb237;
+  background-color: rgb(255, 178, 55);
 }
 body section div.color > div div.black {
   margin: 0 0.3125rem 0.1875rem 0.1875rem;
@@ -174,7 +279,7 @@ section.fourth div.buttons div button {
   transition: background-color 0.2s ease 0s, opacity 0.2s ease 0s;
   height: 3rem;
   padding: 0px 1.5rem;
-  background-color: #1fc7d4;
+  background-color: rgb(31, 199, 212);
   color: white;
   margin-right: 0.5rem;
   width: 9.375rem;
@@ -190,12 +295,10 @@ section.fourth div.buttons div button.arrowBlackButton img {
 }
 section.fourth div.buttons div button.secondaryButton {
   background-color: transparent;
-  color: #1fc7d4;
-  border: 3px solid #1fc7d4;
+  color: rgb(31, 199, 212);
+  border: 3px solid rgb(31, 199, 212);
   box-shadow: none;
 }
 section.fourth div.buttons div button:hover {
   opacity: 50%;
-}
-
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */

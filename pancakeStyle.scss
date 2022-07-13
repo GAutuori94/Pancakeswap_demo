@@ -13,7 +13,9 @@
 }
 
 
+
 nav {
+    width: 100vw;
     font-weight: 400;
     padding: 3px;
     position: relative;
@@ -25,6 +27,7 @@ nav {
     height: f.remConverter(48px);
     background-color: rgb(255, 255, 255);
     border-bottom: 1px solid rgba(128, 128, 128, 0.349);
+    overflow: hidden;
 
     .leftContainer {
         display: flex;
@@ -58,18 +61,20 @@ nav {
         -webkit-box-align: center;
         align-items: center;
         color: rgb(122, 110, 170);
-        font-size: 16px;
+        font-size: f.remConverter(16px);
         font-weight: 400;
-        padding: 0px 16px;
+        padding-left: f.remConverter(16px);
+        padding-right: f.remConverter(16px);
+
+
         height: 48px;
 
         li {
 
             a {
-
-                text-shadow: c.$mainPurple, 0.5px;
+                text-shadow: c.$mainPurple, f.remConverter(0.5px);
                 text-decoration: none;
-                margin: 10px;
+                margin: f.remConverter(10px);
                 color: c.$mainPurple;
             }
         }
@@ -79,25 +84,93 @@ nav {
         display: flex;
         justify-content: space-between;
 
-        div {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
+        //     .netButton {
+
+        //         fill: red;
+        //         transition-property: fill;
+        //         transition-duration: 2s;
+
+        //         .logoNet:hover {
+        //             fill: #EFF4F5;
+        //         }
+        //     }
+        // 
+    }
+
+    div {
+        font-family: k.$fontFamily;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: f.remConverter(5px);
+        cursor: pointer;
+
+        .currentValue {
+            color: c.$mainPurple;
+            font-weight: 500;
         }
     }
 
     button {
-        div {
-            margin: 0;
-        }
-
         @include m.button;
+        height: f.remConverter(32px);
+        padding-left: f.remConverter(16px);
+        padding-right: f.remConverter(16px);
         color: white;
     }
-}
-footer {
-    width: 100%; 
-    background-color: c.$mainBlack;
-    display: flex;
 
+
+}
+
+footer {
+    width: 100vw;
+
+    background-color: c.$mainBlack;
+
+    .services {
+        display: flex;
+        justify-content: space-between;
+        padding: 30px;
+
+
+
+
+        ul {
+            li:first-child {
+                color: c.$mainPurple;
+                font-weight: 600;
+            }
+
+            .gold {
+                a {
+                    color: gold;
+                }
+            }
+
+            li {
+                list-style-type: none;
+                margin: 3px;
+
+                a {
+
+                    text-decoration: none;
+                    color: white;
+                }
+
+                a:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+
+    .partnerSvgIcons {
+        padding-left: 33px;
+        display: flex;
+        align-items: flex-start;
+
+        div {
+            width: 30px;
+        }
+    }
 }

@@ -40,3 +40,14 @@ La mixin per button da lo stile di base ai button, il cui extend verrà sovrascr
     color: white;
     margin-right: f.remConverter(8px);
 }
+@mixin transparent-button {
+    border: 2px solid rgb(31, 199, 212);
+    outline: currentcolor none 0px;
+    height: 32px;
+    padding: 0px 16px;
+    background-color: rgba(31, 200, 212, 0);
+    color: rgba(31, 200, 212);
+}
+
+
+
