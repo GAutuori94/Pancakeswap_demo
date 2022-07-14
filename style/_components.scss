@@ -69,7 +69,7 @@ state: on --> background color: b.$success
     transition: left 200ms ease-in 0s;
     z-index: 1;
 
-    .toggleSwitchSlider:hover {
+    &:hover {
         box-shadow: b.$secondary 0px 0px 0px 1px, b.$secondary 0px 0px 0px 4px;
     }
 
