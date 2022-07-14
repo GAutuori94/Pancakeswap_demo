@@ -17,6 +17,7 @@
   right: 0;
   bottom: 0;
   background: #bdc2c4;
+  -webkit-transition: 0.4s;
   transition: 0.4s;
 }
 
@@ -37,6 +38,7 @@
   left: 4px;
   bottom: 2px;
   background-color: #ffffff;
+  -webkit-transition: 0.4s;
   transition: 0.4s;
 }
 
@@ -44,7 +46,7 @@ input:checked + .slider {
   background-image: url();
   background-repeat: no-repeat;
   background-position: center;
-  background-color: #8a8a8a;
+  background-color: #666171;
 }
 
 input:checked + .slider:before {
@@ -63,6 +65,8 @@ input:focus + .slider {
 }
 
 input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
   transform: translateX(26px);
 }
 
@@ -73,4 +77,6 @@ input:checked + .slider:before {
 
 .slider.round:before {
   border-radius: 50%;
-}/*# sourceMappingURL=toggle-LD.css.map */
+}
+
+/*# sourceMappingURL=toggle-LD.css.map */
