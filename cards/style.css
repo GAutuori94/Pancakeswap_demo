@@ -14,6 +14,7 @@ h1 {
 }
 
 .layout {
+  width: 100%;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -28,7 +29,7 @@ h1 {
 .cards,
 .animations {
   height: auto;
-  width: 40%;
+  width: 100%;
   background-color: #fff;
   border: 1px solid #000;
   margin: 15px;

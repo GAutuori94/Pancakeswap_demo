@@ -1,0 +1,130 @@
+/* CARD STYLING */
+.top-cards-section-container {
+  display: flex;
+  flex-direction: row;
+}
+.top-cards-section-container .top-cards-outer {
+  background: rgb(231, 227, 235);
+  border-radius: 24px;
+  color: rgb(40, 13, 95);
+  overflow: hidden;
+  position: relative;
+  margin-right: 16px;
+  margin-bottom: 0px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 1px 1px 4px;
+  box-sizing: border-box;
+}
+.top-cards-section-container .top-cards-outer .top-cards-inner {
+  width: 100%;
+  height: 100%;
+  overflow: inherit;
+  background: rgb(255, 255, 255);
+  border-radius: 24px;
+}
+.top-cards-section-container .top-cards-outer .top-cards-inner .top-cards-body {
+  color: rgb(40, 13, 95);
+  padding: 24px;
+}
+.top-cards-section-container .top-cards-outer .top-cards-inner .top-cards-body .top-cards-symbol-container {
+  color: rgb(40, 13, 95);
+  position: absolute;
+  top: 24px;
+  right: 24px;
+}
+
+.bottom-cards-section-background {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  -webkit-box-align: center;
+  z-index: 1;
+  background: linear-gradient(rgb(111, 182, 241) 0%, rgb(234, 242, 246) 100%);
+  padding: 48px 0px;
+}
+.bottom-cards-section-background .bottom-cards-container {
+  max-width: 600px;
+  margin: 0px auto;
+  display: flex;
+  flex-direction: row;
+}
+.bottom-cards-section-background .bottom-cards-container .yellow-card {
+  max-width: 100%;
+  margin-right: 24px;
+  margin-bottom: 0px;
+  display: flex;
+  flex: 1 1 0%;
+}
+.bottom-cards-section-background .bottom-cards-container .yellow-card .yellow-card-outer {
+  background: rgb(255, 178, 55);
+  border-radius: 24px;
+  color: rgb(40, 13, 95);
+  overflow: hidden;
+  position: relative;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 1px 1px 4px;
+  transform: rotate(-2.36deg);
+}
+.bottom-cards-section-background .bottom-cards-container .yellow-card .yellow-card-outer .yellow-card-inner {
+  color: rgb(40, 13, 95);
+  overflow: initial;
+  background: linear-gradient(rgb(255, 178, 55) 0%, rgb(255, 205, 81) 51.17%, rgb(255, 231, 106) 100%);
+  border-radius: 24px;
+}
+.bottom-cards-section-background .bottom-cards-container .yellow-card .yellow-card-outer .yellow-card-inner .yellow-card-body {
+  color: rgb(40, 13, 95);
+  padding: 24px;
+}
+.bottom-cards-section-background .bottom-cards-container .purple-card {
+  max-width: 100%;
+  display: flex;
+  flex: 1 1 0%;
+}
+.bottom-cards-section-background .bottom-cards-container .purple-card .purple-card-outer {
+  background: rgb(60, 23, 134);
+  border-radius: 24px;
+  color: rgb(40, 13, 95);
+  overflow: hidden;
+  position: relative;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 1px 1px 4px;
+  transform: rotate(1.43deg);
+}
+.bottom-cards-section-background .bottom-cards-container .purple-card .purple-card-outer .purple-card-inner {
+  color: rgb(40, 13, 95);
+  width: 100%;
+  height: 100%;
+  overflow: initial;
+  background: linear-gradient(rgb(118, 69, 217) 0%, rgb(81, 33, 177) 100%);
+  border-radius: 24px;
+}
+.bottom-cards-section-background .bottom-cards-container .purple-card .purple-card-outer .purple-card-inner .purple-card-body {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  color: white;
+  padding: 24px;
+}
+
+.default-card {
+  background-color: rgb(255, 255, 255);
+  border-radius: 32px;
+  box-shadow: rgba(25, 19, 38, 0.1) 0px 2px 12px -8px, rgba(25, 19, 38, 0.05) 0px 1px 1px;
+  color: rgb(69, 42, 122);
+  overflow: hidden;
+  position: relative;
+}
+.default-card .card-body {
+  padding: 24px;
+}
+.default-card .card-footer {
+  padding: 24px;
+  border-top: 1px solid rgb(233, 234, 235);
+}/*# sourceMappingURL=home-cards.css.map */
