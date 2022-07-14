@@ -1,10 +1,10 @@
 /* CARD STYLING */
 
-.top-cards-section-container {
+.top-cards-container {
   display: flex;
   flex-direction: row;
 
-  .top-cards-outer {
+  .outer-box {
     background: rgb(231, 227, 235);
     border-radius: 24px;
     color: rgb(40, 13, 95);
@@ -16,22 +16,61 @@
     padding: 1px 1px 4px;
     box-sizing: border-box;
 
-    .top-cards-inner {
+    .inner-box {
       width: 100%;
       height: 100%;
       overflow: inherit;
       background: rgb(255, 255, 255);
       border-radius: 24px;
 
-      .top-cards-body {
-        color: rgb(40, 13, 95);
+      .card-body {
         padding: 24px;
 
-        .top-cards-symbol-container {
+        .symbol-container {
           color: rgb(40, 13, 95);
           position: absolute;
           top: 24px;
           right: 24px;
+
+          svg {
+            width: 36px;
+            align-self: center;
+            fill: rgb(118, 69, 217);
+            flex-shrink: 0;
+            filter: none !important;
+          }
+        }
+
+        .card-text {
+          min-width: 232px;
+          width: fit-content;
+          min-height: 168px;
+          margin-top: 64px;
+          display: flex;
+          flex-direction: column;
+          -webkit-box-pack: end;
+          justify-content: flex-end;
+
+          & h2:first-of-type {
+            font-weight: 600;
+            line-height: 1.1;
+            font-size: 40px;
+          }
+
+          & h2:last-of-type {
+            color: rgb(118, 69, 217);
+            margin-bottom: 24px;
+            font-weight: 600;
+            line-height: 1.1;
+            font-size: 40px;
+          }
+
+          .card-footer {
+            color: rgb(122, 110, 170);
+            font-weight: 400;
+            line-height: 1.5;
+            font-size: 16px;
+          }
         }
       }
     }
