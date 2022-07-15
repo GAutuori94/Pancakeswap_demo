@@ -7,19 +7,41 @@
   position: relative;
 }
 .container .floatEl {
-  animation: floatting 3s ease-in-out 0.66s infinite normal none running;
+  -webkit-animation: floatting 3s ease-in-out 1s infinite normal none running;
+          animation: floatting 3s ease-in-out 1s infinite normal none running;
   position: absolute;
+}
+@-webkit-keyframes floatting {
+  0% {
+    transform: translate(0px);
+  }
+  50% {
+    transform: translate(10px, 5px);
+  }
+  100% {
+    transform: translate(0px);
+  }
 }
 @keyframes floatting {
   0% {
     transform: translate(0px);
   }
   50% {
-    transform: translate(-5px, -10px);
+    transform: translate(10px, 5px);
   }
   100% {
     transform: translate(0px);
   }
 }
-
-/*# sourceMappingURL=style.css.map */
+.container .floatEl:nth-child(1) {
+  -webkit-animation-duration: 2.9s;
+          animation-duration: 2.9s;
+}
+.container .floatEl:nth-child(2) {
+  -webkit-animation-duration: 2.1s;
+          animation-duration: 2.1s;
+}
+.container .floatEl:nth-child(3) {
+  -webkit-animation-duration: 2.5s;
+          animation-duration: 2.5s;
+}/*# sourceMappingURL=style.css.map */

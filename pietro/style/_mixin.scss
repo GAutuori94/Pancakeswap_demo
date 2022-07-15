@@ -1,46 +1,19 @@
+
 @mixin opacityAnimation {
     animation: opacityAnimation 5s ease-in-out 0.66s infinite normal none running;
     @keyframes opacityAnimation {
-        0% {
-            opacity: 0.9;
-        }
-
-        ;
-
-        50% {
-            opacity: 0.1;
-        }
-
-        ;
-
-        100% {
-            opacity: 0.9;
-        }
-
-        ;
+        0% {opacity: 0.9};
+        50% {opacity: 0.1};
+        100% {opacity: 0.9};
     }
 }
 
 
 @mixin floatting {
-    animation: floatting 3s ease-in-out 0.66s infinite normal none running;
+    animation: floatting 3s ease-in-out 1s infinite normal none running;
     @keyframes floatting {
-        0% {
-            transform: translate(0px)
-        }
-
-        ;
-
-        50% {
-            transform: translate(-5px, -10px)
-        }
-
-        ;
-
-        100% {
-            transform: translate(0px)
-        }
-
-        ;
+        0% {transform: translate(0px)};
+        50% {transform: translate(10px, 5px)};
+        100% {transform: translate(0px)};
     }
 }
