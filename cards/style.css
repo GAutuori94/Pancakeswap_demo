@@ -1,8 +1,9 @@
-@import "reset.css";
-@import "buttons.css";
+@import "/reset.css";
+@import "/home-cards.css";
+@import "/cards.css";
+@import "/buttons.css";
 
 /*Stile layout design system*/
-
 body {
   background-color: #1fc7d4;
   font-family: "Kanit";
