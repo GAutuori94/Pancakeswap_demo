@@ -131,11 +131,11 @@ input:checked+.slider:before {
 }
 //crea il leddino viola attorno al toggle checked:focus(sulla luna)
 input:focus:checked+.slider:before { 
-    box-shadow: 0 0 2px 4px rgb(122, 110, 170);   
+    box-shadow: 0 0 2px 4px rgb(122, 110, 170);
 }
 //crea il leddino viola attorno al toggle checked:hover(sulla luna)
 input:hover:checked+.slider:before { 
-    box-shadow: 0 0 2px 4px rgb(122, 110, 170);   
+    box-shadow: 0 0 2px 4px rgb(122, 110, 170); 
 }
 
 //crea il leddino viola attorno al toggle checked:hover(sul sole)
@@ -157,7 +157,6 @@ input:checked+.slider:before {
 
 /* Rounded sliders */
 .slider.round {
-
   border-radius: 30px;
 }
 
