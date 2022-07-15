@@ -1,138 +1,167 @@
 body {
-    font-family: Arial, sans-serif;
-    font-size: 20px;
-    padding: 0 20px;
-  }
-  
-  main {
-    text-align: center;
-    margin: 0 auto;
-    max-width: 800px;
-  }
-  
-  p {
-    text-align: left;
-    padding: 0 20px;
-  }
-  
-  code {
-    color: firebrick;
-  }
-  
-  //classe che rende il toggle dark
-  .darkToggle {
-    appearance: none;
-    width: 30px;
-    height: 30px;
-    background: white;
-    border-radius: 5px;
-    border: 2px solid #555;
-  }
-  
-  .darkToggle:checked {
-    background: #333;
-  }
+  font-family: Arial, sans-serif;
+  font-size: 20px;
+  padding: 0 20px;
+}
 
-  //classe che cambia effettivamente il background
-  
-  .dark {
-    color: white;
-    background: #444;
-  }
+main {
+  text-align: center;
+  margin: 0 auto;
+  max-width: 800px;
+}
 
-  //STILE PER IL TOGGLE
+p {
+  text-align: left;
+  padding: 0 20px;
+}
 
-  //transazione
-  .ease {
-    transition: all 300ms ease;
-  }
+code {
+  color: firebrick;
+}
 
-  //classe che crea lo switcher
-  .switch {
+//classe che rende il toggle dark
+.darkToggle {
+  appearance: none;
+  width: 30px;
+  height: 30px;
+  background: white;
+  border-radius: 5px;
+  border: 2px solid #555;
+}
 
-    position: relative;
-    display: inline-block;
-    width: 60px;
-    height: 28px;
-  }
+.darkToggle:checked {
+  background: #333;
+}
 
-  //classe che crea lo slider 
-  .slider {
-    position: absolute;
-    cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: #bdc2c4;
-    -webkit-transition: 0.4s;
-    transition: 0.4s;
-  }
-  .switch input {
-   
-    opacity: 0;
-    width: 0;
-    height: 0;
-  }
-  
-  //classe con pseudo che trasla il toggle a sinistra e cambia l'immagine con url
-  .slider:before {
-    background-image: url("./Assets/asset\ 63.svg"); 
-    background-position: center;
-    position: absolute;
-    background-repeat: no-repeat;
-    content: "";
-    height: 24px;
-    width: 24px;
-    left: 4px;
-    bottom: 2px;
-    background-color: #ffffff;
-    -webkit-transition: 0.4s;
-    transition: 0.4s;
-    
-  }
-  
-  input:checked + .slider {
-    background-image:url();
-    background-repeat: no-repeat;
-    
-     background-position: center;
-    background-color: #666171;  
-  }
-  
-  input:checked + .slider:before {
-    background-color: #000000; 
-    background-image: url("./Assets/asset\ 64.svg"); 
-    background-position: center;
-    margin:auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-items: center;
-    
-  }
-  
-  
-  input:focus + .slider {
-    box-shadow: 0 0 1px #f3c93c;
-  }
-  
-  input:checked + .slider:before {
-    -webkit-transform: translateX(26px);
-    -ms-transform: translateX(26px);
-    transform: translateX(26px);
-  }
-  
-  /* Rounded sliders */
-  .slider.round {
-    border-radius: 30px;
-  }
-  
-  .slider.round:before {
-    border-radius: 50%;
-  }
+//classe che cambia effettivamente il background
 
-  
-  
-  
-  
+.dark {
+  color: white;
+  background: #444;
+}
+
+//STILE PER IL TOGGLE
+
+//transazione
+.ease {
+  transition: all 300ms ease;
+}
+
+//classe che crea lo switcher
+.switch {
+
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 28px;
+}
+
+//classe che crea lo slider 
+.slider {
+
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #bdc2c4;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+
+}
+
+.switch input {
+
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+//classe con pseudo che trasla il toggle a sinistra e cambia l'immagine con url
+.slider:before {
+
+  background-image: url("/./Assets/asset\ 63.svg");
+  background-position: center;
+  position: absolute;
+  background-repeat: no-repeat;
+  content: "";
+  height: 24px;
+  width: 24px;
+  left: 4px;
+  bottom: 2px;
+  background-color: #ffffff;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+
+}
+
+// mette il sole nero di sfondo nel toggle quando la pagina è in dark mode
+input:checked+.slider {
+
+  background-image: url("/Assets/asset\ 63\ copy.svg"); //è una copia di un asset esistente, con apposite modifiche per questa situazione
+  background-repeat: no-repeat;
+  background-position: left;
+  background-color: #666171;
+
+}
+
+
+
+// mette luna bianca di sfondo nel toggle quando la pagina è in dark mode
+input:not(:checked)+.slider {
+
+  background-image: url("/Assets/asset\ 64\ copy.svg"); //è una copia di un asset esistente, con apposite modifiche per questa situazione
+  background-repeat: no-repeat;
+  background-position: right;
+  background-color: #bdc2c4;
+}
+
+input:checked+.slider:before {
+
+  background-color: #000000;
+  background-image: url("/Assets/asset\ 64.svg");
+  background-position: center;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+
+}
+//crea il leddino viola attorno al toggle checked:focus(sulla luna)
+input:focus:checked+.slider:before { 
+    box-shadow: 0 0 2px 4px rgb(122, 110, 170);   
+}
+//crea il leddino viola attorno al toggle checked:hover(sulla luna)
+input:hover:checked+.slider:before { 
+    box-shadow: 0 0 2px 4px rgb(122, 110, 170);   
+}
+
+//crea il leddino viola attorno al toggle checked:hover(sul sole)
+input:hover:not(:checked)+.slider:before {
+    box-shadow: 0 0 2px 4px rgb(122, 110, 170);  
+} 
+
+//crea il leddino viola attorno al toggle checked:focus(sul sole)
+input:focus:not(:checked)+.slider:before {
+    box-shadow: 0 0 2px 4px rgb(122, 110, 170);  
+} 
+
+
+input:checked+.slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+
+  border-radius: 30px;
+}
+
+.slider.round:before {
+
+  border-radius: 50%;
+}

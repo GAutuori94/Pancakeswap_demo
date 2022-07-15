@@ -20,7 +20,9 @@ code {
 }
 
 .darkToggle {
-  appearance: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
   width: 30px;
   height: 30px;
   background: white;
@@ -56,7 +58,6 @@ code {
   right: 0;
   bottom: 0;
   background: #bdc2c4;
-  -webkit-transition: 0.4s;
   transition: 0.4s;
 }
 
@@ -67,7 +68,7 @@ code {
 }
 
 .slider:before {
-  background-image: url("./Assets/asset 63.svg");
+  background-image: url("/./Assets/asset 63.svg");
   background-position: center;
   position: absolute;
   background-repeat: no-repeat;
@@ -77,20 +78,26 @@ code {
   left: 4px;
   bottom: 2px;
   background-color: #ffffff;
-  -webkit-transition: 0.4s;
   transition: 0.4s;
 }
 
 input:checked + .slider {
-  background-image: url();
+  background-image: url("/Assets/asset 63 copy.svg");
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: left;
   background-color: #666171;
+}
+
+input:not(:checked) + .slider {
+  background-image: url("/Assets/asset 64 copy.svg");
+  background-repeat: no-repeat;
+  background-position: right;
+  background-color: #bdc2c4;
 }
 
 input:checked + .slider:before {
   background-color: #000000;
-  background-image: url("./Assets/asset 64.svg");
+  background-image: url("/Assets/asset 64.svg");
   background-position: center;
   margin: auto;
   display: flex;
@@ -99,13 +106,23 @@ input:checked + .slider:before {
   justify-items: center;
 }
 
-input:focus + .slider {
-  box-shadow: 0 0 1px #f3c93c;
+input:focus:checked + .slider:before {
+  box-shadow: 0 0 2px 4px rgb(122, 110, 170);
+}
+
+input:hover:checked + .slider:before {
+  box-shadow: 0 0 2px 4px rgb(122, 110, 170);
+}
+
+input:hover:not(:checked) + .slider:before {
+  box-shadow: 0 0 2px 4px rgb(122, 110, 170);
+}
+
+input:focus:not(:checked) + .slider:before {
+  box-shadow: 0 0 2px 4px rgb(122, 110, 170);
 }
 
 input:checked + .slider:before {
-  -webkit-transform: translateX(26px);
-  -ms-transform: translateX(26px);
   transform: translateX(26px);
 }
 
@@ -116,6 +133,4 @@ input:checked + .slider:before {
 
 .slider.round:before {
   border-radius: 50%;
-}
-
-/*# sourceMappingURL=my-toggle.css.map */
+}/*# sourceMappingURL=my-toggle.css.map */
