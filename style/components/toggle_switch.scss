@@ -1,0 +1,57 @@
+@use 'base' as b;
+
+/*Mixin toggle switch base*/
+
+@mixin toggleSwitchBase {
+    width: b.remConverter(56px);
+    height: b.remcConverter(32px);
+    display: flex;
+    align-items: center;
+    border-radius: b.remConverter(24px);
+    box-shadow: b.$boxShadow;
+    cursor: pointer;
+    display: inline-flex;
+    position: relative;
+    transition: background-color 200ms ease 0s;
+}
+
+/*
+-LIGHT MODE:
+state: off --> background color: b.$light_input
+state: on --> background color: b.$succes
+
+-DARK MODE:
+state: off --> background color: b.$dark_bgcolor_toggle
+state: on --> background color: b.$success
+*/
+
+/*------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+/*Mixin toggle switch slider*/
+
+/*state: OFF*/
+
+@mixin toggleSwitchSlider {
+    border-radius: 50%;
+    cursor: pointer;
+    height: b.remConverter(26px);
+    width: b.remConverter(26px);
+    position: absolute;
+    left: b.remConverter(3px);
+    top: b.remConverter(3px);
+    transition: left 200ms ease-in 0s;
+    z-index: 1;
+
+    &:hover {
+        box-shadow: b.$secondary 0px 0px 0px 1px, b.$secondary 0px 0px 0px 4px;
+    }
+
+}
+
+/*state: ON 
+    left: calc(100% - 30px)
+*/
+
+/*Background color:
+Light mode: #FFFFFF;
+Dark mode: #27262C
