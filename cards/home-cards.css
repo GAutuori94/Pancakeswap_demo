@@ -1,4 +1,14 @@
 /* CARD STYLING */
+.top-cards-background {
+  background: linear-gradient(rgb(255, 255, 255) 22%, rgb(215, 202, 236) 100%);
+  padding: 48px 0px;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  z-index: 1;
+}
+
 .top-cards-container {
   display: flex;
   flex-direction: row;
