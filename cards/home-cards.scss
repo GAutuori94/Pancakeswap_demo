@@ -9,78 +9,78 @@
   -webkit-box-align: center;
   align-items: center;
   z-index: 1;
-}
 
-.top-cards-container {
-  display: flex;
-  flex-direction: row;
+  .top-cards-container {
+    display: flex;
+    flex-direction: row;
 
-  .outer-box {
-    background: rgb(231, 227, 235);
-    border-radius: 24px;
-    color: rgb(40, 13, 95);
-    overflow: hidden;
-    position: relative;
-    margin-right: 16px;
-    margin-bottom: 0px;
-    height: fit-content;
-    padding: 1px 1px 4px;
-    box-sizing: border-box;
-
-    .inner-box {
-      width: 100%;
-      height: 100%;
-      overflow: inherit;
-      background: rgb(255, 255, 255);
+    .outer-box {
+      background: rgb(231, 227, 235);
       border-radius: 24px;
+      color: rgb(40, 13, 95);
+      overflow: hidden;
+      position: relative;
+      margin-right: 16px;
+      margin-bottom: 0px;
+      height: fit-content;
+      padding: 1px 1px 4px;
+      box-sizing: border-box;
 
-      .card-body {
-        padding: 24px;
+      .inner-box {
+        width: 100%;
+        height: 100%;
+        overflow: inherit;
+        background: rgb(255, 255, 255);
+        border-radius: 24px;
 
-        .symbol-container {
-          color: rgb(40, 13, 95);
-          position: absolute;
-          top: 24px;
-          right: 24px;
+        .card-body {
+          padding: 24px;
 
-          svg {
-            width: 36px;
-            align-self: center;
-            fill: rgb(118, 69, 217);
-            flex-shrink: 0;
-            filter: none !important;
-          }
-        }
+          .symbol-container {
+            color: rgb(40, 13, 95);
+            position: absolute;
+            top: 24px;
+            right: 24px;
 
-        .card-text {
-          min-width: 232px;
-          width: fit-content;
-          min-height: 168px;
-          margin-top: 64px;
-          display: flex;
-          flex-direction: column;
-          -webkit-box-pack: end;
-          justify-content: flex-end;
-
-          & h2:first-of-type {
-            font-weight: 600;
-            line-height: 1.1;
-            font-size: 40px;
-          }
-
-          & h2:last-of-type {
-            color: rgb(118, 69, 217);
-            margin-bottom: 24px;
-            font-weight: 600;
-            line-height: 1.1;
-            font-size: 40px;
+            svg {
+              width: 36px;
+              align-self: center;
+              fill: rgb(118, 69, 217);
+              flex-shrink: 0;
+              filter: none !important;
+            }
           }
 
-          .card-footer {
-            color: rgb(122, 110, 170);
-            font-weight: 400;
-            line-height: 1.5;
-            font-size: 16px;
+          .card-text {
+            min-width: 232px;
+            width: fit-content;
+            min-height: 168px;
+            margin-top: 64px;
+            display: flex;
+            flex-direction: column;
+            -webkit-box-pack: end;
+            justify-content: flex-end;
+
+            & h2:first-of-type {
+              font-weight: 600;
+              line-height: 1.1;
+              font-size: 40px;
+            }
+
+            & h2:last-of-type {
+              color: rgb(118, 69, 217);
+              margin-bottom: 24px;
+              font-weight: 600;
+              line-height: 1.1;
+              font-size: 40px;
+            }
+
+            .card-footer {
+              color: rgb(122, 110, 170);
+              font-weight: 400;
+              line-height: 1.5;
+              font-size: 16px;
+            }
           }
         }
       }
@@ -122,7 +122,6 @@
         transform: rotate(-2.36deg);
 
         .yellow-card-inner {
-          color: rgb(40, 13, 95);
           overflow: initial;
           background: linear-gradient(
             rgb(255, 178, 55) 0%,
@@ -132,46 +131,107 @@
           border-radius: 24px;
 
           .yellow-card-body {
-            color: rgb(40, 13, 95);
             padding: 24px;
+
+            .svg-container {
+              position: absolute;
+              top: 24px;
+              right: 24px;
+              transform: rotate(-2.36deg);
+
+              svg {
+                width: 36px;
+                align-self: center;
+                flex-shrink: 0;
+                filter: none !important;
+              }
+            }
+
+            .card-text {
+              margin-top: 48px;
+              display: flex;
+              flex-direction: column;
+
+              p:first-of-type {
+                font-weight: 600;
+                line-height: 1.5;
+                font-size: 16px;
+              }
+
+              h2 {
+                margin-top: 8px;
+                margin-bottom: 8px;
+                font-weight: 600;
+                line-height: 1.1;
+                font-size: 40px;
+              }
+
+              h2 + p {
+                font-weight: 600;
+                line-height: 1.5;
+                margin-bottom: 24px;
+                font-size: 16px;
+              }
+
+              p:last-of-type {
+                font-weight: 400;
+                line-height: 1.5;
+                margin-bottom: 40px;
+                font-size: 16px;
+              }
+            }
+
+            .card-footer {
+              display: flex;
+              -webkit-box-align: center;
+              align-items: center;
+              -webkit-box-pack: center;
+              justify-content: center;
+
+              a {
+                color: inherit;
+                text-decoration: none;
+                width: 100%;
+              }
+            }
           }
         }
       }
     }
+  }
 
-    .purple-card {
-      max-width: 100%;
-      display: flex;
-      flex: 1 1 0%;
+  .purple-card {
+    max-width: 100%;
+    display: flex;
+    flex: 1 1 0%;
 
-      .purple-card-outer {
-        background: rgb(60, 23, 134);
-        border-radius: 24px;
+    .purple-card-outer {
+      background: rgb(60, 23, 134);
+      border-radius: 24px;
+      color: rgb(40, 13, 95);
+      overflow: hidden;
+      position: relative;
+      height: fit-content;
+      padding: 1px 1px 4px;
+      transform: rotate(1.43deg);
+
+      .purple-card-inner {
         color: rgb(40, 13, 95);
-        overflow: hidden;
-        position: relative;
-        height: fit-content;
-        padding: 1px 1px 4px;
-        transform: rotate(1.43deg);
+        width: 100%;
+        height: 100%;
+        overflow: initial;
+        background: linear-gradient(
+          rgb(118, 69, 217) 0%,
+          rgb(81, 33, 177) 100%
+        );
+        border-radius: 24px;
 
-        .purple-card-inner {
-          color: rgb(40, 13, 95);
-          width: 100%;
-          height: 100%;
-          overflow: initial;
-          background: linear-gradient(
-            rgb(118, 69, 217) 0%,
-            rgb(81, 33, 177) 100%
-          );
-          border-radius: 24px;
-
-          .purple-card-body {
-            font-weight: 400;
-            font-size: 16px;
-            line-height: 1.5;
-            color: white;
-            padding: 24px;
-          }
+        .purple-card-body {
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 1.5;
+          color: white;
+          padding: 24px;
         }
       }
     }

@@ -8,12 +8,11 @@
   align-items: center;
   z-index: 1;
 }
-
-.top-cards-container {
+.top-cards-background .top-cards-container {
   display: flex;
   flex-direction: row;
 }
-.top-cards-container .outer-box {
+.top-cards-background .top-cards-container .outer-box {
   background: rgb(231, 227, 235);
   border-radius: 24px;
   color: rgb(40, 13, 95);
@@ -27,30 +26,30 @@
   padding: 1px 1px 4px;
   box-sizing: border-box;
 }
-.top-cards-container .outer-box .inner-box {
+.top-cards-background .top-cards-container .outer-box .inner-box {
   width: 100%;
   height: 100%;
   overflow: inherit;
   background: rgb(255, 255, 255);
   border-radius: 24px;
 }
-.top-cards-container .outer-box .inner-box .card-body {
+.top-cards-background .top-cards-container .outer-box .inner-box .card-body {
   padding: 24px;
 }
-.top-cards-container .outer-box .inner-box .card-body .symbol-container {
+.top-cards-background .top-cards-container .outer-box .inner-box .card-body .symbol-container {
   color: rgb(40, 13, 95);
   position: absolute;
   top: 24px;
   right: 24px;
 }
-.top-cards-container .outer-box .inner-box .card-body .symbol-container svg {
+.top-cards-background .top-cards-container .outer-box .inner-box .card-body .symbol-container svg {
   width: 36px;
   align-self: center;
   fill: rgb(118, 69, 217);
   flex-shrink: 0;
   filter: none !important;
 }
-.top-cards-container .outer-box .inner-box .card-body .card-text {
+.top-cards-background .top-cards-container .outer-box .inner-box .card-body .card-text {
   min-width: 232px;
   width: -webkit-fit-content;
   width: -moz-fit-content;
@@ -61,19 +60,19 @@
   flex-direction: column;
   justify-content: flex-end;
 }
-.top-cards-container .outer-box .inner-box .card-body .card-text h2:first-of-type {
+.top-cards-background .top-cards-container .outer-box .inner-box .card-body .card-text h2:first-of-type {
   font-weight: 600;
   line-height: 1.1;
   font-size: 40px;
 }
-.top-cards-container .outer-box .inner-box .card-body .card-text h2:last-of-type {
+.top-cards-background .top-cards-container .outer-box .inner-box .card-body .card-text h2:last-of-type {
   color: rgb(118, 69, 217);
   margin-bottom: 24px;
   font-weight: 600;
   line-height: 1.1;
   font-size: 40px;
 }
-.top-cards-container .outer-box .inner-box .card-body .card-text .card-footer {
+.top-cards-background .top-cards-container .outer-box .inner-box .card-body .card-text .card-footer {
   color: rgb(122, 110, 170);
   font-weight: 400;
   line-height: 1.5;
@@ -116,21 +115,70 @@
   transform: rotate(-2.36deg);
 }
 .bottom-cards-section-background .bottom-cards-container .yellow-card .yellow-card-outer .yellow-card-inner {
-  color: rgb(40, 13, 95);
   overflow: initial;
   background: linear-gradient(rgb(255, 178, 55) 0%, rgb(255, 205, 81) 51.17%, rgb(255, 231, 106) 100%);
   border-radius: 24px;
 }
 .bottom-cards-section-background .bottom-cards-container .yellow-card .yellow-card-outer .yellow-card-inner .yellow-card-body {
-  color: rgb(40, 13, 95);
   padding: 24px;
 }
-.bottom-cards-section-background .bottom-cards-container .purple-card {
+.bottom-cards-section-background .bottom-cards-container .yellow-card .yellow-card-outer .yellow-card-inner .yellow-card-body .svg-container {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  transform: rotate(-2.36deg);
+}
+.bottom-cards-section-background .bottom-cards-container .yellow-card .yellow-card-outer .yellow-card-inner .yellow-card-body .svg-container svg {
+  width: 36px;
+  align-self: center;
+  flex-shrink: 0;
+  filter: none !important;
+}
+.bottom-cards-section-background .bottom-cards-container .yellow-card .yellow-card-outer .yellow-card-inner .yellow-card-body .card-text {
+  margin-top: 48px;
+  display: flex;
+  flex-direction: column;
+}
+.bottom-cards-section-background .bottom-cards-container .yellow-card .yellow-card-outer .yellow-card-inner .yellow-card-body .card-text p:first-of-type {
+  font-weight: 600;
+  line-height: 1.5;
+  font-size: 16px;
+}
+.bottom-cards-section-background .bottom-cards-container .yellow-card .yellow-card-outer .yellow-card-inner .yellow-card-body .card-text h2 {
+  margin-top: 8px;
+  margin-bottom: 8px;
+  font-weight: 600;
+  line-height: 1.1;
+  font-size: 40px;
+}
+.bottom-cards-section-background .bottom-cards-container .yellow-card .yellow-card-outer .yellow-card-inner .yellow-card-body .card-text h2 + p {
+  font-weight: 600;
+  line-height: 1.5;
+  margin-bottom: 24px;
+  font-size: 16px;
+}
+.bottom-cards-section-background .bottom-cards-container .yellow-card .yellow-card-outer .yellow-card-inner .yellow-card-body .card-text p:last-of-type {
+  font-weight: 400;
+  line-height: 1.5;
+  margin-bottom: 40px;
+  font-size: 16px;
+}
+.bottom-cards-section-background .bottom-cards-container .yellow-card .yellow-card-outer .yellow-card-inner .yellow-card-body .card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.bottom-cards-section-background .bottom-cards-container .yellow-card .yellow-card-outer .yellow-card-inner .yellow-card-body .card-footer a {
+  color: inherit;
+  text-decoration: none;
+  width: 100%;
+}
+.bottom-cards-section-background .purple-card {
   max-width: 100%;
   display: flex;
   flex: 1 1 0%;
 }
-.bottom-cards-section-background .bottom-cards-container .purple-card .purple-card-outer {
+.bottom-cards-section-background .purple-card .purple-card-outer {
   background: rgb(60, 23, 134);
   border-radius: 24px;
   color: rgb(40, 13, 95);
@@ -142,7 +190,7 @@
   padding: 1px 1px 4px;
   transform: rotate(1.43deg);
 }
-.bottom-cards-section-background .bottom-cards-container .purple-card .purple-card-outer .purple-card-inner {
+.bottom-cards-section-background .purple-card .purple-card-outer .purple-card-inner {
   color: rgb(40, 13, 95);
   width: 100%;
   height: 100%;
@@ -150,7 +198,7 @@
   background: linear-gradient(rgb(118, 69, 217) 0%, rgb(81, 33, 177) 100%);
   border-radius: 24px;
 }
-.bottom-cards-section-background .bottom-cards-container .purple-card .purple-card-outer .purple-card-inner .purple-card-body {
+.bottom-cards-section-background .purple-card .purple-card-outer .purple-card-inner .purple-card-body {
   font-weight: 400;
   font-size: 16px;
   line-height: 1.5;
