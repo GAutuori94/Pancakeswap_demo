@@ -1,12 +1,13 @@
 
-@mixin opacityAnimation {
-    animation: opacityAnimation 5s ease-in-out 0.66s infinite normal none running;
-    @keyframes opacityAnimation {
+@mixin ghosting {
+    animation: ghosting 5s ease-in-out 1s infinite normal none running;
+    @keyframes ghosting {
         0% {opacity: 0.9};
         50% {opacity: 0.1};
         100% {opacity: 0.9};
     }
 }
+
 
 
 @mixin floatting {
