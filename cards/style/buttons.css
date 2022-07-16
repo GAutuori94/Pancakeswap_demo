@@ -1,6 +1,5 @@
 button {
   position: relative;
-  -webkit-box-align: center;
   align-items: center;
   border-radius: 16px;
   box-shadow: rgba(14, 14, 44, 0.4) 0px -1px 0px 0px inset;
@@ -9,7 +8,6 @@ button {
   font-family: inherit;
   font-size: 16px;
   font-weight: 600;
-  -webkit-box-pack: center;
   justify-content: center;
   letter-spacing: 0.03em;
   line-height: 1;
@@ -22,3 +20,23 @@ button {
   color: white;
   width: 100%;
 }
+button svg {
+  --swiper-theme-color: #007aff;
+  color-scheme: light;
+  --vh: 14.49px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  line-height: 1;
+  color: white;
+  width: 20px;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  font-family: Kanit, sans-serif;
+  align-self: center;
+  fill: rgb(255, 255, 255);
+  flex-shrink: 0;
+  margin-left: 4px;
+  filter: none !important;
+}/*# sourceMappingURL=buttons.css.map */

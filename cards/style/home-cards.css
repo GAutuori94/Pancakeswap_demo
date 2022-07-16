@@ -205,6 +205,67 @@
   color: white;
   padding: 24px;
 }
+.bottom-cards-section-background .purple-card .purple-card-outer .purple-card-inner .purple-card-body .svg-container {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  transform: rotate(1.43deg);
+}
+.bottom-cards-section-background .purple-card .purple-card-outer .purple-card-inner .purple-card-body .svg-container svg {
+  color: white;
+  width: 36px;
+  align-self: center;
+  fill: white;
+  flex-shrink: 0;
+  filter: none !important;
+}
+.bottom-cards-section-background .purple-card .purple-card-outer .purple-card-inner .purple-card-body .card-text {
+  margin-top: 48px;
+  display: flex;
+  flex-direction: column;
+}
+.bottom-cards-section-background .purple-card .purple-card-outer .purple-card-inner .purple-card-body .card-text p:first-of-type {
+  font-weight: 600;
+  line-height: 1.5;
+  font-size: 16px;
+}
+.bottom-cards-section-background .purple-card .purple-card-outer .purple-card-inner .purple-card-body .card-text div {
+  font-weight: 600;
+  line-height: 1.5;
+  font-size: 40px;
+  -webkit-text-fill-color: transparent;
+  background: linear-gradient(rgb(255, 216, 0) 0%, rgb(253, 171, 50) 100%);
+  -webkit-background-clip: text;
+          background-clip: text;
+}
+.bottom-cards-section-background .purple-card .purple-card-outer .purple-card-inner .purple-card-body .card-text div span {
+  font-weight: 600;
+  line-height: 1.5;
+  -webkit-text-fill-color: transparent;
+  font-size: 100%;
+}
+.bottom-cards-section-background .purple-card .purple-card-outer .purple-card-inner .purple-card-body .card-text div + p {
+  font-weight: 600;
+  line-height: 1.5;
+  margin-bottom: 24px;
+  font-size: 16px;
+}
+.bottom-cards-section-background .purple-card .purple-card-outer .purple-card-inner .purple-card-body .card-text p:last-of-type {
+  font-weight: 400;
+  line-height: 1.5;
+  margin-bottom: 40px;
+  font-size: 16px;
+}
+.bottom-cards-section-background .purple-card .purple-card-outer .purple-card-inner .purple-card-body .card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.bottom-cards-section-background .purple-card .purple-card-outer .purple-card-inner .purple-card-body .card-footer a {
+  color: inherit;
+  text-decoration: none;
+  width: 100%;
+}
 
 .default-card {
   background-color: rgb(255, 255, 255);
