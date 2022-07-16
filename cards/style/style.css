@@ -1,7 +1,7 @@
-@import "/reset.css";
-@import "/home-cards.css";
-@import "/cards.css";
-@import "/buttons.css";
+@import "./reset.css";
+@import "./home-cards.css";
+@import "./cards.css";
+@import "./buttons.css";
 
 /*Stile layout design system*/
 body {
