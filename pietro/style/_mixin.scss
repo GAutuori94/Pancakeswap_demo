@@ -14,7 +14,7 @@
     animation: floatting 3s ease-in-out 1s infinite normal none running;
     @keyframes floatting {
         0% {transform: translate(0px)};
-        50% {transform: translate(10px, 5px)};
+        50% {transform: translate(15px, 10px)};
         100% {transform: translate(0px)};
     }
 }

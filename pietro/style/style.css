@@ -16,7 +16,7 @@
     transform: translate(0px);
   }
   50% {
-    transform: translate(10px, 5px);
+    transform: translate(15px, 10px);
   }
   100% {
     transform: translate(0px);
@@ -27,7 +27,7 @@
     transform: translate(0px);
   }
   50% {
-    transform: translate(10px, 5px);
+    transform: translate(15px, 10px);
   }
   100% {
     transform: translate(0px);
