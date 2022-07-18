@@ -1,4 +1,6 @@
 @use '../../base.scss' as b;
+@import '../../components/toggle_LD_mode.scss';
+@import '../../components/toggle_switch.scss'; 
 @import '../../components.scss';
 
 
@@ -7,7 +9,7 @@
 }
 
 nav {
-    font-family: b.$fontFamily;
+    width: 100vw;
     font-weight: 400;
     padding: 3px;
     position: relative;
@@ -17,8 +19,9 @@ nav {
     justify-content: space-between;
     align-items: center;
     height: b.remConverter(48px);
-    background-color: rgb(255, 255, 255);
-    border-bottom: 1px solid rgba(128, 128, 128, 0.349);
+    background-color: b.$light_background;
+
+    overflow: hidden;
 
     .leftContainer {
         display: flex;
@@ -26,10 +29,10 @@ nav {
         div {
             width: 100%;
             padding: b.remConverter(10px);
-            border-radius: 15px;
+            border-radius: b.remConverter(15px);
 
             .grey-hover:hover {
-                background-color: #EFF4F5;
+                background-color: b.$light_tertiary;
                 transition: 120ms;
             }
         }
@@ -51,19 +54,20 @@ nav {
         display: flex;
         -webkit-box-align: center;
         align-items: center;
-        color: rgb(122, 110, 170);
-        font-size: 16px;
+        color: b.$secondary;
+        font-size: b.remConverter(16px);
         font-weight: 400;
-        padding: 0px 16px;
-        height: 48px;
+        padding-left: b.remConverter(16px);
+        padding-right: b.remConverter(16px);
+
+        height: b.remConverter(48px);
 
         li {
 
             a {
-
-                text-shadow: b.$secondary 0.5px;
+                text-shadow: b.$secondary, b.remConverter(0.5px);
                 text-decoration: none;
-                margin: 10px;
+                margin: b.remConverter(10px);
                 color: b.$secondary;
             }
         }
@@ -73,35 +77,97 @@ nav {
         display: flex;
         justify-content: space-between;
 
-        div {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
+        //     .netButton {
+
+        //         fill: red;
+        //         transition-property: fill;
+        //         transition-duration: 2s;
+
+        //         .logoNet:hover {
+        //             fill: #EFF4F5;
+        //         }
+        //     }
+        // 
+    }
+
+    div {
+        font-family: b.$fontFamily;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: b.remConverter(5px);
+        cursor: pointer;
+
+        .currentValue {
+            color: b.$secondary;
+            font-weight: 500;
         }
     }
 
     button {
-        div {
-            margin: 0;
-        }
-
         @include button;
+        box-shadow: b.$light_text;
+        height: b.remConverter(32px);
+        padding-left: b.remConverter(16px);
+        padding-right: b.remConverter(16px);
         color: white;
     }
+
+
 }
 
 footer {
-    width: 100%;
+    width: 100vw;
     background-color: b.$dark_card;
     display: flex;
+    flex-flow: column;
+    padding: b.remConverter(25px);
 
-    .partnerSvgIcons {
+
+    .services {
         display: flex;
+        justify-content: space-between;
+        padding: b.remConverter(30px);
 
-        div {
-            width: 40px;
+
+
+
+        ul {
+            li:first-child {
+                color: b.$dark_secondary;
+                font-weight: 600;
+            }
+
+            .gold {
+                a {
+                    color: b.$binance;
+                }
+            }
+
+            li {
+                list-style-type: none;
+                margin: b.remConverter(3px);
+
+                a {
+
+                    text-decoration: none;
+                    color: b.$light_background;
+                }
+
+                a:hover {
+                    text-decoration: underline;
+                }
+            }
         }
-
     }
 
+    .partnerSvgIcons {
+        padding-left: 33px;
+        display: flex;
+        align-items: flex-start;
+
+        div {
+            width: 30px;
+        }
+    }
 }

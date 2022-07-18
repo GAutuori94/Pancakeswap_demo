@@ -7,6 +7,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Kanit:wght@100;200;300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Kanit:wght@100;200;300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Kanit:wght@100;200;300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@100;200;300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@100;200;300&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -24,6 +26,193 @@
 /*FONT*/
 /*------------------------------------------------------------------------------------------------------------------------------------------------*/
 /*SHADOWS*/
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+/*Px to rem conversion function*/
+/* COLORS VARIABLES*/
+/*-------baseColors-----------*/
+/*-------brandColors-----------*/
+/*-------lightColors-----------*/
+/*-------darkColors-----------*/
+/*------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*FONT*/
+/*------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*SHADOWS*/
+.darkToggle {
+  appearance: none;
+  width: 30px;
+  height: 30px;
+  background: white;
+  border-radius: 5px;
+  border: 2px solid #555;
+}
+
+.darkToggle:checked {
+  background: #333;
+}
+
+.dark {
+  color: white;
+  background: #444;
+}
+
+.ease {
+  transition: all 300ms ease;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 28px;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #bdc2c4;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider:before {
+  background-image: url("/./Assets/asset 63.svg");
+  background-position: center;
+  position: absolute;
+  background-repeat: no-repeat;
+  content: "";
+  height: 24px;
+  width: 24px;
+  left: 4px;
+  bottom: 2px;
+  background-color: #ffffff;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-image: url("/Assets/asset 63 copy.svg");
+  background-repeat: no-repeat;
+  background-position: left;
+  background-color: #666171;
+}
+
+input:not(:checked) + .slider {
+  background-image: url("/Assets/asset 64 copy.svg");
+  background-repeat: no-repeat;
+  background-position: right;
+  background-color: #bdc2c4;
+}
+
+input:checked + .slider:before {
+  background-color: #000000;
+  background-image: url("/Assets/asset 64.svg");
+  background-position: center;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+}
+
+input:focus:checked + .slider:before {
+  box-shadow: 0 0 2px 4px rgb(122, 110, 170);
+}
+
+input:hover:checked + .slider:before {
+  box-shadow: 0 0 2px 4px rgb(122, 110, 170);
+}
+
+input:hover:not(:checked) + .slider:before {
+  box-shadow: 0 0 2px 4px rgb(122, 110, 170);
+}
+
+input:focus:not(:checked) + .slider:before {
+  box-shadow: 0 0 2px 4px rgb(122, 110, 170);
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 30px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+/* MODELLO HTML X IL TOGGLE LIGHT/DARK MODE
+
+  <!--Qui ho importato delle classi da quello di Andrea label agganciato al darkToggle con una classe switch
+          poi dentro un input type checkbox con id darkToggle e classe omonima lo span dentro al label slider 
+          e round che rende lo span il toggle effettivo-->
+
+          <label for="darkToggle" class="switch">
+              <input type="checkbox" id="darkToggle" class="darkToggle">
+              <span class="slider round"></span>
+          </label>
+
+        </main>
+
+*/
+/*Reset*/
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+/*Px to rem conversion function*/
+/* COLORS VARIABLES*/
+/*-------baseColors-----------*/
+/*-------brandColors-----------*/
+/*-------lightColors-----------*/
+/*-------darkColors-----------*/
+/*------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*FONT*/
+/*------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*SHADOWS*/
+/*Mixin toggle switch base*/
+/*
+-LIGHT MODE:
+state: off --> background color: b.$light_input
+state: on --> background color: b.$succes
+
+-DARK MODE:
+state: off --> background color: b.$dark_bgcolor_toggle
+state: on --> background color: b.$success
+*/
+/*------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*Mixin toggle switch slider*/
+/*state: OFF*/
+/*state: ON 
+    left: calc(100% - 30px)
+*/
+/*Background color:
+Light mode: #FFFFFF;
+Dark mode: #27262C*/
+/*Reset*/
 * {
   margin: 0;
   padding: 0;
@@ -509,7 +698,7 @@ input:checked + .slider:before {
 }
 
 nav {
-  font-family: "Kanit", "sans";
+  width: 100vw;
   font-weight: 400;
   padding: 3px;
   position: relative;
@@ -519,8 +708,8 @@ nav {
   justify-content: space-between;
   align-items: center;
   height: 3rem;
-  background-color: rgb(255, 255, 255);
-  border-bottom: 1px solid rgba(128, 128, 128, 0.349);
+  background-color: #FAF9FA;
+  overflow: hidden;
 }
 nav .leftContainer {
   display: flex;
@@ -528,7 +717,7 @@ nav .leftContainer {
 nav .leftContainer div {
   width: 100%;
   padding: 0.625rem;
-  border-radius: 15px;
+  border-radius: 0.9375rem;
 }
 nav .leftContainer div .grey-hover:hover {
   background-color: #EFF4F5;
@@ -548,26 +737,34 @@ nav ul {
   display: flex;
   -webkit-box-align: center;
   align-items: center;
-  color: rgb(122, 110, 170);
-  font-size: 16px;
+  color: #7645D9;
+  font-size: 1rem;
   font-weight: 400;
-  padding: 0px 16px;
-  height: 48px;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  height: 3rem;
 }
 nav ul li a {
-  text-shadow: #7645D9 0.5px;
+  text-shadow: #7645D9, 0.03125rem;
   text-decoration: none;
-  margin: 10px;
+  margin: 0.625rem;
   color: #7645D9;
 }
 nav .rightContainer {
   display: flex;
   justify-content: space-between;
 }
-nav .rightContainer div {
+nav div {
+  font-family: "Kanit", "sans";
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin: 0.3125rem;
+  cursor: pointer;
+}
+nav div .currentValue {
+  color: #7645D9;
+  font-weight: 500;
 }
 nav button {
   align-items: center;
@@ -590,22 +787,50 @@ nav button {
   background-color: #1FC7D4;
   color: #ffffff;
   margin-right: 0.5rem;
+  box-shadow: #452A7A;
+  height: 2rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
   color: white;
-}
-nav button div {
-  margin: 0;
 }
 
 footer {
-  width: 100%;
+  width: 100vw;
   background-color: #27262C;
   display: flex;
+  flex-flow: column;
+  padding: 1.5625rem;
+}
+footer .services {
+  display: flex;
+  justify-content: space-between;
+  padding: 1.875rem;
+}
+footer .services ul li:first-child {
+  color: #9A6AFF;
+  font-weight: 600;
+}
+footer .services ul .gold a {
+  color: #F0B90B;
+}
+footer .services ul li {
+  list-style-type: none;
+  margin: 0.1875rem;
+}
+footer .services ul li a {
+  text-decoration: none;
+  color: #FAF9FA;
+}
+footer .services ul li a:hover {
+  text-decoration: underline;
 }
 footer .partnerSvgIcons {
+  padding-left: 33px;
   display: flex;
+  align-items: flex-start;
 }
 footer .partnerSvgIcons div {
-  width: 40px;
+  width: 30px;
 }
 
 /*# sourceMappingURL=style.css.map */
