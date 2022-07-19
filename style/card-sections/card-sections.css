@@ -510,4 +510,26 @@ input:checked + .slider:before {
   font-family: "Kanit", "sans";
 }
 
+.top-cards-background img {
+  margin-bottom: 1.5rem;
+}
+.top-cards-background .card-section-text * {
+  text-align: center;
+}
+.top-cards-background .card-section-text h2 {
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 44px;
+}
+.top-cards-background .card-section-text h2:last-of-type {
+  margin-bottom: 2rem;
+}
+.top-cards-background .card-section-text p:nth-of-type(2) {
+  margin-bottom: 1.25rem;
+}
+.top-cards-background .card-section-text p:last-of-type {
+  font-weight: 600;
+  margin-bottom: 2rem;
+}
+
 /*# sourceMappingURL=card-sections.css.map */
