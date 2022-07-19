@@ -1,0 +1,664 @@
+/*Reset*/
+@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@100;200;300&display=swap");
+/*Reset*/
+@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@100;200;300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@100;200;300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@100;200;300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@100;200;300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@100;200;300&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+/*Px to rem conversion function*/
+/* COLORS VARIABLES*/
+/*-------baseColors-----------*/
+/*-------brandColors-----------*/
+/*-------lightColors-----------*/
+/*-------darkColors-----------*/
+/*------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*FONT*/
+/*------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*SHADOWS*/
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+/*Px to rem conversion function*/
+/* COLORS VARIABLES*/
+/*-------baseColors-----------*/
+/*-------brandColors-----------*/
+/*-------lightColors-----------*/
+/*-------darkColors-----------*/
+/*------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*FONT*/
+/*------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*SHADOWS*/
+/*Reset*/
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+/*Px to rem conversion function*/
+/* COLORS VARIABLES*/
+/*-------baseColors-----------*/
+/*-------brandColors-----------*/
+/*-------lightColors-----------*/
+/*-------darkColors-----------*/
+/*------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*FONT*/
+/*------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*SHADOWS*/
+/*Mixin button*/
+/*Reset*/
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+/*Px to rem conversion function*/
+/* COLORS VARIABLES*/
+/*-------baseColors-----------*/
+/*-------brandColors-----------*/
+/*-------lightColors-----------*/
+/*-------darkColors-----------*/
+/*------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*FONT*/
+/*------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*SHADOWS*/
+/*Mixin toggle switch base*/
+/*
+-LIGHT MODE:
+state: off --> background color: b.$light_input
+state: on --> background color: b.$succes
+
+-DARK MODE:
+state: off --> background color: b.$dark_bgcolor_toggle
+state: on --> background color: b.$success
+*/
+/*------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*Mixin toggle switch slider*/
+/*state: OFF*/
+/*state: ON 
+    left: calc(100% - 30px)
+*/
+/*Background color:
+Light mode: #FFFFFF;
+Dark mode: #27262C*/
+/*Reset*/
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+/*Px to rem conversion function*/
+/* COLORS VARIABLES*/
+/*-------baseColors-----------*/
+/*-------brandColors-----------*/
+/*-------lightColors-----------*/
+/*-------darkColors-----------*/
+/*------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*FONT*/
+/*------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*SHADOWS*/
+.darkToggle {
+  appearance: none;
+  width: 30px;
+  height: 30px;
+  background: white;
+  border-radius: 5px;
+  border: 2px solid #555;
+}
+
+.darkToggle:checked {
+  background: #333;
+}
+
+.dark {
+  color: white;
+  background: #444;
+}
+
+.ease {
+  transition: all 300ms ease;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 28px;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #bdc2c4;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider:before {
+  background-image: url("/./Assets/asset 63.svg");
+  background-position: center;
+  position: absolute;
+  background-repeat: no-repeat;
+  content: "";
+  height: 24px;
+  width: 24px;
+  left: 4px;
+  bottom: 2px;
+  background-color: #ffffff;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-image: url("/Assets/asset 63 copy.svg");
+  background-repeat: no-repeat;
+  background-position: left;
+  background-color: #666171;
+}
+
+input:not(:checked) + .slider {
+  background-image: url("/Assets/asset 64 copy.svg");
+  background-repeat: no-repeat;
+  background-position: right;
+  background-color: #bdc2c4;
+}
+
+input:checked + .slider:before {
+  background-color: #000000;
+  background-image: url("/Assets/asset 64.svg");
+  background-position: center;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+}
+
+input:focus:checked + .slider:before {
+  box-shadow: 0 0 2px 4px rgb(122, 110, 170);
+}
+
+input:hover:checked + .slider:before {
+  box-shadow: 0 0 2px 4px rgb(122, 110, 170);
+}
+
+input:hover:not(:checked) + .slider:before {
+  box-shadow: 0 0 2px 4px rgb(122, 110, 170);
+}
+
+input:focus:not(:checked) + .slider:before {
+  box-shadow: 0 0 2px 4px rgb(122, 110, 170);
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 30px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+/* MODELLO HTML X IL TOGGLE LIGHT/DARK MODE
+
+  <!--Qui ho importato delle classi da quello di Andrea label agganciato al darkToggle con una classe switch
+          poi dentro un input type checkbox con id darkToggle e classe omonima lo span dentro al label slider 
+          e round che rende lo span il toggle effettivo-->
+
+          <label for="darkToggle" class="switch">
+              <input type="checkbox" id="darkToggle" class="darkToggle">
+              <span class="slider round"></span>
+          </label>
+
+        </main>
+
+*/
+/*Reset*/
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+/*Px to rem conversion function*/
+/* COLORS VARIABLES*/
+/*-------baseColors-----------*/
+/*-------brandColors-----------*/
+/*-------lightColors-----------*/
+/*-------darkColors-----------*/
+/*------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*FONT*/
+/*------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*SHADOWS*/
+/* CARD STYLING */
+.top-cards-background {
+  background: linear-gradient(rgb(255, 255, 255) 22%, rgb(215, 202, 236) 100%);
+  padding: 48px 0px;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  -webkit-box-align: center;
+  align-items: center;
+  z-index: 1;
+}
+
+.top-cards-container {
+  display: flex;
+  flex-direction: row;
+}
+.top-cards-container .outer-box {
+  background: rgb(231, 227, 235);
+  border-radius: 24px;
+  color: rgb(40, 13, 95);
+  overflow: hidden;
+  position: relative;
+  margin-right: 16px;
+  margin-bottom: 0px;
+  height: fit-content;
+  padding: 1px 1px 4px;
+  box-sizing: border-box;
+}
+.top-cards-container .outer-box .inner-box {
+  width: 100%;
+  height: 100%;
+  overflow: inherit;
+  background: rgb(255, 255, 255);
+  border-radius: 24px;
+}
+.top-cards-container .outer-box .inner-box .card-body {
+  padding: 24px;
+}
+.top-cards-container .outer-box .inner-box .card-body .symbol-container {
+  color: rgb(40, 13, 95);
+  position: absolute;
+  top: 24px;
+  right: 24px;
+}
+.top-cards-container .outer-box .inner-box .card-body .symbol-container svg {
+  width: 36px;
+  align-self: center;
+  fill: rgb(118, 69, 217);
+  flex-shrink: 0;
+  filter: none !important;
+}
+.top-cards-container .outer-box .inner-box .card-body .card-text {
+  min-width: 232px;
+  width: fit-content;
+  min-height: 168px;
+  margin-top: 64px;
+  display: flex;
+  flex-direction: column;
+  -webkit-box-pack: end;
+  justify-content: flex-end;
+}
+.top-cards-container .outer-box .inner-box .card-body .card-text h2:first-of-type {
+  font-weight: 600;
+  line-height: 1.1;
+  font-size: 40px;
+}
+.top-cards-container .outer-box .inner-box .card-body .card-text h2:last-of-type {
+  color: rgb(118, 69, 217);
+  margin-bottom: 24px;
+  font-weight: 600;
+  line-height: 1.1;
+  font-size: 40px;
+}
+.top-cards-container .outer-box .inner-box .card-body .card-text .card-footer {
+  color: rgb(122, 110, 170);
+  font-weight: 400;
+  line-height: 1.5;
+  font-size: 16px;
+}
+
+.bottom-cards-section-background {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  -webkit-box-align: center;
+  z-index: 1;
+  background: linear-gradient(rgb(111, 182, 241) 0%, rgb(234, 242, 246) 100%);
+  padding: 48px 0px;
+}
+.bottom-cards-section-background .bottom-cards-container {
+  max-width: 600px;
+  margin: 0px auto;
+  display: flex;
+  flex-direction: row;
+}
+.bottom-cards-section-background .bottom-cards-container .yellow-card {
+  max-width: 100%;
+  margin-right: 24px;
+  margin-bottom: 0px;
+  display: flex;
+  flex: 1 1 0%;
+}
+.bottom-cards-section-background .bottom-cards-container .yellow-card .yellow-card-outer {
+  background: rgb(255, 178, 55);
+  border-radius: 24px;
+  color: rgb(40, 13, 95);
+  overflow: hidden;
+  position: relative;
+  height: fit-content;
+  padding: 1px 1px 4px;
+  transform: rotate(-2.36deg);
+}
+.bottom-cards-section-background .bottom-cards-container .yellow-card .yellow-card-outer .yellow-card-inner {
+  color: rgb(40, 13, 95);
+  overflow: initial;
+  background: linear-gradient(rgb(255, 178, 55) 0%, rgb(255, 205, 81) 51.17%, rgb(255, 231, 106) 100%);
+  border-radius: 24px;
+}
+.bottom-cards-section-background .bottom-cards-container .yellow-card .yellow-card-outer .yellow-card-inner .yellow-card-body {
+  color: rgb(40, 13, 95);
+  padding: 24px;
+}
+.bottom-cards-section-background .bottom-cards-container .purple-card {
+  max-width: 100%;
+  display: flex;
+  flex: 1 1 0%;
+}
+.bottom-cards-section-background .bottom-cards-container .purple-card .purple-card-outer {
+  background: rgb(60, 23, 134);
+  border-radius: 24px;
+  color: rgb(40, 13, 95);
+  overflow: hidden;
+  position: relative;
+  height: fit-content;
+  padding: 1px 1px 4px;
+  transform: rotate(1.43deg);
+}
+.bottom-cards-section-background .bottom-cards-container .purple-card .purple-card-outer .purple-card-inner {
+  color: rgb(40, 13, 95);
+  width: 100%;
+  height: 100%;
+  overflow: initial;
+  background: linear-gradient(rgb(118, 69, 217) 0%, rgb(81, 33, 177) 100%);
+  border-radius: 24px;
+}
+.bottom-cards-section-background .bottom-cards-container .purple-card .purple-card-outer .purple-card-inner .purple-card-body {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  color: white;
+  padding: 24px;
+}
+
+.default-card {
+  background-color: rgb(255, 255, 255);
+  border-radius: 32px;
+  box-shadow: rgba(25, 19, 38, 0.1) 0px 2px 12px -8px, rgba(25, 19, 38, 0.05) 0px 1px 1px;
+  color: rgb(69, 42, 122);
+  overflow: hidden;
+  position: relative;
+}
+.default-card .card-body {
+  padding: 24px;
+}
+.default-card .card-footer {
+  padding: 24px;
+  border-top: 1px solid rgb(233, 234, 235);
+}
+
+/*Mixin animations*/
+/*
+@use "mixin" as m;
+
+
+*{
+    box-sizing: border-box;
+}
+
+.container{
+    width: 100%;
+    position: relative;
+
+    .floatEl {
+    @include m.floatting;
+    position: absolute;
+    &:nth-child(1){
+        animation-duration: 2.9s;
+    }
+    &:nth-child(2){
+        animation-duration: 2.1s;
+    }
+    &:nth-child(3){
+        animation-duration: 2.5s;
+    }
+    &:nth-child(4){
+        animation-duration: 2.5s;
+    }
+    &:nth-child(5){
+        animation-duration: 2.5s;
+    }
+    }
+
+
+    .ghost {
+        @include m.ghosting;
+        width: 1024px;
+        position: absolute;
+        &:nth-child(1){
+            animation-duration: 6s;
+        }
+        &:nth-child(2){
+            animation-duration: 4.8s;
+        }
+        &:nth-child(3){
+            animation-duration: 3.6s;
+        }
+    }
+}
+
+*/
+#CTA-buy_section {
+  font-family: "Kanit", "sans";
+  width: 100%;
+  height: 90vh;
+  padding: 48px 0px;
+}
+#CTA-buy_section .inner-container {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 48px 0;
+}
+#CTA-buy_section .inner-container .cake-coin-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+#CTA-buy_section .inner-container .cake-coin-container .copy-left {
+  margin-right: 10%;
+}
+#CTA-buy_section .inner-container .cake-coin-container .copy-left h2 {
+  font-size: 40px;
+  font-weight: 600;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+#CTA-buy_section .inner-container .cake-coin-container .copy-left h2 span {
+  font-size: 40px;
+  font-weight: 600;
+  color: #7645D9;
+}
+#CTA-buy_section .inner-container .cake-coin-container .copy-left p {
+  margin-bottom: 40px;
+  font-size: 16px;
+  color: #7A6EAA;
+  font-weight: bold;
+  font-family: inherit;
+}
+#CTA-buy_section .inner-container .cake-coin-container .copy-left .bottom-cta button {
+  align-items: center;
+  border: 0px;
+  border-radius: 1rem;
+  box-shadow: 0px -1px 0px 0px inset;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 600;
+  justify-content: center;
+  letter-spacing: 0.03em;
+  line-height: 1;
+  opacity: 1;
+  outline: 0px;
+  transition: background-color 0.2s ease 0s, opacity 0.2s ease 0s;
+  height: 3rem;
+  padding: 0px remConverter(24px);
+  background-color: #1FC7D4;
+  color: #ffffff;
+  margin-right: 0.5rem;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+#CTA-buy_section .inner-container .cake-coin-container .copy-left .bottom-cta button:hover {
+  opacity: 0.65;
+}
+#CTA-buy_section .inner-container .cake-coin-container .copy-left .bottom-cta a {
+  color: #1FC7D4;
+  text-decoration: none;
+  font-weight: 900;
+}
+#CTA-buy_section .inner-container .cake-coin-container .copy-left .bottom-cta a:hover {
+  text-decoration: underline;
+}
+#CTA-buy_section .inner-container .cake-coin-container .container-animation {
+  width: 100%;
+  padding-bottom: 70px;
+  position: relative;
+}
+#CTA-buy_section .inner-container .cake-coin-container .container-animation .floatEl {
+  width: 100%;
+  animation: floatting 3s ease-in-out 1s infinite normal none running;
+  position: absolute;
+}
+@keyframes floatting {
+  0% {
+    transform: translate(0px);
+  }
+  50% {
+    transform: translate(10px, 5px);
+  }
+  100% {
+    transform: translate(0px);
+  }
+}
+#CTA-buy_section .inner-container .cake-coin-container .container-animation .floatEl:nth-child(1) {
+  animation-duration: 2.9s;
+}
+#CTA-buy_section .inner-container .cake-coin-container .container-animation .floatEl:nth-child(2) {
+  animation-duration: 2.1s;
+}
+#CTA-buy_section .inner-container .cake-coin-container .container-animation .floatEl:nth-child(3) {
+  animation-duration: 2.5s;
+}
+#CTA-buy_section .inner-container .cake-coin-container .container-animation .floatEl:nth-child(4) {
+  animation-duration: 2.5s;
+}
+#CTA-buy_section .inner-container .cake-coin-container .container-animation .floatEl:nth-child(5) {
+  animation-duration: 2.5s;
+}
+#CTA-buy_section .inner-container .table-home-buy {
+  width: 79.5%;
+  margin-top: 60px;
+}
+#CTA-buy_section .inner-container .table-home-buy .supply-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin-bottom: 21px;
+}
+#CTA-buy_section .inner-container .table-home-buy .supply-row .table-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 16%;
+}
+#CTA-buy_section .inner-container .table-home-buy .supply-row .table-section:nth-child(2) {
+  border-left: 1px solid lightgray;
+  padding-left: 20px;
+}
+#CTA-buy_section .inner-container .table-home-buy .supply-row .table-section:nth-child(3) {
+  border-left: 1px solid lightgray;
+  padding-left: 20px;
+}
+#CTA-buy_section .inner-container .table-home-buy .supply-row .table-section .head-sec {
+  font-size: 16px;
+  color: #7A6EAA;
+  font-weight: bold;
+  font-family: inherit;
+}
+#CTA-buy_section .inner-container .table-home-buy .supply-row .table-section .bottom-sec {
+  font-size: 24px;
+  font-weight: bolder;
+}
+#CTA-buy_section .inner-container .table-home-buy .bottom-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin-top: 21px;
+}
+#CTA-buy_section .inner-container .table-home-buy .bottom-row .table-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 16%;
+}
+#CTA-buy_section .inner-container .table-home-buy .bottom-row .table-section:nth-child(2) {
+  border-left: 1px solid lightgray;
+  padding-left: 20px;
+}
+#CTA-buy_section .inner-container .table-home-buy .bottom-row .table-section:nth-child(3) {
+  border-left: 1px solid lightgray;
+  padding-left: 20px;
+}
+#CTA-buy_section .inner-container .table-home-buy .bottom-row .table-section .head-sec {
+  font-size: 16px;
+  color: #7A6EAA;
+  font-weight: bold;
+  font-family: inherit;
+}
+#CTA-buy_section .inner-container .table-home-buy .bottom-row .table-section:nth-child(2) .bottom-sec {
+  font-size: 24px;
+  font-weight: bolder;
+}
+
+/*# sourceMappingURL=cta-buy_style.css.map */

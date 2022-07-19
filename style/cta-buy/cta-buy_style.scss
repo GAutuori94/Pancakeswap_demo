@@ -1,0 +1,186 @@
+@use '../base.scss' as b;
+@import '../components';
+
+#CTA-buy_section {
+
+    font-family: b.$fontFamily;
+    width: 100%;
+    height: 90vh;
+    padding: 48px 0px;
+
+    .inner-container {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        padding: 48px 0;
+
+        .cake-coin-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+
+            .copy-left {
+                margin-right: 10%;
+
+                h2 {
+                    font-size: b.$font-size-subheader;
+                    font-weight: b.$fontHeavyWeight;
+                    margin-top: 40px;
+                    margin-bottom: 40px;
+
+                    span {
+                        font-size: b.$font-size-subheader;
+                        font-weight: b.$fontHeavyWeight;
+                        color: b.$secondary;
+                    }
+                }
+
+                p {
+                    margin-bottom: 40px;
+                    font-size: b.$font-size-copy;
+                    color: #7A6EAA;
+                    font-weight: bold;
+                    font-family: inherit;
+                }
+
+                .bottom-cta {
+                    button {
+                        @include button;
+                        padding-left: 24px;
+                        padding-right: 24px;
+
+                        &:hover {
+                            opacity: 0.65;
+                        }
+                    }
+
+                    a {
+                        color: b.$primary;
+                        text-decoration: none;
+                        font-weight: 900;
+
+                        &:hover {
+                            text-decoration: underline;
+                        }
+                    }
+                }
+            }
+
+            .container-animation {
+                width: 100%;
+                padding-bottom: 70px;
+                position: relative;
+
+                .floatEl {
+                    width: 100%;
+                    @include floatting;
+                    position: absolute;
+
+                    &:nth-child(1) {
+                        animation-duration: 2.9s;
+                    }
+
+                    &:nth-child(2) {
+                        animation-duration: 2.1s;
+                    }
+
+                    &:nth-child(3) {
+                        animation-duration: 2.5s;
+                    }
+
+                    &:nth-child(4) {
+                        animation-duration: 2.5s;
+                    }
+
+                    &:nth-child(5) {
+                        animation-duration: 2.5s;
+                    }
+                }
+            }
+        }
+
+        .table-home-buy {
+
+            width: 79.5%;
+            margin-top: 60px;
+
+            .supply-row {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-evenly;
+                margin-bottom: 21px;
+
+                .table-section {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    width: 16%;
+
+                    &:nth-child(2) {
+                        border-left: 1px solid lightgray;
+                        padding-left: 20px;
+                    }
+
+                    &:nth-child(3) {
+                        border-left: 1px solid lightgray;
+                        padding-left: 20px;
+                    }
+
+                    .head-sec {
+                        font-size: b.$font-size-copy;
+                        color: #7A6EAA;
+                        font-weight: bold;
+                        font-family: inherit;
+
+                    }
+
+                    .bottom-sec {
+                        font-size: 24px;
+                        font-weight: bolder;
+                    }
+                }
+            }
+
+            .bottom-row {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-evenly;
+                margin-top: 21px;
+
+                .table-section {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    width: 16%;
+
+                    &:nth-child(2) {
+                        border-left: 1px solid lightgray;
+                        padding-left: 20px;
+                    }
+
+                    &:nth-child(3) {
+                        border-left: 1px solid lightgray;
+                        padding-left: 20px;
+                    }
+
+                    .head-sec {
+                        font-size: b.$font-size-copy;
+                        color: #7A6EAA;
+                        font-weight: bold;
+                        font-family: inherit;
+                    }
+
+                    &:nth-child(2) {
+                        .bottom-sec {
+                            font-size: 24px;
+                        font-weight: bolder;
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+}
