@@ -1,26 +1,28 @@
-@use 'base' as b;
+@use "../base.scss" as b;
 
 /*Mixin button*/
 
 @mixin button {
-    align-items: center; // alla scritta piazzandola al centro
-    border: 0px; // di base non c'è bordo, verrà aggiunto 
-    border-radius: b.remConverter(16px); // resta così per tutti, verrà visualizzato diversamente nella navbar per via dell'altezza del div padre
-    box-shadow: $boxShadow; // leggero box-shadow a sud dell'asse y
-    cursor: pointer; // simula il link
-    display: inline-flex; // serve per gestire l'allineamento con le arrowsvg
-    font-family: inherit; //ereditano kanit
-    font-size: b.$font-size-button;
-    font-weight: b.$fontHeavyWeight;
-    justify-content: center; //portano al centro il testo rispetto all'asse x
-    letter-spacing: 0.03em;
-    line-height: 1;
-    opacity: 1;
-    outline: 0px;
-    transition: background-color 0.2s ease 0s, opacity 0.2s ease 0s; // con i valori impostati in precedenza ne gestiamo l'effetto di transizione di
-    height: b.remConverter(48px);
-    padding: 0px remConverter(24px);
-    background-color: b.$primary;
-    color: #ffffff;
-    margin-right: b.remConverter(8px);
-};
+  align-items: center; // alla scritta piazzandola al centro
+  border: 0px; // di base non c'è bordo, verrà aggiunto
+  border-radius: b.remConverter(
+    16px
+  ); // resta così per tutti, verrà visualizzato diversamente nella navbar per via dell'altezza del div padre
+  box-shadow: $boxShadow; // leggero box-shadow a sud dell'asse y
+  cursor: pointer; // simula il link
+  display: inline-flex; // serve per gestire l'allineamento con le arrowsvg
+  font-family: inherit; //ereditano kanit
+  font-size: b.$font-size-button;
+  font-weight: b.$fontHeavyWeight;
+  justify-content: center; //portano al centro il testo rispetto all'asse x
+  letter-spacing: 0.03em;
+  line-height: 1;
+  opacity: 1;
+  outline: 0px;
+  transition: background-color 0.2s ease 0s, opacity 0.2s ease 0s; // con i valori impostati in precedenza ne gestiamo l'effetto di transizione di
+  height: b.remConverter(48px);
+  padding: 0px remConverter(24px);
+  background-color: b.$primary;
+  color: #ffffff;
+  margin-right: b.remConverter(8px);
+} ;

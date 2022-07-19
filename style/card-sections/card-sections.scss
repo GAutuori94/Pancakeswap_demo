@@ -1,0 +1,6 @@
+@use "../base" as b;
+@import "../components.scss";
+
+* {
+  font-family: b.$fontFamily;
+}

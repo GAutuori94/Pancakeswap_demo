@@ -1,26 +1,36 @@
-
+@use "../base.scss" as b;
 /*Mixin animations*/
-// mixin per animazione classe .ghost per cambio opacità stelle-bunny 
+// mixin per animazione classe .ghost per cambio opacità stelle-bunny
 @mixin opacityAnimation {
-    animation: opacityAnimation 5s ease-in-out 0.66s infinite normal none running;
-    @keyframes opacityAnimation {
-        0% {opacity: 0.9};
-        50% {opacity: 0.1};
-        100% {opacity: 0.9};
+  animation: opacityAnimation 5s ease-in-out 0.66s infinite normal none running;
+  @keyframes opacityAnimation {
+    0% {
+      opacity: 0.9;
     }
+    50% {
+      opacity: 0.1;
+    }
+    100% {
+      opacity: 0.9;
+    }
+  }
 }
 
-
-// mixin per animazione classe .floatEl per movimento fluttuante altre animazioni 
+// mixin per animazione classe .floatEl per movimento fluttuante altre animazioni
 @mixin floatting {
-    animation: floatting 3s ease-in-out 1s infinite normal none running;
-    @keyframes floatting {
-        0% {transform: translate(0px)};
-        50% {transform: translate(10px, 5px)};
-        100% {transform: translate(0px)};
+  animation: floatting 3s ease-in-out 1s infinite normal none running;
+  @keyframes floatting {
+    0% {
+      transform: translate(0px);
     }
+    50% {
+      transform: translate(10px, 5px);
+    }
+    100% {
+      transform: translate(0px);
+    }
+  }
 }
-
 
 /*
 @use "mixin" as m;
