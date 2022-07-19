@@ -118,7 +118,9 @@ Dark mode: #27262C;
 /*------------------------------------------------------------------------------------------------------------------------------------------------*/
 /*SHADOWS*/
 .darkToggle {
-  appearance: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
   width: 30px;
   height: 30px;
   background: white;
@@ -154,7 +156,6 @@ Dark mode: #27262C;
   right: 0;
   bottom: 0;
   background: #bdc2c4;
-  -webkit-transition: 0.4s;
   transition: 0.4s;
 }
 
@@ -175,7 +176,6 @@ Dark mode: #27262C;
   left: 4px;
   bottom: 2px;
   background-color: #ffffff;
-  -webkit-transition: 0.4s;
   transition: 0.4s;
 }
 
@@ -221,8 +221,6 @@ input:focus:not(:checked) + .slider:before {
 }
 
 input:checked + .slider:before {
-  -webkit-transform: translateX(26px);
-  -ms-transform: translateX(26px);
   transform: translateX(26px);
 }
 
@@ -274,7 +272,6 @@ input:checked + .slider:before {
   display: flex;
   position: relative;
   flex-direction: column;
-  -webkit-box-align: center;
   align-items: center;
   z-index: 1;
 }
@@ -291,6 +288,8 @@ input:checked + .slider:before {
   position: relative;
   margin-right: 16px;
   margin-bottom: 0px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
   height: fit-content;
   padding: 1px 1px 4px;
   box-sizing: border-box;
@@ -320,12 +319,13 @@ input:checked + .slider:before {
 }
 .top-cards-container .card-element .inner-box .card-body .card-text {
   min-width: 232px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
   width: fit-content;
   min-height: 168px;
   margin-top: 64px;
   display: flex;
   flex-direction: column;
-  -webkit-box-pack: end;
   justify-content: flex-end;
 }
 .top-cards-container .card-element .inner-box .card-body .card-text h2:first-of-type {
@@ -376,6 +376,8 @@ input:checked + .slider:before {
   color: rgb(40, 13, 95);
   overflow: hidden;
   position: relative;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
   height: fit-content;
   padding: 1px 1px 4px;
   transform: rotate(-2.36deg);
@@ -401,6 +403,8 @@ input:checked + .slider:before {
   color: rgb(40, 13, 95);
   overflow: hidden;
   position: relative;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
   height: fit-content;
   padding: 1px 1px 4px;
   transform: rotate(1.43deg);
@@ -530,6 +534,4 @@ input:checked + .slider:before {
 .top-cards-background .card-section-text p:last-of-type {
   font-weight: 600;
   margin-bottom: 2rem;
-}
-
-/*# sourceMappingURL=card-sections.css.map */
+}/*# sourceMappingURL=card-sections.css.map */
