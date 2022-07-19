@@ -1,6 +1,6 @@
 @use '../../base.scss' as b;
 @import '../../components/toggle_LD_mode.scss';
-@import '../../components/toggle_switch.scss'; 
+@import '../../components/toggle_switch.scss';
 @import '../../components.scss';
 
 
@@ -19,12 +19,19 @@ nav {
     justify-content: space-between;
     align-items: center;
     height: b.remConverter(48px);
-    background-color: b.$light_background;
-
     overflow: hidden;
 
     .leftContainer {
         display: flex;
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
 
         div {
             width: 100%;
@@ -32,16 +39,34 @@ nav {
             border-radius: b.remConverter(15px);
 
             .grey-hover:hover {
-                background-color: b.$light_tertiary;
-                transition: 120ms;
+                    background-color: b.$light_tertiary;
+                    transition: 120ms;
+                } 
+                
+
+                li {
+                    a {
+                        button {
+                            background-color: rgba(255, 255, 255, 0); 
+                            color: b.$dark_secondary; 
+                            &:hover {
+                                background-color: b.$light_tertiary;
+                                transition: 120ms;
+                            }
+                            
+                        }
+                    }
+                
             }
         }
 
         .pancakeLogo {
+
             display: flex;
             list-style-type: none;
             align-items: center;
-            margin-top: b.remConverter(5px);
+            padding-top: b.remConverter(15px);
+
         }
     }
 
@@ -56,7 +81,7 @@ nav {
         align-items: center;
         color: b.$secondary;
         font-size: b.remConverter(16px);
-        font-weight: 400;
+        font-weight: 400; 
         padding-left: b.remConverter(16px);
         padding-right: b.remConverter(16px);
 
@@ -65,7 +90,7 @@ nav {
         li {
 
             a {
-                text-shadow: b.$secondary, b.remConverter(0.5px);
+                
                 text-decoration: none;
                 margin: b.remConverter(10px);
                 color: b.$secondary;
@@ -76,19 +101,77 @@ nav {
     .rightContainer {
         display: flex;
         justify-content: space-between;
+        align-items: center;
 
-        //     .netButton {
+        .currentValue {
+            margin-top: b.remConverter(8px);
 
-        //         fill: red;
-        //         transition-property: fill;
-        //         transition-duration: 2s;
+        }
 
-        //         .logoNet:hover {
-        //             fill: #EFF4F5;
-        //         }
-        //     }
-        // 
+        .netButton {
+            margin-top: b.remConverter(15px);
+            width: b.remConverter(30px);
+            height: b.remConverter(30px);
+            background-image: url("/src/assets/images/svg/Utilities/logoNET.svg");
+            background-repeat: no-repeat;
+            transition-property: filter;
+            transition-duration: 0.5s;
+
+
+
+            &:hover {
+                filter: opacity(0.5);
+
+
+            }
+        }
+
+        .pancakeCointainer {
+            margin-top: b.remConverter(15px);
+            width: b.remConverter(30px);
+            height: b.remConverter(30px);
+            background-image: url("/src/assets/images/svg/Utilities/logoPancake.svg");
+            background-repeat: no-repeat;
+            transition-property: transform;
+            transition-duration: 0.5s;
+
+            &:hover {
+                transform: scale(1.2);
+
+
+            }
+        }
+
+        .ingranaggio {
+            margin-top: b.remConverter(15px);
+            width: b.remConverter(30px);
+            height: b.remConverter(30px);
+            background-image: url("/src/assets/images/svg/Utilities/ingranaggio.svg");
+            background-repeat: no-repeat;
+            transition-property: filter;
+            transition-duration: 0.5s;
+
+            &:hover {
+                filter: opacity(0.5);
+
+
+            }
+        }
+
     }
+
+    //     .netButton {
+
+    //         fill: red;
+    //         transition-property: fill;
+    //         transition-duration: 2s;
+
+    //         .logoNet:hover {
+    //             fill: #EFF4F5;
+    //         }
+    //     }
+    // 
+
 
     div {
         font-family: b.$fontFamily;
@@ -104,16 +187,20 @@ nav {
         }
     }
 
-    button {
+    .connectWalletButton {
         @include button;
-        box-shadow: b.$light_text;
+        box-shadow: b.$light_textSubtle b.$boxShadow;
         height: b.remConverter(32px);
         padding-left: b.remConverter(16px);
         padding-right: b.remConverter(16px);
         color: white;
+
+        &:hover {
+            opacity: 70%;
+        }
+
+
     }
-
-
 }
 
 footer {
@@ -149,7 +236,6 @@ footer {
                 margin: b.remConverter(3px);
 
                 a {
-
                     text-decoration: none;
                     color: b.$light_background;
                 }
@@ -162,12 +248,71 @@ footer {
     }
 
     .partnerSvgIcons {
+
         padding-left: 33px;
         display: flex;
         align-items: flex-start;
 
+
         div {
-            width: 30px;
+            width: 40px;
+        }
+    }
+
+    .lasts {
+        display: flex;
+        justify-content: space-between;
+        padding: b.remConverter(32px);
+        border-top: 1px solid grey;
+        margin-top: 20px;
+
+
+        button {
+
+            @include button;
+            box-shadow: b.$light_text b.$boxShadow;
+            height: b.remConverter(32px);
+            padding-left: b.remConverter(16px);
+            padding-right: b.remConverter(16px);
+            color: white;
+
+            &:hover {
+                opacity: 70%;
+            }
+
+        }
+
+
+        .modeSelector {
+            div {
+                padding: 5px;
+            }
+
+            .languageSelector {
+                display: flex;
+                align-self: center;
+
+                p {
+                    color: #b8add2;
+                    padding: 5px;
+                    font-family: b.$fontFamily;
+
+                }
+
+                .net {
+                    display: flex;
+                    align-self: center;
+                    justify-content: space-between;
+                    padding: 5px;
+                }
+            }
+
+            display: flex;
+
+            width: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
         }
     }
 }

@@ -91,7 +91,7 @@
 }
 
 .slider:before {
-  background-image: url("/./Assets/asset 63.svg");
+  background-image: url("Pancakeswap_demo/src/assets/images/svg/asset 63.svg");
   background-position: center;
   position: absolute;
   background-repeat: no-repeat;
@@ -352,7 +352,7 @@ Dark mode: #27262C*/
 }
 
 .slider:before {
-  background-image: url("/./Assets/asset 63.svg");
+  background-image: url("Pancakeswap_demo/src/assets/images/svg/asset 63.svg");
   background-position: center;
   position: absolute;
   background-repeat: no-repeat;
@@ -708,11 +708,17 @@ nav {
   justify-content: space-between;
   align-items: center;
   height: 3rem;
-  background-color: #FAF9FA;
   overflow: hidden;
 }
 nav .leftContainer {
   display: flex;
+}
+nav .leftContainer .dropdown-content {
+  display: none;
+  position: absolute;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
 }
 nav .leftContainer div {
   width: 100%;
@@ -723,11 +729,19 @@ nav .leftContainer div .grey-hover:hover {
   background-color: #EFF4F5;
   transition: 120ms;
 }
+nav .leftContainer div li a button {
+  background-color: rgba(255, 255, 255, 0);
+  color: #9A6AFF;
+}
+nav .leftContainer div li a button:hover {
+  background-color: #EFF4F5;
+  transition: 120ms;
+}
 nav .leftContainer .pancakeLogo {
   display: flex;
   list-style-type: none;
   align-items: center;
-  margin-top: 0.3125rem;
+  padding-top: 0.9375rem;
 }
 nav ul {
   display: flex;
@@ -745,7 +759,6 @@ nav ul {
   height: 3rem;
 }
 nav ul li a {
-  text-shadow: #7645D9, 0.03125rem;
   text-decoration: none;
   margin: 0.625rem;
   color: #7645D9;
@@ -753,6 +766,46 @@ nav ul li a {
 nav .rightContainer {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+}
+nav .rightContainer .currentValue {
+  margin-top: 0.5rem;
+}
+nav .rightContainer .netButton {
+  margin-top: 0.9375rem;
+  width: 1.875rem;
+  height: 1.875rem;
+  background-image: url("/src/assets/images/svg/Utilities/logoNET.svg");
+  background-repeat: no-repeat;
+  transition-property: filter;
+  transition-duration: 0.5s;
+}
+nav .rightContainer .netButton:hover {
+  filter: opacity(0.5);
+}
+nav .rightContainer .pancakeCointainer {
+  margin-top: 0.9375rem;
+  width: 1.875rem;
+  height: 1.875rem;
+  background-image: url("/src/assets/images/svg/Utilities/logoPancake.svg");
+  background-repeat: no-repeat;
+  transition-property: transform;
+  transition-duration: 0.5s;
+}
+nav .rightContainer .pancakeCointainer:hover {
+  transform: scale(1.2);
+}
+nav .rightContainer .ingranaggio {
+  margin-top: 0.9375rem;
+  width: 1.875rem;
+  height: 1.875rem;
+  background-image: url("/src/assets/images/svg/Utilities/ingranaggio.svg");
+  background-repeat: no-repeat;
+  transition-property: filter;
+  transition-duration: 0.5s;
+}
+nav .rightContainer .ingranaggio:hover {
+  filter: opacity(0.5);
 }
 nav div {
   font-family: "Kanit", "sans";
@@ -766,7 +819,7 @@ nav div .currentValue {
   color: #7645D9;
   font-weight: 500;
 }
-nav button {
+nav .connectWalletButton {
   align-items: center;
   border: 0px;
   border-radius: 1rem;
@@ -787,11 +840,14 @@ nav button {
   background-color: #1FC7D4;
   color: #ffffff;
   margin-right: 0.5rem;
-  box-shadow: #452A7A;
+  box-shadow: #8F80BA 0px -1px 0px 0px inset;
   height: 2rem;
   padding-left: 1rem;
   padding-right: 1rem;
   color: white;
+}
+nav .connectWalletButton:hover {
+  opacity: 70%;
 }
 
 footer {
@@ -830,7 +886,69 @@ footer .partnerSvgIcons {
   align-items: flex-start;
 }
 footer .partnerSvgIcons div {
-  width: 30px;
+  width: 40px;
+}
+footer .lasts {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem;
+  border-top: 1px solid grey;
+  margin-top: 20px;
+}
+footer .lasts button {
+  align-items: center;
+  border: 0px;
+  border-radius: 1rem;
+  box-shadow: 0px -1px 0px 0px inset;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 600;
+  justify-content: center;
+  letter-spacing: 0.03em;
+  line-height: 1;
+  opacity: 1;
+  outline: 0px;
+  transition: background-color 0.2s ease 0s, opacity 0.2s ease 0s;
+  height: 3rem;
+  padding: 0px remConverter(24px);
+  background-color: #1FC7D4;
+  color: #ffffff;
+  margin-right: 0.5rem;
+  box-shadow: #452A7A 0px -1px 0px 0px inset;
+  height: 2rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  color: white;
+}
+footer .lasts button:hover {
+  opacity: 70%;
+}
+footer .lasts .modeSelector {
+  display: flex;
+  width: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+footer .lasts .modeSelector div {
+  padding: 5px;
+}
+footer .lasts .modeSelector .languageSelector {
+  display: flex;
+  align-self: center;
+}
+footer .lasts .modeSelector .languageSelector p {
+  color: #b8add2;
+  padding: 5px;
+  font-family: "Kanit", "sans";
+}
+footer .lasts .modeSelector .languageSelector .net {
+  display: flex;
+  align-self: center;
+  justify-content: space-between;
+  padding: 5px;
 }
 
 /*# sourceMappingURL=style.css.map */
