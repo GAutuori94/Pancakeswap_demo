@@ -691,23 +691,32 @@ input:checked + .slider:before {
   bottom: -3px;
 }
 
-.hs-bottom spacer {
+.hs-bottom-spacer {
   align-self: center;
   fill: #280d5f;
   flex-shrink: 0;
 }
 
+.homepage-hero-container {
+  display: flex;
+  justify-content: center;
+}
+
 .homepage-hero {
   box-sizing: border-box;
   display: flex;
+  flex-direction: row;
   -webkit-box-pack: center;
   justify-content: center;
-  position: relative;
+  align-items: center;
+  position: absolute;
+  vertical-align: baseline;
 }
 
 .hero-section-lefttxt-container {
   font-family: "Kanit", "sans";
   display: flex;
+  flex: 1 1 0%;
   flex-direction: column;
 }
 
@@ -718,6 +727,7 @@ input:checked + .slider:before {
   font-size: 64px;
   font-weight: 600;
   line-height: 1.1;
+  box-sizing: border-box;
 }
 
 .hs-leftcopy {
@@ -727,37 +737,31 @@ input:checked + .slider:before {
   font-size: 20px;
   font-weight: 600;
   line-height: 1.1;
+  box-sizing: border-box;
 }
 
 /*bottoni*/
-.hero-section-rightanimation-container {
+.hero-section-rightanimation {
+  z-index: 1;
+  position: relative;
   display: flex;
-  height: 192px;
-  width: 192px;
+  height: 450px;
+  width: 450px;
   max-width: 100%;
   max-height: 100%;
+  flex: 1 1 0%;
 }
 
-.hs-big-animation-runner {
+.hs-biganimation-container {
   width: 100%;
-}
-.hs-big-animation-runner .hs-biganimation-sources {
-  box-sizing: border-box;
-  width: initial;
-  height: initial;
-  background: none;
-  opacity: 1;
-  border: 0px;
-  margin: 0px;
-  padding: 0px;
   position: relative;
-  max-width: 100%;
+  box-sizing: border-box;
 }
-.hs-big-animation-runner .hs-biganimation-sources .floatEl {
+.hs-biganimation-container .floatEl {
   animation: floatting 3s ease-in-out 1s infinite normal none running;
   box-sizing: border-box;
-  position: relative;
-  max-width: 200%;
+  position: absolute;
+  max-width: 100%;
 }
 @keyframes floatting {
   0% {
@@ -770,16 +774,16 @@ input:checked + .slider:before {
     transform: translate(0px);
   }
 }
-.hs-big-animation-runner .hs-biganimation-sources .floatEl:nth-child(1) {
+.hs-biganimation-container .floatEl:nth-child(1) {
   animation-duration: 2.9s;
 }
-.hs-big-animation-runner .hs-biganimation-sources .floatEl:nth-child(2) {
+.hs-biganimation-container .floatEl:nth-child(2) {
   animation-duration: 2.1s;
 }
-.hs-big-animation-runner .hs-biganimation-sources .floatEl:nth-child(3) {
+.hs-biganimation-container .floatEl:nth-child(3) {
   animation-duration: 2.5s;
 }
-.hs-big-animation-runner .hs-biganimation-sources .floatEl:nth-child(4) {
+.hs-biganimation-container .floatEl:nth-child(4) {
   animation-duration: 2.5s;
 }
 

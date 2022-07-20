@@ -166,24 +166,32 @@
     bottom: -3px;
 }
 
-.hs-bottom spacer {
+.hs-bottom-spacer {
     align-self: center;
     fill: #280d5f;
     flex-shrink: 0;
 }
 
+.homepage-hero-container {
+    display: flex;
+    justify-content: center;
+}
+
 .homepage-hero {
     box-sizing: border-box;
     display: flex;
+    flex-direction: row;
     -webkit-box-pack: center;
     justify-content: center;
-    position: relative;
+    align-items: center;
+    position: absolute;
+    vertical-align: baseline;
 }
 
 .hero-section-lefttxt-container {
     font-family: b.$fontFamily;
     display: flex;
-    //flex: 1 1 0%;
+    flex: 1 1 0%;
     flex-direction: column;
 
 }
@@ -195,6 +203,7 @@
     font-size: b.$font-size-header;
     font-weight: b.$fontHeavyWeight;
     line-height: 1.1;
+    box-sizing: border-box;
 }
 
 .hs-leftcopy {
@@ -204,39 +213,31 @@
     font-size: b.$font-size-paragraph;
     font-weight: b.$fontHeavyWeight;
     line-height: 1.1;
+    box-sizing: border-box;
 }
 
 /*bottoni*/
-.hero-section-rightanimation-container {
+.hero-section-rightanimation {
+    z-index: 1;
+    position: relative;
     display: flex;
-    height: 192px;
-    width: 192px;
+    height: 450px;
+    width: 450px;
     max-width: 100%;
     max-height: 100%;
+    flex: 1 1 0%;
 }
 
-.hs-big-animation-runner {
-    width: 100%;
-    
-
-    .hs-biganimation-sources {
-        box-sizing: border-box;
-        //overflow: hidden;
-        width: initial;
-        height: initial;
-        background: none;
-        opacity: 1;
-        border: 0px;
-        margin: 0px;
-        padding: 0px;
+    .hs-biganimation-container {
+        width: 100%;
         position: relative;
-        max-width: 100%;
+        box-sizing: border-box;
         
         .floatEl {
             @include floatting;
             box-sizing: border-box;
-            position: relative;
-            max-width: 200%;
+            position: absolute;
+            max-width: 100%;
             &:nth-child(1){
                 animation-duration: 2.9s;
             }
@@ -251,4 +252,3 @@
             }
         }
     }
-}
