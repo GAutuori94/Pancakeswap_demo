@@ -698,11 +698,12 @@ input:checked + .slider:before {
 }
 
 nav {
+  background-color: #FAF9FA;
   width: 100vw;
   font-weight: 400;
   padding: 3px;
-  position: relative;
-  z-index: auto;
+  position: fixed;
+  z-index: 3;
   padding-left: 0.625rem;
   display: flex;
   justify-content: space-between;
@@ -710,32 +711,60 @@ nav {
   height: 3rem;
   overflow: hidden;
 }
-nav .leftContainer {
-  display: flex;
+nav .dropbtn {
+  color: #9A6AFF;
+  font-weight: inherit;
+  font-size: inherit;
 }
-nav .leftContainer .dropdown-content {
+nav .dropdown {
+  position: relative;
+  display: inline-block;
+}
+nav .dropdown-content {
   display: none;
   position: absolute;
+  background-color: #f1f1f1;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
+}
+nav .dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+nav .dropdown-content a:hover {
+  background-color: #ddd;
+}
+nav .dropbtn:hover .dropdown-content {
+  display: block;
+}
+nav .dropdown:hover .dropbtn {
+  background-color: inherit;
+}
+nav .leftContainer {
+  display: flex;
 }
 nav .leftContainer div {
   width: 100%;
   padding: 0.625rem;
   border-radius: 0.9375rem;
 }
+nav .leftContainer div li a {
+  border-radius: 0.9375rem;
+}
+nav .leftContainer div li a .dropbtn {
+  border-radius: 0.9375rem;
+  color: #7645D9;
+  background-color: initial;
+  cursor: pointer;
+  font-weight: 600;
+}
 nav .leftContainer div .grey-hover:hover {
-  background-color: #EFF4F5;
-  transition: 120ms;
-}
-nav .leftContainer div li a button {
-  background-color: rgba(255, 255, 255, 0);
-  color: #9A6AFF;
-}
-nav .leftContainer div li a button:hover {
-  background-color: #EFF4F5;
-  transition: 120ms;
+  border-radius: 0.9375rem;
+  background-color: #eff4f5;
+  transition: 1200ms;
 }
 nav .leftContainer .pancakeLogo {
   display: flex;
@@ -753,7 +782,7 @@ nav ul {
   align-items: center;
   color: #7645D9;
   font-size: 1rem;
-  font-weight: 400;
+  font-weight: 600;
   padding-left: 1rem;
   padding-right: 1rem;
   height: 3rem;
@@ -770,6 +799,7 @@ nav .rightContainer {
 }
 nav .rightContainer .currentValue {
   margin-top: 0.5rem;
+  font-weight: 900;
 }
 nav .rightContainer .netButton {
   margin-top: 0.9375rem;
@@ -858,6 +888,7 @@ footer {
   padding: 1.5625rem;
 }
 footer .services {
+  margin-top: 1.875rem;
   display: flex;
   justify-content: space-between;
   padding: 1.875rem;
@@ -937,18 +968,51 @@ footer .lasts .modeSelector div {
 }
 footer .lasts .modeSelector .languageSelector {
   display: flex;
-  align-self: center;
+  align-items: center;
 }
-footer .lasts .modeSelector .languageSelector p {
+footer .lasts .modeSelector .languageSelector .net {
+  background-image: url("/src/assets/images/svg/Utilities/logoNETsecondarycolor.svg");
+  background-repeat: no-repeat;
+  background-position: left;
+  display: flex;
+  justify-content: space-between;
+  padding: 5px;
+}
+footer .lasts .modeSelector .languageSelector .net:hover {
+  opacity: 70%;
+  cursor: pointer;
+  transition-property: opacity;
+  transition-duration: 0.5s;
+}
+footer .lasts .modeSelector .languageSelector .net p {
+  margin-left: 20px;
+  align-items: center;
   color: #b8add2;
   padding: 5px;
   font-family: "Kanit", "sans";
 }
-footer .lasts .modeSelector .languageSelector .net {
+footer .lasts .selectors .buttonContainer {
   display: flex;
-  align-self: center;
-  justify-content: space-between;
-  padding: 5px;
+  align-items: center;
+}
+footer .lasts .selectors .buttonContainer p {
+  color: #B8ADD2;
+  font-family: inherit;
+  font-weight: 900;
+  margin: 0px 20px 0px 0px;
+}
+footer .lasts .selectors .buttonContainer .svg {
+  margin-top: 0.5rem;
+  width: 1.875rem;
+  height: 1.875rem;
+  background-image: url("/src/assets/images/svg/Utilities/logoPancake.svg");
+  background-repeat: no-repeat;
+  transition-property: transform;
+  transition-duration: 0.5s;
+  cursor: pointer;
+}
+footer .lasts .selectors .buttonContainer .svg:hover {
+  transform: scale(1.2);
 }
 
 /*# sourceMappingURL=style.css.map */

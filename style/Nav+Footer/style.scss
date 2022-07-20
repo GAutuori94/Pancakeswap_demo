@@ -1,7 +1,7 @@
-@use '../../base.scss' as b;
-@import '../../components/toggle_LD_mode.scss';
-@import '../../components/toggle_switch.scss';
-@import '../../components.scss';
+@use '../base.scss' as b;
+@import '../components/toggle_LD_mode.scss';
+@import '../components/toggle_switch.scss';
+@import '../components.scss';
 
 
 * {
@@ -9,11 +9,12 @@
 }
 
 nav {
+    background-color: b.$light_background;
     width: 100vw;
     font-weight: 400;
     padding: 3px;
-    position: relative;
-    z-index: auto;
+    position: fixed;
+    z-index: 3;
     padding-left: b.remConverter(10px);
     display: flex;
     justify-content: space-between;
@@ -21,44 +22,97 @@ nav {
     height: b.remConverter(48px);
     overflow: hidden;
 
+
+    .dropbtn {
+
+        color: b.$dark_secondary;
+        font-weight: inherit;
+        font-size: inherit;
+
+
+    }
+
+    .dropdown {
+        position: relative;
+        display: inline-block;
+    }
+
+    .dropdown-content {
+
+        display: none;
+        position: absolute;
+        background-color: #f1f1f1;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+    }
+
+
+    .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+    }
+
+    .dropdown-content a:hover {
+        background-color: #ddd;
+    }
+
+    .dropbtn:hover .dropdown-content {
+        display: block;
+    }
+
+    .dropdown:hover .dropbtn {
+        background-color: inherit;
+    }
+
     .leftContainer {
         display: flex;
 
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            min-width: 160px;
-            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-            z-index: 1;
-        }
+        // .dropdown-content {
+        //     display: none;
+        //     position: absolute;
+        //     min-width: 160px;
+        //     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        //     z-index: 1;
+        // }
 
 
         div {
+
             width: 100%;
             padding: b.remConverter(10px);
             border-radius: b.remConverter(15px);
 
-            .grey-hover:hover {
-                    background-color: b.$light_tertiary;
-                    transition: 120ms;
-                } 
-                
+            li {
 
-                li {
-                    a {
-                        button {
-                            background-color: rgba(255, 255, 255, 0); 
-                            color: b.$dark_secondary; 
-                            &:hover {
-                                background-color: b.$light_tertiary;
-                                transition: 120ms;
-                            }
-                            
-                        }
+
+                a {
+                    border-radius: b.remConverter(15px);
+
+                    .dropbtn {
+                        border-radius: b.remConverter(15px);
+                        color: b.$secondary;
+                        background-color: initial;
+                        cursor: pointer;
+                        font-weight: 600;
                     }
-                
+                }
             }
+
+            .grey-hover:hover {
+                border-radius: b.remConverter(15px);
+                background-color: #eff4f5;
+                transition: 1200ms;
+            }
+
         }
+
+
+
+
+
 
         .pancakeLogo {
 
@@ -81,7 +135,7 @@ nav {
         align-items: center;
         color: b.$secondary;
         font-size: b.remConverter(16px);
-        font-weight: 400; 
+        font-weight: 600;
         padding-left: b.remConverter(16px);
         padding-right: b.remConverter(16px);
 
@@ -90,7 +144,7 @@ nav {
         li {
 
             a {
-                
+
                 text-decoration: none;
                 margin: b.remConverter(10px);
                 color: b.$secondary;
@@ -105,7 +159,7 @@ nav {
 
         .currentValue {
             margin-top: b.remConverter(8px);
-
+            font-weight: 900; 
         }
 
         .netButton {
@@ -160,19 +214,6 @@ nav {
 
     }
 
-    //     .netButton {
-
-    //         fill: red;
-    //         transition-property: fill;
-    //         transition-duration: 2s;
-
-    //         .logoNet:hover {
-    //             fill: #EFF4F5;
-    //         }
-    //     }
-    // 
-
-
     div {
         font-family: b.$fontFamily;
         display: flex;
@@ -212,9 +253,11 @@ footer {
 
 
     .services {
+        margin-top: b.remConverter(30px);
         display: flex;
         justify-content: space-between;
         padding: b.remConverter(30px);
+
 
 
 
@@ -290,20 +333,33 @@ footer {
 
             .languageSelector {
                 display: flex;
-                align-self: center;
+                align-items: center;
 
-                p {
-                    color: #b8add2;
-                    padding: 5px;
-                    font-family: b.$fontFamily;
 
-                }
 
                 .net {
+                    &:hover {
+                        opacity: 70%;
+                        cursor: pointer;
+                        transition-property: opacity;
+                        transition-duration: 0.5s;
+                    }
+
+                    background-image: url("/src/assets/images/svg/Utilities/logoNETsecondarycolor.svg");
+                    background-repeat: no-repeat;
+                    background-position: left;
                     display: flex;
-                    align-self: center;
                     justify-content: space-between;
                     padding: 5px;
+
+                    p {
+                        margin-left: 20px;
+                        align-items: center;
+                        color: #b8add2;
+                        padding: 5px;
+                        font-family: b.$fontFamily;
+
+                    }
                 }
             }
 
@@ -313,6 +369,38 @@ footer {
             display: flex;
             align-items: center;
             justify-content: space-between;
+        }
+
+        .selectors {
+            .buttonContainer {
+
+                display: flex;
+                align-items: center;
+
+                p {
+                    color: #B8ADD2;
+                    font-family: inherit;
+                    font-weight: 900;
+                    margin: 0px 20px 0px 0px;
+                }
+
+                .svg {
+                    margin-top: b.remConverter(8px);
+                    width: b.remConverter(30px);
+                    height: b.remConverter(30px);
+                    background-image: url("/src/assets/images/svg/Utilities/logoPancake.svg");
+                    background-repeat: no-repeat;
+                    transition-property: transform;
+                    transition-duration: 0.5s;
+                    cursor: pointer;
+
+                    &:hover {
+                        transform: scale(1.2);
+
+
+                    }
+                }
+            }
         }
     }
 }
