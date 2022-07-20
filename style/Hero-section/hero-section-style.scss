@@ -1,0 +1,235 @@
+@use '../base' as b;
+@import '../components';
+
+.hero-section-base {
+    height: 100vh;
+    width: 100%;
+    padding: 48px 0;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    -webkit-box-align: center;
+    align-items: center;
+    background: b.$light_gradientBubblegum;
+}
+
+.hero-section-centre {
+    width: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.hero-section-banner-container {
+     position: relative;
+     width: 56%;
+     display: flex;
+     justify-content: space-between;
+     background: -webkit-linear-gradient(top, #7645d9 0%, #452a7a 100%);
+     border-radius: 32px;
+    }
+
+.swiper {
+    list-style: none;
+    padding: 0;
+    position: relative;
+    overflow: visible;
+    width: 100%;
+}
+
+.swiper-wrapper {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    box-sizing: content-box;
+}
+
+.swiper-content-container {
+    border-radius: 32px;
+    width: 100%;
+    max-height: max-content;
+}
+
+.swiper-content {
+    position: relative;
+    padding: 24px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    max-height: 192px;
+}
+
+.swiper-left-content {
+   
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    justify-content: center;
+    align-items: flex-start
+}
+
+.swiper-left-content-top {
+    font-family: b.$fontFamily;
+    font-size: 24px;
+    background: -webkit-linear-gradient(top, rgb(255, 216, 0), rgb(235, 140, 0));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.swiper-left-content-middle {
+    color: rgb(255, 255, 255);
+    text-shadow: #00000040 0px 4px 4px;
+    text-transform: uppercase;
+    font-family: b.$fontFamily;
+    font-size: b.$font-size-subheader;
+    font-weight: b.$fontHeavyWeight
+}
+
+.hs-banner-button {
+    @include button;
+    font-family: b.$fontFamily;
+    box-shadow: b.$primaryDark b.$boxShadow;
+    padding: 0px 24px;
+}
+
+.full-button-text {
+    font-weight: b.$fontHeavyWeight;
+    line-height: 1.5;
+    margin-right: 4px;
+    font-size: b.$font-size-copy;
+}
+
+.arrow-button {
+    fill: #ffff;
+}
+
+.swiper-right-content {
+    position: absolute;
+    right: 0px;
+}
+
+.swiper-right-imgcontainer {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: flex-end;
+    width: initial;
+    height: initial;
+    background: none;
+    opacity: 1;
+    border: 0px;
+    margin: 0px;
+    padding: 0px;
+    position: relative;
+    max-width: 100%;
+}
+
+.swiper-right-img {
+    display: block;
+    max-width: 100%;
+    width: 60%;
+    height: initial;
+    background: none;
+    opacity: 1;
+    border: 0px;
+    margin-bottom: 38px;
+    padding: 0px;
+}
+
+.swiper-pagechange {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    width: 108px;
+    background: #7a6eaa;
+    border-radius: 8px;
+}
+
+.hs-spacer-container {
+    z-index: 0;
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    bottom: 0px;
+    left: 0px;
+}
+
+.hero-section-spacer {
+    position: absolute;
+    width: 100%;
+    bottom: -3px;
+}
+
+.hs-bottom spacer {
+    align-self: center;
+    fill: #280d5f;
+    flex-shrink: 0;
+}
+
+.homepage-hero {
+    width: 50%;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    position: relative;
+}
+
+.hero-section-lefttxt-container {
+    font-family: b.$fontFamily;
+    display: flex;
+    flex: 1 1 0%;
+    flex-direction: column;
+}
+
+.hs-leftslogan {
+    font-family: b.$fontFamily;
+    color: b.$secondary;
+    margin-bottom: 24px;
+    font-size: b.$font-size-header;
+    font-weight: b.$fontHeavyWeight;
+    line-height: 1.1;
+}
+
+.hs-leftcopy {
+    font-family: b.$fontFamily;
+    color: #280d5f;
+    margin-bottom: 24px;
+    font-size: b.$font-size-paragraph;
+    font-weight: b.$fontHeavyWeight;
+    line-height: 1.1;
+}
+
+/*bottoni*/
+
+
+.hero-section-rightanimation-container {
+    display: flex;
+    height: 10%;
+    width: 10%;
+    position: relative;
+        
+        .floatEl {
+        @include floatting;
+        position: absolute;
+        &:nth-child(1){
+            animation-duration: 2.9s;
+        }
+        &:nth-child(2){
+            animation-duration: 2.1s;
+        }
+        &:nth-child(3){
+            animation-duration: 2.5s;
+        }
+        &:nth-child(4){
+            animation-duration: 2.5s;
+        }
+        &:nth-child(5){
+            animation-duration: 2.5s;
+        }
+    }
+}
