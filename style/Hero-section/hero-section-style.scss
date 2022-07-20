@@ -74,6 +74,7 @@
     font-family: b.$fontFamily;
     font-size: 24px;
     background: -webkit-linear-gradient(top, rgb(255, 216, 0), rgb(235, 140, 0));
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -172,7 +173,7 @@
 }
 
 .homepage-hero {
-    width: 50%;
+    box-sizing: border-box;
     display: flex;
     -webkit-box-pack: center;
     justify-content: center;
@@ -182,8 +183,9 @@
 .hero-section-lefttxt-container {
     font-family: b.$fontFamily;
     display: flex;
-    flex: 1 1 0%;
+    //flex: 1 1 0%;
     flex-direction: column;
+
 }
 
 .hs-leftslogan {
@@ -205,31 +207,48 @@
 }
 
 /*bottoni*/
-
-
 .hero-section-rightanimation-container {
     display: flex;
-    height: 10%;
-    width: 10%;
-    position: relative;
+    height: 192px;
+    width: 192px;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.hs-big-animation-runner {
+    width: 100%;
+    
+
+    .hs-biganimation-sources {
+        box-sizing: border-box;
+        //overflow: hidden;
+        width: initial;
+        height: initial;
+        background: none;
+        opacity: 1;
+        border: 0px;
+        margin: 0px;
+        padding: 0px;
+        position: relative;
+        max-width: 100%;
         
         .floatEl {
-        @include floatting;
-        position: absolute;
-        &:nth-child(1){
-            animation-duration: 2.9s;
-        }
-        &:nth-child(2){
-            animation-duration: 2.1s;
-        }
-        &:nth-child(3){
-            animation-duration: 2.5s;
-        }
-        &:nth-child(4){
-            animation-duration: 2.5s;
-        }
-        &:nth-child(5){
-            animation-duration: 2.5s;
+            @include floatting;
+            box-sizing: border-box;
+            position: relative;
+            max-width: 200%;
+            &:nth-child(1){
+                animation-duration: 2.9s;
+            }
+            &:nth-child(2){
+                animation-duration: 2.1s;
+            }
+            &:nth-child(3){
+                animation-duration: 2.5s;
+            }
+            &:nth-child(4){
+                animation-duration: 2.5s;
+            }
         }
     }
 }

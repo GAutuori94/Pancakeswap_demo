@@ -577,6 +577,7 @@ input:checked + .slider:before {
   font-family: "Kanit", "sans";
   font-size: 24px;
   background: -webkit-linear-gradient(top, rgb(255, 216, 0), rgb(235, 140, 0));
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -697,7 +698,7 @@ input:checked + .slider:before {
 }
 
 .homepage-hero {
-  width: 50%;
+  box-sizing: border-box;
   display: flex;
   -webkit-box-pack: center;
   justify-content: center;
@@ -707,7 +708,6 @@ input:checked + .slider:before {
 .hero-section-lefttxt-container {
   font-family: "Kanit", "sans";
   display: flex;
-  flex: 1 1 0%;
   flex-direction: column;
 }
 
@@ -732,13 +732,32 @@ input:checked + .slider:before {
 /*bottoni*/
 .hero-section-rightanimation-container {
   display: flex;
-  height: 10%;
-  width: 10%;
-  position: relative;
+  height: 192px;
+  width: 192px;
+  max-width: 100%;
+  max-height: 100%;
 }
-.hero-section-rightanimation-container .floatEl {
+
+.hs-big-animation-runner {
+  width: 100%;
+}
+.hs-big-animation-runner .hs-biganimation-sources {
+  box-sizing: border-box;
+  width: initial;
+  height: initial;
+  background: none;
+  opacity: 1;
+  border: 0px;
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+  max-width: 100%;
+}
+.hs-big-animation-runner .hs-biganimation-sources .floatEl {
   animation: floatting 3s ease-in-out 1s infinite normal none running;
-  position: absolute;
+  box-sizing: border-box;
+  position: relative;
+  max-width: 200%;
 }
 @keyframes floatting {
   0% {
@@ -751,19 +770,16 @@ input:checked + .slider:before {
     transform: translate(0px);
   }
 }
-.hero-section-rightanimation-container .floatEl:nth-child(1) {
+.hs-big-animation-runner .hs-biganimation-sources .floatEl:nth-child(1) {
   animation-duration: 2.9s;
 }
-.hero-section-rightanimation-container .floatEl:nth-child(2) {
+.hs-big-animation-runner .hs-biganimation-sources .floatEl:nth-child(2) {
   animation-duration: 2.1s;
 }
-.hero-section-rightanimation-container .floatEl:nth-child(3) {
+.hs-big-animation-runner .hs-biganimation-sources .floatEl:nth-child(3) {
   animation-duration: 2.5s;
 }
-.hero-section-rightanimation-container .floatEl:nth-child(4) {
-  animation-duration: 2.5s;
-}
-.hero-section-rightanimation-container .floatEl:nth-child(5) {
+.hs-big-animation-runner .hs-biganimation-sources .floatEl:nth-child(4) {
   animation-duration: 2.5s;
 }
 
