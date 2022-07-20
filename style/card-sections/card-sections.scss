@@ -136,61 +136,133 @@
     border-radius: remConverter(72px);
     padding: remConverter(40px);
 
-    .bottom-cards-container {
-      max-width: 600px;
-      margin: 0px auto;
+    .card-section-container {
       display: flex;
-      flex-direction: row;
+      flex-direction: column;
+      -webkit-box-align: center;
+      align-items: center;
+      -webkit-box-pack: center;
+      justify-content: center;
 
-      .yellow-card {
-        max-width: 100%;
-        margin-right: 24px;
-        margin-bottom: 0px;
+      .card-section-text {
+
+        h2 {
+          margin-bottom: 24px;
+          text-align: center;
+          font-weight: 600;
+          line-height: 1.1;
+          font-size: 40px;
+
+          span {
+            color: rgb(118, 69, 217);
+          }
+        }
+      }
+
+        .card-sectiontxt-copy1 {
+          color: rgb(122, 110, 170);
+          font-weight: 400;
+          line-height: 1.5;
+          font-size: 16px;
+        }
+
+        .card-sectiontxt-copy2 {
+          color: rgb(122, 110, 170);
+          font-weight: 400;
+          line-height: 1.5;
+          margin-bottom: 40px;
+          font-size: 16px;
+        }
+
+
+      .bottom-cards-container {
+        max-width: 600px;
+        margin: 0px auto;
         display: flex;
-        flex: 1 1 0%;
+        flex-direction: row;
 
-        .yellow-card-outer {
-          background: rgb(255, 178, 55);
-          border-radius: 24px;
-          color: rgb(40, 13, 95);
-          overflow: hidden;
-          position: relative;
-          height: fit-content;
-          padding: 1px 1px 4px;
-          transform: rotate(-2.36deg);
+        .yellow-card {
+          max-width: 100%;
+          margin-right: 24px;
+          margin-bottom: 0px;
+          display: flex;
+          flex: 1 1 0%;
 
-          .yellow-card-inner {
-            color: rgb(40, 13, 95);
-            overflow: initial;
-            background: linear-gradient(
-              rgb(255, 178, 55) 0%,
-              rgb(255, 205, 81) 51.17%,
-              rgb(255, 231, 106) 100%
-            );
+          .yellow-card-outer {
+            background: rgb(255, 178, 55);
             border-radius: 24px;
+            color: rgb(40, 13, 95);
+            overflow: hidden;
+            position: relative;
+            height: fit-content;
+            padding: 1px 1px 4px;
+            transform: rotate(-2.36deg);
 
-            .yellow-card-body {
+            .yellow-card-inner {
               color: rgb(40, 13, 95);
-              padding: 24px;
+              overflow: initial;
+              background: linear-gradient(
+                rgb(255, 178, 55) 0%,
+                rgb(255, 205, 81) 51.17%,
+                rgb(255, 231, 106) 100%
+              );
+              border-radius: 24px;
 
-              .svg-container {
-                position: absolute;
-                top: 24px;
-                right: 24px;
-                transform: rotate(-2.36deg);
+              .yellow-card-body {
+                color: rgb(40, 13, 95);
+                padding: 24px;
 
-                img {
-                  width: 36px;
-                  align-self: center;
-                  flex-shrink: 0;
-                  filter: none !important;
+                .svg-container {
+                  position: absolute;
+                  top: 24px;
+                  right: 24px;
+                  transform: rotate(-2.36deg);
+
+                  img {
+                    width: 36px;
+                    align-self: center;
+                    flex-shrink: 0;
+                    filter: none !important;
+                  }
                 }
-              }
 
-              .card-text {
-                margin-top: 48px;
-                display: flex;
-                flex-direction: column;
+                .card-text {
+                  margin-top: 48px;
+                  display: flex;
+                  flex-direction: column;
+
+                  margin-top: 48px;
+                  display: flex;
+                  flex-direction: column;
+
+                  p:first-of-type {
+                    font-weight: 600;
+                    line-height: 1.5;
+                    font-size: 16px;
+                  }
+
+                  h2 {
+                    margin-top: 8px;
+                    margin-bottom: 8px;
+                    font-weight: 600;
+                    line-height: 1.1;
+                    font-size: 40px;
+                  }
+
+                  h2 + p {
+                    font-weight: 600;
+                    line-height: 1.5;
+                    margin-bottom: 24px;
+                    font-size: 16px;
+                  }
+
+                  p:last-of-type {
+                    font-weight: 400;
+                    line-height: 1.5;
+                    margin-bottom: 40px;
+                    font-size: 16px;
+                  }
+                }
               }
 
               .card-footer {
@@ -202,48 +274,139 @@
                 -webkit-box-pack: center;
                 justify-content: center;
 
-                button {
-                  @include button;
+                a {
                   width: 100%;
+
+                  button {
+                    @include button;
+                    width: 100%;
+                    box-shadow: $primary 0px -1px 0px 0px inset;
+
+                    .ftixwH {
+                      fill: #ffff;
+                    }
+                  }
                 }
               }
             }
           }
         }
-      }
 
-      .purple-card {
-        max-width: 100%;
-        display: flex;
-        flex: 1 1 0%;
+        .purple-card {
+          max-width: 100%;
+          display: flex;
+          flex: 1 1 0%;
 
-        .purple-card-outer {
-          background: rgb(60, 23, 134);
-          border-radius: 24px;
-          color: rgb(40, 13, 95);
-          overflow: hidden;
-          position: relative;
-          height: fit-content;
-          padding: 1px 1px 4px;
-          transform: rotate(1.43deg);
-
-          .purple-card-inner {
-            color: rgb(40, 13, 95);
-            width: 100%;
-            height: 100%;
-            overflow: initial;
-            background: linear-gradient(
-              rgb(118, 69, 217) 0%,
-              rgb(81, 33, 177) 100%
-            );
+          .purple-card-outer {
+            background: rgb(60, 23, 134);
             border-radius: 24px;
+            color: rgb(40, 13, 95);
+            overflow: hidden;
+            position: relative;
+            height: fit-content;
+            padding: 1px 1px 4px;
+            transform: rotate(1.43deg);
 
-            .purple-card-body {
-              font-weight: 400;
-              font-size: 16px;
-              line-height: 1.5;
-              color: white;
-              padding: 24px;
+            .purple-card-inner {
+              color: rgb(40, 13, 95);
+              width: 100%;
+              height: 100%;
+              overflow: initial;
+              background: linear-gradient(
+                rgb(118, 69, 217) 0%,
+                rgb(81, 33, 177) 100%
+              );
+              border-radius: 24px;
+
+              .purple-card-body {
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 1.5;
+                color: white;
+                padding: 24px;
+
+                .svg-container {
+                  position: absolute;
+                  top: 24px;
+                  right: 24px;
+                  transform: rotate(1.43deg);
+
+                  img {
+                    color: white;
+                    width: 36px;
+                    align-self: center;
+                    fill: white;
+                    flex-shrink: 0;
+                    filter: none !important;
+                  }
+                }
+
+                .card-text {
+                  margin-top: 48px;
+                  display: flex;
+                  flex-direction: column;
+
+                  p:first-of-type {
+                    font-weight: 600;
+                    line-height: 1.5;
+                    font-size: 16px;
+                  }
+
+                  div {
+                    font-weight: 600;
+                    line-height: 1.5;
+                    font-size: 40px;
+                    -webkit-text-fill-color: transparent;
+                    background-clip: text;
+
+                    span {
+                      font-weight: 600;
+                      line-height: 1.5;
+                      background: -webkit-linear-gradient(top, rgb(255, 216, 0), rgb(235, 140, 0));
+                      background-clip: text;
+                      -webkit-background-clip: text;
+                      -webkit-text-fill-color: transparent;
+                      font-size: 100%;
+                    }
+                  }
+
+                  div + p {
+                    font-weight: 600;
+                    line-height: 1.5;
+                    margin-bottom: 24px;
+                    font-size: 16px;
+                  }
+
+                  p:last-of-type {
+                    font-weight: 400;
+                    line-height: 1.5;
+                    margin-bottom: 40px;
+                    font-size: 16px;
+                  }
+                }
+
+                .card-footer {
+                  display: flex;
+                  -webkit-box-align: center;
+                  align-items: center;
+                  -webkit-box-pack: center;
+                  justify-content: center;
+
+                  a {
+                    width: 100%;
+
+                    button {
+                      @include button;
+                      width: 100%;
+                      box-shadow: $primary 0px -1px 0px 0px inset;
+
+                      .ftixwH {
+                        fill: #ffff;
+                      }
+                    }
+                  }
+                }
+              }
             }
           }
         }
