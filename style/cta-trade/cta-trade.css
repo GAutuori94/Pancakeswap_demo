@@ -524,6 +524,7 @@ input:checked + .slider:before {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
+  max-width: 60.5rem;
 }
 #CTA-trade_section .trade-section .trade-section-box .trade-section-left {
   margin-right: 10%;
@@ -535,6 +536,7 @@ input:checked + .slider:before {
   font-size: 40px;
   font-weight: 600;
   margin-bottom: 1.5rem;
+  line-height: 1.1;
 }
 #CTA-trade_section .trade-section .trade-section-box .trade-section-left h2 span {
   font-size: 40px;
@@ -547,6 +549,7 @@ input:checked + .slider:before {
   color: #7a6eaa;
   font-weight: bold;
   font-family: inherit;
+  line-height: 1.5;
 }
 #CTA-trade_section .trade-section .trade-section-box .trade-section-left .bottom-cta button {
   align-items: center;
