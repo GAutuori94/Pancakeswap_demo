@@ -15,7 +15,6 @@
     justify-content: space-between;
     flex-direction: column;
     align-items: center;
-    width: b.remConverter(852px);
 
     .trade-section-box {
       display: flex;
@@ -26,6 +25,26 @@
         display: flex;
         flex-direction: column;
         flex: 1 1 0;
+        h2 {
+            font-size: b.$font-size-subheader;
+            font-weight: b.$fontHeavyWeight;
+            margin-bottom: b.remConverter(24px);
+  
+            span {
+              font-size: b.$font-size-subheader;
+              font-weight: b.$fontHeavyWeight;
+              color: b.$secondary;
+            }
+          }
+  
+          p {
+            margin-bottom: b.remConverter(24px);
+            font-size: b.$font-size-copy;
+            color: #7a6eaa;
+            font-weight: bold;
+            font-family: inherit;
+          }
+  
         .bottom-cta {
           button {
             @include button;
@@ -36,29 +55,6 @@
               opacity: 0.65;
             }
           }
-
-        h2 {
-          font-size: b.$font-size-subheader;
-          font-weight: b.$fontHeavyWeight;
-          margin-top: 40px;
-          margin-bottom: 40px;
-
-          span {
-            font-size: b.$font-size-subheader;
-            font-weight: b.$fontHeavyWeight;
-            color: b.$secondary;
-          }
-        }
-
-        p {
-          margin-bottom: 40px;
-          font-size: b.$font-size-copy;
-          color: #7a6eaa;
-          font-weight: bold;
-          font-family: inherit;
-        }
-
-        
 
           a {
             color: b.$primary;
@@ -83,8 +79,6 @@
           flex: 1 1 0%;
           padding-bottom: 70px;
           position: relative;
-          height: 60%;
-          width: 15vw;
 
           .floatEl {
             width: 100%;

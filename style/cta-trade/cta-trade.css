@@ -519,7 +519,6 @@ input:checked + .slider:before {
   justify-content: space-between;
   flex-direction: column;
   align-items: center;
-  width: 53.25rem;
 }
 #CTA-trade_section .trade-section .trade-section-box {
   display: flex;
@@ -531,6 +530,23 @@ input:checked + .slider:before {
   display: flex;
   flex-direction: column;
   flex: 1 1 0;
+}
+#CTA-trade_section .trade-section .trade-section-box .trade-section-left h2 {
+  font-size: 40px;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+#CTA-trade_section .trade-section .trade-section-box .trade-section-left h2 span {
+  font-size: 40px;
+  font-weight: 600;
+  color: #7645D9;
+}
+#CTA-trade_section .trade-section .trade-section-box .trade-section-left p {
+  margin-bottom: 1.5rem;
+  font-size: 16px;
+  color: #7a6eaa;
+  font-weight: bold;
+  font-family: inherit;
 }
 #CTA-trade_section .trade-section .trade-section-box .trade-section-left .bottom-cta button {
   align-items: center;
@@ -559,24 +575,6 @@ input:checked + .slider:before {
 #CTA-trade_section .trade-section .trade-section-box .trade-section-left .bottom-cta button:hover {
   opacity: 0.65;
 }
-#CTA-trade_section .trade-section .trade-section-box .trade-section-left .bottom-cta h2 {
-  font-size: 40px;
-  font-weight: 600;
-  margin-top: 40px;
-  margin-bottom: 40px;
-}
-#CTA-trade_section .trade-section .trade-section-box .trade-section-left .bottom-cta h2 span {
-  font-size: 40px;
-  font-weight: 600;
-  color: #7645D9;
-}
-#CTA-trade_section .trade-section .trade-section-box .trade-section-left .bottom-cta p {
-  margin-bottom: 40px;
-  font-size: 16px;
-  color: #7a6eaa;
-  font-weight: bold;
-  font-family: inherit;
-}
 #CTA-trade_section .trade-section .trade-section-box .trade-section-left .bottom-cta a {
   color: #1FC7D4;
   text-decoration: none;
@@ -596,8 +594,6 @@ input:checked + .slider:before {
   flex: 1 1 0%;
   padding-bottom: 70px;
   position: relative;
-  height: 60%;
-  width: 15vw;
 }
 #CTA-trade_section .trade-section .trade-section-box .trade-section-right .animation-box .floatEl {
   width: 100%;
