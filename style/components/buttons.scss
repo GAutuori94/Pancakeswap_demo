@@ -8,7 +8,7 @@
   border-radius: b.remConverter(
     16px
   ); // resta così per tutti, verrà visualizzato diversamente nella navbar per via dell'altezza del div padre
-  box-shadow: $boxShadow; // leggero box-shadow a sud dell'asse y
+  box-shadow: b.$boxShadow; // leggero box-shadow a sud dell'asse y
   cursor: pointer; // simula il link
   display: inline-flex; // serve per gestire l'allineamento con le arrowsvg
   font-family: inherit; //ereditano kanit
