@@ -546,6 +546,9 @@ input:checked + .slider:before {
   color: #ffffff;
   margin-right: 0.5rem;
   width: 10.321875rem;
+  height: 3rem;
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
 }
 #CTA-connect_section #central-container .connect-cta:hover {
   opacity: 0.65;
@@ -553,10 +556,10 @@ input:checked + .slider:before {
 }
 #CTA-connect_section .img-pos-1 {
   top: 30px;
-  transform: translateX(-120%);
+  transform: translateX(-100%);
 }
 #CTA-connect_section .img-pos-2 {
-  transform: translateX(125%);
+  transform: translateX(150%);
   padding-top: 1.875rem;
 }
 #CTA-connect_section .container {
@@ -595,6 +598,12 @@ input:checked + .slider:before {
 }
 #CTA-connect_section .container .floatEl:nth-child(5) {
   animation-duration: 2.5s;
+}
+
+@media (max-width: 42.5rem) {
+  .container {
+    visibility: hidden;
+  }
 }
 
 /*# sourceMappingURL=connect-sec_style.css.map */

@@ -56,6 +56,9 @@
         .connect-cta{
             @include button;
             width: b.remConverter(165.15px);
+            height: b.remConverter(48px);
+            padding-top: b.remConverter(20px);
+            padding-bottom: b.remConverter(20px);
 
             &:hover{
                 opacity: 0.65;
@@ -67,12 +70,12 @@
 
     .img-pos-1 {
         top: 30px;
-        transform: translateX(-120%);
+        transform: translateX(-100%);
 
     }
 
     .img-pos-2 {
-        transform: translateX(125%);
+        transform: translateX(150%);
         padding-top: b.remConverter(30px);
     }
 
@@ -109,5 +112,11 @@
                 animation-duration: 2.5s;
             }
         }
+    }
+}
+
+@media (max-width:  b.remConverter(680px)) {
+    .container {
+        visibility: hidden;
     }
 }
