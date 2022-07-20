@@ -489,7 +489,7 @@ input:checked + .slider:before {
   font-family: "Kanit", "sans";
   width: 100%;
   height: 90vh;
-  padding: 48px 0px;
+  padding: 3rem 0rem;
 }
 #CTA-buy_section .inner-container {
   display: flex;
@@ -497,7 +497,7 @@ input:checked + .slider:before {
   flex-direction: column;
   align-items: center;
   width: 100%;
-  padding: 48px 0;
+  padding: 3rem 0rem;
 }
 #CTA-buy_section .inner-container .cake-coin-container {
   display: flex;
@@ -510,17 +510,17 @@ input:checked + .slider:before {
 #CTA-buy_section .inner-container .cake-coin-container .copy-left h2 {
   font-size: 40px;
   font-weight: 600;
-  margin-top: 40px;
-  margin-bottom: 40px;
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
 }
 #CTA-buy_section .inner-container .cake-coin-container .copy-left h2 span {
-  font-size: 40px;
+  font-size: 2.5rem;
   font-weight: 600;
   color: #7645D9;
 }
 #CTA-buy_section .inner-container .cake-coin-container .copy-left p {
-  margin-bottom: 40px;
-  font-size: 16px;
+  margin-bottom: 2.5rem;
+  font-size: 1rem;
   color: #7A6EAA;
   font-weight: bold;
   font-family: inherit;
@@ -546,8 +546,8 @@ input:checked + .slider:before {
   background-color: #1FC7D4;
   color: #ffffff;
   margin-right: 0.5rem;
-  padding-left: 24px;
-  padding-right: 24px;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
 }
 #CTA-buy_section .inner-container .cake-coin-container .copy-left .bottom-cta button:hover {
   opacity: 0.65;
@@ -562,7 +562,7 @@ input:checked + .slider:before {
 }
 #CTA-buy_section .inner-container .cake-coin-container .container-animation {
   width: 100%;
-  padding-bottom: 70px;
+  padding-bottom: 4.375rem;
   position: relative;
 }
 #CTA-buy_section .inner-container .cake-coin-container .container-animation .floatEl {
@@ -598,13 +598,13 @@ input:checked + .slider:before {
 }
 #CTA-buy_section .inner-container .table-home-buy {
   width: 79.5%;
-  margin-top: 60px;
+  margin-top: 3.75rem;
 }
 #CTA-buy_section .inner-container .table-home-buy .supply-row {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  margin-bottom: 21px;
+  margin-bottom: 1.3125rem;
 }
 #CTA-buy_section .inner-container .table-home-buy .supply-row .table-section {
   display: flex;
@@ -614,27 +614,27 @@ input:checked + .slider:before {
 }
 #CTA-buy_section .inner-container .table-home-buy .supply-row .table-section:nth-child(2) {
   border-left: 1px solid lightgray;
-  padding-left: 20px;
+  padding-left: 1.25rem;
 }
 #CTA-buy_section .inner-container .table-home-buy .supply-row .table-section:nth-child(3) {
   border-left: 1px solid lightgray;
-  padding-left: 20px;
+  padding-left: 1.25rem;
 }
 #CTA-buy_section .inner-container .table-home-buy .supply-row .table-section .head-sec {
-  font-size: 16px;
+  font-size: 1rem;
   color: #7A6EAA;
   font-weight: bold;
   font-family: inherit;
 }
 #CTA-buy_section .inner-container .table-home-buy .supply-row .table-section .bottom-sec {
-  font-size: 24px;
+  font-size: 1.5rem;
   font-weight: bolder;
 }
 #CTA-buy_section .inner-container .table-home-buy .bottom-row {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  margin-top: 21px;
+  margin-top: 1.3125rem;
 }
 #CTA-buy_section .inner-container .table-home-buy .bottom-row .table-section {
   display: flex;
@@ -644,20 +644,20 @@ input:checked + .slider:before {
 }
 #CTA-buy_section .inner-container .table-home-buy .bottom-row .table-section:nth-child(2) {
   border-left: 1px solid lightgray;
-  padding-left: 20px;
+  padding-left: 1.25rem;
 }
 #CTA-buy_section .inner-container .table-home-buy .bottom-row .table-section:nth-child(3) {
   border-left: 1px solid lightgray;
-  padding-left: 20px;
+  padding-left: 1.25rem;
 }
 #CTA-buy_section .inner-container .table-home-buy .bottom-row .table-section .head-sec {
-  font-size: 16px;
+  font-size: 1rem;
   color: #7A6EAA;
   font-weight: bold;
   font-family: inherit;
 }
 #CTA-buy_section .inner-container .table-home-buy .bottom-row .table-section:nth-child(2) .bottom-sec {
-  font-size: 24px;
+  font-size: 1.5rem;
   font-weight: bolder;
 }
 

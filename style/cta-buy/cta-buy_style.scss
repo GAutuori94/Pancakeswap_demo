@@ -6,7 +6,7 @@
     font-family: b.$fontFamily;
     width: 100%;
     height: 90vh;
-    padding: 48px 0px;
+    padding: b.remConverter(48px) b.remConverter(0px);
 
     .inner-container {
         display: flex;
@@ -14,7 +14,7 @@
         flex-direction: column;
         align-items: center;
         width: 100%;
-        padding: 48px 0;
+        padding: b.remConverter(48px) b.remConverter(0px);
 
         .cake-coin-container {
             display: flex;
@@ -27,19 +27,19 @@
                 h2 {
                     font-size: b.$font-size-subheader;
                     font-weight: b.$fontHeavyWeight;
-                    margin-top: 40px;
-                    margin-bottom: 40px;
+                    margin-top: b.remConverter(40px);
+                    margin-bottom: b.remConverter(40px);
 
                     span {
-                        font-size: b.$font-size-subheader;
+                        font-size: b.remConverter(b.$font-size-subheader);
                         font-weight: b.$fontHeavyWeight;
                         color: b.$secondary;
                     }
                 }
 
                 p {
-                    margin-bottom: 40px;
-                    font-size: b.$font-size-copy;
+                    margin-bottom: b.remConverter(40px);
+                    font-size: b.remConverter(b.$font-size-copy);
                     color: #7A6EAA;
                     font-weight: bold;
                     font-family: inherit;
@@ -48,8 +48,8 @@
                 .bottom-cta {
                     button {
                         @include button;
-                        padding-left: 24px;
-                        padding-right: 24px;
+                        padding-left: b.remConverter(24px);
+                        padding-right: b.remConverter(24px);
 
                         &:hover {
                             opacity: 0.65;
@@ -70,7 +70,7 @@
 
             .container-animation {
                 width: 100%;
-                padding-bottom: 70px;
+                padding-bottom: b.remConverter(70px);
                 position: relative;
 
                 .floatEl {
@@ -104,13 +104,13 @@
         .table-home-buy {
 
             width: 79.5%;
-            margin-top: 60px;
+            margin-top: b.remConverter(60px);
 
             .supply-row {
                 display: flex;
                 flex-direction: row;
                 justify-content: space-evenly;
-                margin-bottom: 21px;
+                margin-bottom: b.remConverter(21px);
 
                 .table-section {
                     display: flex;
@@ -120,16 +120,16 @@
 
                     &:nth-child(2) {
                         border-left: 1px solid lightgray;
-                        padding-left: 20px;
+                        padding-left: b.remConverter(20px);
                     }
 
                     &:nth-child(3) {
                         border-left: 1px solid lightgray;
-                        padding-left: 20px;
+                        padding-left: b.remConverter(20px);
                     }
 
                     .head-sec {
-                        font-size: b.$font-size-copy;
+                        font-size: b.remConverter(b.$font-size-copy);
                         color: #7A6EAA;
                         font-weight: bold;
                         font-family: inherit;
@@ -137,7 +137,7 @@
                     }
 
                     .bottom-sec {
-                        font-size: 24px;
+                        font-size: b.remConverter(24px);
                         font-weight: bolder;
                     }
                 }
@@ -147,7 +147,7 @@
                 display: flex;
                 flex-direction: row;
                 justify-content: space-evenly;
-                margin-top: 21px;
+                margin-top: b.remConverter(21px);
 
                 .table-section {
                     display: flex;
@@ -157,16 +157,16 @@
 
                     &:nth-child(2) {
                         border-left: 1px solid lightgray;
-                        padding-left: 20px;
+                        padding-left: b.remConverter(20px);
                     }
 
                     &:nth-child(3) {
                         border-left: 1px solid lightgray;
-                        padding-left: 20px;
+                        padding-left: b.remConverter(20px);
                     }
 
                     .head-sec {
-                        font-size: b.$font-size-copy;
+                        font-size: b.remConverter(b.$font-size-copy);
                         color: #7A6EAA;
                         font-weight: bold;
                         font-family: inherit;
@@ -174,7 +174,7 @@
 
                     &:nth-child(2) {
                         .bottom-sec {
-                            font-size: 24px;
+                            font-size: b.remConverter(24px);
                         font-weight: bolder;
                         }
                     }
