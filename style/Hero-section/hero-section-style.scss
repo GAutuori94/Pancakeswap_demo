@@ -89,6 +89,7 @@
 }
 
 .hs-banner-button {
+    z-index: 1;
     @include button;
     font-family: b.$fontFamily;
     box-shadow: b.$primaryDark b.$boxShadow;
@@ -164,17 +165,22 @@
     position: absolute;
     width: 100%;
     bottom: -3px;
+    vertical-align: baseline;
 }
 
 .hs-bottom-spacer {
     align-self: center;
     fill: #280d5f;
     flex-shrink: 0;
+    vertical-align: baseline;
 }
 
 .homepage-hero-container {
+    z-index: 1;
     display: flex;
     justify-content: center;
+    position: relative;
+    margin-top: 30px;
 }
 
 .homepage-hero {
@@ -184,7 +190,7 @@
     -webkit-box-pack: center;
     justify-content: center;
     align-items: center;
-    position: absolute;
+    position: relative;
     vertical-align: baseline;
 }
 
@@ -193,7 +199,7 @@
     display: flex;
     flex: 1 1 0%;
     flex-direction: column;
-
+    align-items: flex-start;
 }
 
 .hs-leftslogan {
@@ -203,7 +209,7 @@
     font-size: b.$font-size-header;
     font-weight: b.$fontHeavyWeight;
     line-height: 1.1;
-    box-sizing: border-box;
+    
 }
 
 .hs-leftcopy {
@@ -213,24 +219,43 @@
     font-size: b.$font-size-paragraph;
     font-weight: b.$fontHeavyWeight;
     line-height: 1.1;
-    box-sizing: border-box;
 }
 
-/*bottoni*/
+.hs-buttons {
+    display: flex;
+}
+
+.hs-connect-button {
+    @include button;
+    font-family: b.$fontFamily;
+    box-shadow: b.$primaryDark b.$boxShadow;
+    padding: 0px 24px;
+}
+
+.hs-trade-button {
+    @include button;
+    background-color: transparent;
+    border: 2px solid b.$primary;
+    font-family: b.$fontFamily;
+    box-shadow: none;
+    padding: 0px 24px;
+    color: b.$primary;
+}
+
 .hero-section-rightanimation {
     z-index: 1;
     position: relative;
     display: flex;
-    height: 450px;
-    width: 450px;
+    height: 100%;
+    width: 100%;
     max-width: 100%;
     max-height: 100%;
     flex: 1 1 0%;
 }
 
     .hs-biganimation-container {
-        width: 100%;
-        position: relative;
+        width: 125%;
+        position: absolute;
         box-sizing: border-box;
         
         .floatEl {
@@ -249,6 +274,7 @@
             }
             &:nth-child(4){
                 animation-duration: 2.5s;
+                
             }
         }
     }

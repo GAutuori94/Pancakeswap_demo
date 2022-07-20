@@ -592,6 +592,7 @@ input:checked + .slider:before {
 }
 
 .hs-banner-button {
+  z-index: 1;
   align-items: center;
   border: 0px;
   border-radius: 1rem;
@@ -689,17 +690,22 @@ input:checked + .slider:before {
   position: absolute;
   width: 100%;
   bottom: -3px;
+  vertical-align: baseline;
 }
 
 .hs-bottom-spacer {
   align-self: center;
   fill: #280d5f;
   flex-shrink: 0;
+  vertical-align: baseline;
 }
 
 .homepage-hero-container {
+  z-index: 1;
   display: flex;
   justify-content: center;
+  position: relative;
+  margin-top: 30px;
 }
 
 .homepage-hero {
@@ -709,7 +715,7 @@ input:checked + .slider:before {
   -webkit-box-pack: center;
   justify-content: center;
   align-items: center;
-  position: absolute;
+  position: relative;
   vertical-align: baseline;
 }
 
@@ -718,6 +724,7 @@ input:checked + .slider:before {
   display: flex;
   flex: 1 1 0%;
   flex-direction: column;
+  align-items: flex-start;
 }
 
 .hs-leftslogan {
@@ -727,7 +734,6 @@ input:checked + .slider:before {
   font-size: 64px;
   font-weight: 600;
   line-height: 1.1;
-  box-sizing: border-box;
 }
 
 .hs-leftcopy {
@@ -737,24 +743,87 @@ input:checked + .slider:before {
   font-size: 20px;
   font-weight: 600;
   line-height: 1.1;
-  box-sizing: border-box;
 }
 
-/*bottoni*/
+.hs-buttons {
+  display: flex;
+}
+
+.hs-connect-button {
+  align-items: center;
+  border: 0px;
+  border-radius: 1rem;
+  box-shadow: 0px -1px 0px 0px inset;
+  cursor: pointer;
+  display: flex;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 600;
+  justify-content: center;
+  letter-spacing: 0.03em;
+  line-height: 1;
+  opacity: 1;
+  outline: 0px;
+  transition: background-color 0.2s ease 0s, opacity 0.2s ease 0s;
+  height: 3rem;
+  padding: 0px remConverter(24px);
+  background-color: #1FC7D4;
+  color: #ffffff;
+  margin-right: 0.5rem;
+  font-family: "Kanit", "sans";
+  box-shadow: #0098A1 0px -1px 0px 0px inset;
+  padding: 0px 24px;
+}
+.hs-connect-button:hover {
+  filter: opacity(0.5);
+}
+
+.hs-trade-button {
+  align-items: center;
+  border: 0px;
+  border-radius: 1rem;
+  box-shadow: 0px -1px 0px 0px inset;
+  cursor: pointer;
+  display: flex;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 600;
+  justify-content: center;
+  letter-spacing: 0.03em;
+  line-height: 1;
+  opacity: 1;
+  outline: 0px;
+  transition: background-color 0.2s ease 0s, opacity 0.2s ease 0s;
+  height: 3rem;
+  padding: 0px remConverter(24px);
+  background-color: #1FC7D4;
+  color: #ffffff;
+  margin-right: 0.5rem;
+  background-color: transparent;
+  border: 2px solid #1FC7D4;
+  font-family: "Kanit", "sans";
+  box-shadow: none;
+  padding: 0px 24px;
+  color: #1FC7D4;
+}
+.hs-trade-button:hover {
+  filter: opacity(0.5);
+}
+
 .hero-section-rightanimation {
   z-index: 1;
   position: relative;
   display: flex;
-  height: 450px;
-  width: 450px;
+  height: 100%;
+  width: 100%;
   max-width: 100%;
   max-height: 100%;
   flex: 1 1 0%;
 }
 
 .hs-biganimation-container {
-  width: 100%;
-  position: relative;
+  width: 125%;
+  position: absolute;
   box-sizing: border-box;
 }
 .hs-biganimation-container .floatEl {
