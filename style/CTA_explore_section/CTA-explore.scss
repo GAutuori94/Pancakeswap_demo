@@ -1,0 +1,158 @@
+@use "../base.scss" as b;
+
+@import "../components";
+
+
+
+#CTA-explore_section{
+  font-family: b.$fontFamily;
+  width: 100%;
+  height: 90vh;
+  padding: 48px 0px;
+
+  h2 {
+    font-size: b.$font-size-subheader;
+    font-weight: b.$fontHeavyWeight;
+    margin-top: 40px;
+    margin-bottom: 40px;
+
+    span {
+        font-size: b.$font-size-subheader;
+        font-weight: b.$fontHeavyWeight;
+        color: b.$secondary;
+    }
+  }
+  h3{
+    font-size: 20px;
+    font-weight: bolder;
+    margin-left: 10%;
+    span {
+      font-size: 20px;
+      font-weight: b.$fontHeavyWeight;
+      color: b.$secondary;
+  }
+
+  }
+
+  //Styling del divisore al posto dell'svg
+  .diagonal-divider {
+    margin-top: 2rem;
+    background-color: #EAF1F5;
+    width: 100%;
+    height: 6rem;
+    transform: rotate(-1.5deg);
+  }
+
+  .quotazioni{
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin:0 10%;
+  }
+  .quotazioni:nth-child(1){
+    font-weight: 700;
+    font-size: 12px;
+    border-left: solid 1px #7A6EAA;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  .quotazione{
+    font-weight: 700;
+    font-size: 12px;
+    border-left: solid 1px #7A6EAA;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    .quotation-percentage{
+      font-weight: 1200;
+      font-size: 16px;
+    }
+    .quotation-name{
+      font-size: 12px;
+      color: b.$secondary;
+      font-weight: b.$fontHeavyWeight;
+    }
+    .quotation-percentage-type{
+      color: #7A6EAA
+    }
+    #prima-quotazione{
+      border: none;
+    }
+  }
+
+  //Styling del div contenente gran parte della sezione
+  .inner-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: baseline;
+    background-color: #EAF1F5;
+    top: -1.5rem;
+    width: 100%;
+    height: 90vh;
+
+    .picture-container{
+      width: 50%;
+      padding-bottom: b.remConverter(70px);
+      position: absolute;
+    }
+    .floatEl {
+      width: 200px;
+      @include floatting;
+
+      &:nth-child(1) {
+          animation-duration: 2.9s;
+      }
+
+      &:nth-child(2) {
+          animation-duration: 2.1s;
+      }
+
+      &:nth-child(3) {
+          animation-duration: 2.5s;
+      }
+  }
+
+    p{
+      margin-bottom: b.remConverter(40px);
+      font-size: b.remConverter(b.$font-size-copy);
+      color: #7A6EAA;
+      font-weight: bold;
+      font-family: inherit;
+    }
+
+  }
+
+  .blue-button {
+    @include button;
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+  .blue-button:hover{
+    opacity: 0.65;
+  }
+  .docs-link{
+    color: b.$primary;
+    text-decoration: none;
+    font-weight: 900;
+    &:hover{
+      text-decoration: underline;
+    }
+  }
+
+  .buttons{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 10%
+  }
+  .central-container{
+    margin-left: 10%;
+    width: 40%;
+    display: flex;
+    flex-direction: row;
+  }
+}
