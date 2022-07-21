@@ -165,7 +165,7 @@ Dark mode: #27262C;
 }
 
 .slider:before {
-  background-image: url("/./Assets/asset 63.svg");
+  background-image: url("Pancakeswap_demo/src/assets/images/svg/asset 63.svg");
   background-position: center;
   position: absolute;
   background-repeat: no-repeat;
@@ -236,19 +236,18 @@ input:checked + .slider:before {
 }
 
 /* MODELLO HTML X IL TOGGLE LIGHT/DARK MODE
+  <!--Qui ho importato delle classi da quello di Andrea label agganciato al darkToggle con una classe switch
+          poi dentro un input type checkbox con id darkToggle e classe omonima lo span dentro al label slider 
+          e round che rende lo span il toggle effettivo-->
 
-    <!--Qui ho importato delle classi da quello di Andrea label agganciato al darkToggle con una classe switch
-            poi dentro un input type checkbox con id darkToggle e classe omonima lo span dentro al label slider 
-            e round che rende lo span il toggle effettivo-->
+          <label for="darkToggle" class="switch">
+              <input type="checkbox" id="darkToggle" class="darkToggle">
+              <span class="slider round"></span>
+          </label>
 
-            <label for="darkToggle" class="switch">
-                <input type="checkbox" id="darkToggle" class="darkToggle">
-                <span class="slider round"></span>
-            </label>
+        </main>
 
-          </main>
-
-  */
+*/
 /*Reset*/
 * {
   margin: 0;

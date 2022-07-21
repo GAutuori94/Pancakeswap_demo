@@ -51,6 +51,7 @@
         .bottom-cta {
           display: flex;
           align-items: center;
+          
           button {
             @include button;
             padding-left: 24px;
