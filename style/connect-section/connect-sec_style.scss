@@ -1,0 +1,122 @@
+@use '../base.scss' as b;
+@import '../components';
+
+#CTA-connect_section {
+    background: linear-gradient(rgb(118, 69, 217) 0%, rgb(81, 33, 117) 100%);
+    
+    font-family: b.$fontFamily;
+    height: 54vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: b.remConverter(24px);
+    overflow: hidden;
+
+    
+    
+
+    
+
+
+    #central-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        height: 50%;
+
+        .central-contain-h2 {
+
+            font-size: b.remConverter(b.$font-size-subheader);
+            font-weight: b.$fontHeavyWeight;
+            color: b.$light_invertedContrast;
+        }
+
+        .copy-1 {
+            color: b.$light_invertedContrast;
+        }
+
+        .copy-2 {
+            color: b.$light_invertedContrast;
+            font-weight: bold;
+        }
+
+        a{
+            text-decoration: none;
+            color: b.$primary;
+            margin-bottom: b.remConverter(15px);
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+
+        .connect-cta{
+            @include button;
+            width: b.remConverter(165.15px);
+            height: b.remConverter(48px);
+            padding-top: b.remConverter(20px);
+            padding-bottom: b.remConverter(20px);
+
+            &:hover{
+                opacity: 0.65;
+                background-color: b.$primary;
+            }
+            
+        }
+    }
+
+    .img-pos-1 {
+        top: 30px;
+        transform: translateX(-100%);
+
+    }
+
+    .img-pos-2 {
+        transform: translateX(150%);
+        padding-top: b.remConverter(30px);
+    }
+
+    .container {
+        width: b.remConverter(256px);
+        height: b.remConverter(256px);
+        position: absolute;
+        box-sizing: border-box;
+
+
+
+        .floatEl {
+            @include floatting;
+            width: 100%;
+            position: absolute;
+
+            &:nth-child(1) {
+                animation-duration: 2.9s;
+            }
+
+            &:nth-child(2) {
+                animation-duration: 2.1s;
+            }
+
+            &:nth-child(3) {
+                animation-duration: 2.5s;
+            }
+
+            &:nth-child(4) {
+                animation-duration: 2.5s;
+            }
+
+            &:nth-child(5) {
+                animation-duration: 2.5s;
+            }
+        }
+    }
+}
+
+@media (max-width:  b.remConverter(680px)) {
+    .container {
+        visibility: hidden;
+    }
+}
