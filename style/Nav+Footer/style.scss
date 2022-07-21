@@ -1,0 +1,407 @@
+@use '../base.scss' as b;
+@import '../components/toggle_LD_mode.scss';
+@import '../components/toggle_switch.scss';
+@import '../components.scss';
+
+
+* {
+    font-family: b.$fontFamily;
+}
+
+nav {
+    background-color: b.$light_background;
+    width: 100%;
+    font-weight: 400;
+    padding: 3px;
+    position: fixed;
+    z-index: 3;
+    padding-left: b.remConverter(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: b.remConverter(48px);
+    overflow: hidden;
+
+
+    .dropbtn {
+
+        color: b.$dark_secondary;
+        font-weight: inherit;
+        font-size: inherit;
+
+
+    }
+
+    .dropdown {
+        position: relative;
+        display: inline-block;
+    }
+
+    .dropdown-content {
+
+        display: none;
+        position: absolute;
+        background-color: #f1f1f1;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+    }
+
+
+    .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+    }
+
+    .dropdown-content a:hover {
+        background-color: #ddd;
+    }
+
+    .dropbtn:hover .dropdown-content {
+        display: block;
+    }
+
+    .dropdown:hover .dropbtn {
+        background-color: inherit;
+    }
+
+    .leftContainer {
+        display: flex;
+
+        // .dropdown-content {
+        //     display: none;
+        //     position: absolute;
+        //     min-width: 160px;
+        //     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        //     z-index: 1;
+        // }
+
+
+        div {
+
+            width: 100%;
+            padding: b.remConverter(10px);
+            border-radius: b.remConverter(15px);
+
+            li {
+
+
+                a {
+                    border-radius: b.remConverter(15px);
+
+                    .dropbtn {
+                        border-radius: b.remConverter(15px);
+                        color: b.$secondary;
+                        background-color: initial;
+                        cursor: pointer;
+                        font-weight: 600;
+                    }
+                }
+            }
+
+            .grey-hover:hover {
+                border-radius: b.remConverter(15px);
+                background-color: #eff4f5;
+                transition: 1200ms;
+            }
+
+        }
+
+
+
+
+
+
+        .pancakeLogo {
+
+            display: flex;
+            list-style-type: none;
+            align-items: center;
+            padding-top: b.remConverter(15px);
+
+        }
+    }
+
+    ul {
+
+        display: flex;
+        justify-content: space-between;
+        list-style-type: none;
+        position: relative;
+        display: flex;
+        -webkit-box-align: center;
+        align-items: center;
+        color: b.$secondary;
+        font-size: b.remConverter(16px);
+        font-weight: 600;
+        padding-left: b.remConverter(16px);
+        padding-right: b.remConverter(16px);
+
+        height: b.remConverter(48px);
+
+        li {
+
+            a {
+
+                text-decoration: none;
+                margin: b.remConverter(10px);
+                color: b.$secondary;
+            }
+        }
+    }
+
+    .rightContainer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .currentValue {
+            margin-top: b.remConverter(8px);
+            font-weight: 900; 
+        }
+
+        .netButton {
+            margin-top: b.remConverter(15px);
+            width: b.remConverter(30px);
+            height: b.remConverter(30px);
+            //background-image: url("src/assets/images/svg/Utilities/logoNET.svg");
+            background-image: url("/Pancakeswap_demo/src/assets/images/svg/Utilities/logoNET.svg");
+            background-repeat: no-repeat;
+            transition-property: filter;
+            transition-duration: 0.5s;
+
+
+
+            &:hover {
+                filter: opacity(0.5);
+
+
+            }
+        }
+
+        .pancakeCointainer {
+            margin-top: b.remConverter(15px);
+            width: b.remConverter(30px);
+            height: b.remConverter(30px);
+            background-image: url("/src/assets/images/svg/Utilities/logoPancake.svg");
+            background-repeat: no-repeat;
+            transition-property: transform;
+            transition-duration: 0.5s;
+
+            &:hover {
+                transform: scale(1.2);
+
+
+            }
+        }
+
+        .ingranaggio {
+            margin-top: b.remConverter(15px);
+            width: b.remConverter(30px);
+            height: b.remConverter(30px);
+            background-image: url("/src/assets/images/svg/Utilities/ingranaggio.svg");
+            background-repeat: no-repeat;
+            transition-property: filter;
+            transition-duration: 0.5s;
+
+            &:hover {
+                filter: opacity(0.5);
+
+
+            }
+        }
+
+    }
+
+    div {
+        font-family: b.$fontFamily;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: b.remConverter(5px);
+        cursor: pointer;
+
+        .currentValue {
+            color: b.$secondary;
+            font-weight: 500;
+        }
+    }
+
+    .connectWalletButton {
+        @include button;
+        box-shadow: b.$light_textSubtle b.$boxShadow;
+        height: b.remConverter(32px);
+        padding-left: b.remConverter(16px);
+        padding-right: b.remConverter(16px);
+        color: white;
+
+        &:hover {
+            opacity: 70%;
+        }
+
+
+    }
+}
+
+footer {
+    width: 100%;
+    background-color: b.$dark_card;
+    display: flex;
+    flex-flow: column;
+    padding: b.remConverter(25px);
+
+
+    .services {
+        margin-top: b.remConverter(30px);
+        display: flex;
+        justify-content: space-between;
+        padding: b.remConverter(30px);
+
+
+
+
+
+        ul {
+            li:first-child {
+                color: b.$dark_secondary;
+                font-weight: 600;
+            }
+
+            .gold {
+                a {
+                    color: b.$binance;
+                }
+            }
+
+            li {
+                list-style-type: none;
+                margin: b.remConverter(3px);
+
+                a {
+                    text-decoration: none;
+                    color: b.$light_background;
+                }
+
+                a:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+
+    .partnerSvgIcons {
+
+        padding-left: 33px;
+        display: flex;
+        align-items: flex-start;
+
+
+        div {
+            width: 40px;
+        }
+    }
+
+    .lasts {
+        display: flex;
+        justify-content: space-between;
+        padding: b.remConverter(32px);
+        border-top: 1px solid grey;
+        margin-top: 20px;
+
+
+        button {
+
+            @include button;
+            box-shadow: b.$light_text b.$boxShadow;
+            height: b.remConverter(32px);
+            padding-left: b.remConverter(16px);
+            padding-right: b.remConverter(16px);
+            color: white;
+
+            &:hover {
+                opacity: 70%;
+            }
+
+        }
+
+
+        .modeSelector {
+            div {
+                padding: 5px;
+            }
+
+            .languageSelector {
+                display: flex;
+                align-items: center;
+
+
+
+                .net {
+                    &:hover {
+                        opacity: 70%;
+                        cursor: pointer;
+                        transition-property: opacity;
+                        transition-duration: 0.5s;
+                    }
+
+                    background-image: url("/src/assets/images/svg/Utilities/logoNETsecondarycolor.svg");
+                    background-repeat: no-repeat;
+                    background-position: left;
+                    display: flex;
+                    justify-content: space-between;
+                    padding: 5px;
+
+                    p {
+                        margin-left: 20px;
+                        align-items: center;
+                        color: #b8add2;
+                        padding: 5px;
+                        font-family: b.$fontFamily;
+
+                    }
+                }
+            }
+
+            display: flex;
+
+            width: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .selectors {
+            .buttonContainer {
+
+                display: flex;
+                align-items: center;
+
+                p {
+                    color: #B8ADD2;
+                    font-family: inherit;
+                    font-weight: 900;
+                    margin: 0px 20px 0px 0px;
+                }
+
+                .svg {
+                    margin-top: b.remConverter(8px);
+                    width: b.remConverter(30px);
+                    height: b.remConverter(30px);
+                    background-image: url("/src/assets/images/svg/Utilities/logoPancake.svg");
+                    background-repeat: no-repeat;
+                    transition-property: transform;
+                    transition-duration: 0.5s;
+                    cursor: pointer;
+
+                    &:hover {
+                        transform: scale(1.2);
+
+
+                    }
+                }
+            }
+        }
+    }
+}
