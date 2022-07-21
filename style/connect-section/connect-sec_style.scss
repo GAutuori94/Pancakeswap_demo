@@ -69,13 +69,13 @@
     }
 
     .img-pos-1 {
-        top: 30px;
-        transform: translateX(-100%);
+        //top: 30px;
+        transform: translate(-80%, -50%);
 
     }
 
     .img-pos-2 {
-        transform: translateX(150%);
+        transform: translate(140%, 0%);
         padding-top: b.remConverter(30px);
     }
 

@@ -6,6 +6,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Kanit:wght@100;200;300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Kanit:wght@100;200;300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Kanit:wght@100;200;300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@100;200;300&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -93,9 +94,11 @@ state: on --> background color: b.$success
 /*state: ON 
     left: calc(100% - 30px)
 */
-/*Background color:
+/*
+Background color:
 Light mode: #FFFFFF;
-Dark mode: #27262C*/
+Dark mode: #27262C;
+*/
 /*Reset*/
 * {
   margin: 0;
@@ -234,18 +237,18 @@ input:checked + .slider:before {
 
 /* MODELLO HTML X IL TOGGLE LIGHT/DARK MODE
 
-  <!--Qui ho importato delle classi da quello di Andrea label agganciato al darkToggle con una classe switch
-          poi dentro un input type checkbox con id darkToggle e classe omonima lo span dentro al label slider 
-          e round che rende lo span il toggle effettivo-->
+    <!--Qui ho importato delle classi da quello di Andrea label agganciato al darkToggle con una classe switch
+            poi dentro un input type checkbox con id darkToggle e classe omonima lo span dentro al label slider 
+            e round che rende lo span il toggle effettivo-->
 
-          <label for="darkToggle" class="switch">
-              <input type="checkbox" id="darkToggle" class="darkToggle">
-              <span class="slider round"></span>
-          </label>
+            <label for="darkToggle" class="switch">
+                <input type="checkbox" id="darkToggle" class="darkToggle">
+                <span class="slider round"></span>
+            </label>
 
-        </main>
+          </main>
 
-*/
+  */
 /*Reset*/
 * {
   margin: 0;
@@ -275,12 +278,11 @@ input:checked + .slider:before {
   align-items: center;
   z-index: 1;
 }
-
-.top-cards-container {
+.top-cards-background .top-cards-container {
   display: flex;
   flex-direction: row;
 }
-.top-cards-container .outer-box {
+.top-cards-background .top-cards-container .card-element {
   background: rgb(231, 227, 235);
   border-radius: 24px;
   color: rgb(40, 13, 95);
@@ -292,30 +294,23 @@ input:checked + .slider:before {
   padding: 1px 1px 4px;
   box-sizing: border-box;
 }
-.top-cards-container .outer-box .inner-box {
+.top-cards-background .top-cards-container .card-element .inner-box {
   width: 100%;
   height: 100%;
   overflow: inherit;
   background: rgb(255, 255, 255);
   border-radius: 24px;
 }
-.top-cards-container .outer-box .inner-box .card-body {
+.top-cards-background .top-cards-container .card-element .inner-box .card-body {
   padding: 24px;
 }
-.top-cards-container .outer-box .inner-box .card-body .symbol-container {
+.top-cards-background .top-cards-container .card-element .inner-box .card-body .symbol-container {
   color: rgb(40, 13, 95);
   position: absolute;
   top: 24px;
   right: 24px;
 }
-.top-cards-container .outer-box .inner-box .card-body .symbol-container svg {
-  width: 36px;
-  align-self: center;
-  fill: rgb(118, 69, 217);
-  flex-shrink: 0;
-  filter: none !important;
-}
-.top-cards-container .outer-box .inner-box .card-body .card-text {
+.top-cards-background .top-cards-container .card-element .inner-box .card-body .card-text {
   min-width: 232px;
   width: fit-content;
   min-height: 168px;
@@ -325,19 +320,19 @@ input:checked + .slider:before {
   -webkit-box-pack: end;
   justify-content: flex-end;
 }
-.top-cards-container .outer-box .inner-box .card-body .card-text h2:first-of-type {
+.top-cards-background .top-cards-container .card-element .inner-box .card-body .card-text h2:first-of-type {
   font-weight: 600;
   line-height: 1.1;
   font-size: 40px;
 }
-.top-cards-container .outer-box .inner-box .card-body .card-text h2:last-of-type {
+.top-cards-background .top-cards-container .card-element .inner-box .card-body .card-text h2:last-of-type {
   color: rgb(118, 69, 217);
   margin-bottom: 24px;
   font-weight: 600;
   line-height: 1.1;
   font-size: 40px;
 }
-.top-cards-container .outer-box .inner-box .card-body .card-text .card-footer {
+.top-cards-background .top-cards-container .card-element .inner-box .card-body .card-text .card-footer {
   color: rgb(122, 110, 170);
   font-weight: 400;
   line-height: 1.5;
@@ -434,6 +429,24 @@ input:checked + .slider:before {
   border-top: 1px solid rgb(233, 234, 235);
 }
 
+/*Reset*/
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+/*Px to rem conversion function*/
+/* COLORS VARIABLES*/
+/*-------baseColors-----------*/
+/*-------brandColors-----------*/
+/*-------lightColors-----------*/
+/*-------darkColors-----------*/
+/*------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*FONT*/
+/*------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*SHADOWS*/
 /*Mixin animations*/
 /*
 @use "mixin" as m;
@@ -530,7 +543,7 @@ input:checked + .slider:before {
   border-radius: 1rem;
   box-shadow: 0px -1px 0px 0px inset;
   cursor: pointer;
-  display: inline-flex;
+  display: flex;
   font-family: inherit;
   font-size: 16px;
   font-weight: 600;
@@ -551,15 +564,17 @@ input:checked + .slider:before {
   padding-bottom: 1.25rem;
 }
 #CTA-connect_section #central-container .connect-cta:hover {
+  filter: opacity(0.5);
+}
+#CTA-connect_section #central-container .connect-cta:hover {
   opacity: 0.65;
   background-color: #1FC7D4;
 }
 #CTA-connect_section .img-pos-1 {
-  top: 30px;
-  transform: translateX(-100%);
+  transform: translate(-80%, -50%);
 }
 #CTA-connect_section .img-pos-2 {
-  transform: translateX(150%);
+  transform: translate(140%, 0%);
   padding-top: 1.875rem;
 }
 #CTA-connect_section .container {
