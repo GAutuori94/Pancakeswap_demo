@@ -59,6 +59,7 @@
             height: b.remConverter(48px);
             padding-top: b.remConverter(20px);
             padding-bottom: b.remConverter(20px);
+            box-shadow: b.$primary 0px -1px 0px 0px inset;
 
             &:hover{
                 opacity: 0.65;
